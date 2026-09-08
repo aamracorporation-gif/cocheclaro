@@ -12,10 +12,12 @@ import { EngineTable } from "@/components/vehicle/EngineTable";
 import { EngineSelector } from "@/components/vehicle/EngineSelector";
 import { IssuesList } from "@/components/vehicle/IssuesList";
 import { MaintenanceTable } from "@/components/vehicle/MaintenanceTable";
+import { RecallList } from "@/components/vehicle/RecallList";
 import { Faq } from "@/components/vehicle/Faq";
 import { InlineAnnualCost } from "@/components/calculators/InlineAnnualCost";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { getRecallsForGeneration } from "@/lib/recalls";
 import { getAllPublishedGenerations, getGenerationDetail } from "@/lib/db";
 import { yearRange, fuelLabel } from "@/lib/format";
 
@@ -77,6 +79,8 @@ export default async function GenerationPage({
         )} CV`
       : "—";
   const defaultConsumption = engines.find((e) => e.link.consumption)?.link.consumption;
+
+  const recallsData = await getRecallsForGeneration(b, m, g);
 
   const faq = g.faq;
   const faqLd = faqJsonLd(faq);
@@ -160,6 +164,20 @@ export default async function GenerationPage({
         </p>
         <div className="mt-4">
           <IssuesList issues={knownIssues} sources={sources} />
+        </div>
+      </section>
+
+      {/* Campañas / llamadas a revisión (datos de la NHTSA, EE. UU.) */}
+      <section aria-labelledby="campanas" className="mt-10">
+        <h2 id="campanas" className="h2">
+          Campañas y llamadas a revisión
+        </h2>
+        <p className="mt-1 text-sm text-ink-faint">
+          Llamadas a revisión oficiales registradas por la NHTSA de Estados Unidos. No son
+          &laquo;averías&raquo;: son campañas de seguridad del fabricante.
+        </p>
+        <div className="mt-4">
+          <RecallList data={recallsData} />
         </div>
       </section>
 

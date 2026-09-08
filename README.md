@@ -20,6 +20,9 @@ Construido a partir del *Plan Maestro CocheClaro* (SEO orgánico → AdSense + a
   comparativas, FAQ y **caja de fuentes + última revisión**.
 - **Fichas de motor**: datos técnicos, coches que lo montan, averías y mantenimiento.
 - **Comparativas curadas** (indexables) + **comparador libre** (noindex).
+- **Campañas y llamadas a revisión** en cada ficha, desde la **API pública de la
+  NHTSA** (EE. UU., sin clave), etiquetadas como datos del mercado estadounidense.
+  No sustituyen a la capa editorial de averías. Se desactiva con `RECALLS_ENABLED=false`.
 - **Calculadoras** (100 % en el navegador): combustible, coste anual, planificador
   de mantenimiento. Cada una explica su fórmula y tiene tests.
 - **SEO técnico**: SSG/ISR, `generateMetadata` por entidad, canonical absoluto,
@@ -100,6 +103,7 @@ Las clave:
 - [x] Fase 2 — Producto base (home, buscador, fichas, motores, calculadoras,
       comparador, páginas legales).
 - [x] Dataset de demostración (15 marcas, 40 modelos, 43 generaciones, 28 motores).
+- [x] Integración con la API pública de recalls de la NHTSA (campañas por ficha).
 - [~] Fase 3 — Panel editorial: hecha la **consola de solo lectura** (`/admin`).
       Falta CRUD protegido con Supabase Auth e importación CSV con validación Zod.
 - [ ] Adaptador de datos Supabase (`src/lib/db/supabase.ts`) + generador de seed.

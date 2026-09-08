@@ -34,6 +34,13 @@ export const ads = {
   client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "",
 };
 
+export const recalls = {
+  /** Sección de campañas contra la API pública de la NHTSA (EE. UU.).
+   *  Poner RECALLS_ENABLED=false si los builds se vuelven lentos. */
+  enabled: process.env.RECALLS_ENABLED !== "false",
+  apiBase: "https://api.nhtsa.gov/recalls/recallsByVehicle",
+};
+
 export function absoluteUrl(path: string): string {
   if (!path.startsWith("/")) return `${site.url}/${path}`;
   return `${site.url}${path}`;

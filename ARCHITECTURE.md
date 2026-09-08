@@ -87,6 +87,30 @@ con dígito ("8", "a3") se tratan como significativos aunque sean cortos.
   scripts: es la base sobre la que montar una CMP certificada (Google CMP / TCF)
   antes de anuncios personalizados en el EEE.
 
+## Campañas / llamadas a revisión (API externa)
+
+`src/lib/recalls.ts` consulta la **API pública de recalls de la NHTSA**
+(`api.nhtsa.gov`, sin clave) y muestra las llamadas a revisión en la ficha de
+generación. Decisiones:
+
+- **Solo para el catálogo de campañas, no para el catálogo de coches.** El
+  catálogo y las averías editoriales siguen siendo datos propios (`src/data`).
+  Ninguna API cubre "averías conocidas con evidencia + mantenimiento" para el
+  mercado europeo; eso es el foso del proyecto.
+- **Datos de EE. UU.**, etiquetados como tales en la interfaz. Muchas marcas
+  europeas (SEAT, CUPRA, Škoda, Peugeot, Renault, Dacia) no se venden allí →
+  `src/data/nhtsa-map.ts` las excluye y no se consulta la API.
+- Los nombres de modelo de la NHTSA están en inglés/mayúsculas y a veces las
+  campañas se archivan por acabado (BMW). `NHTSA_OVERRIDES` mapea esos casos.
+- Se consultan 2–3 años de modelo por generación, en paralelo, con timeout de
+  6 s y `Promise.allSettled`. **Cualquier fallo devuelve lista vacía**: la
+  sección nunca rompe la página.
+- Caché de `fetch` de Next a 7 días (`revalidate`). Se puede desactivar con
+  `RECALLS_ENABLED=false`.
+- Las categorías de componente se traducen al español (`recallComponentTitle`);
+  el texto de resumen se muestra en inglés (original de la NHTSA) y así se
+  etiqueta, sin traducción automática.
+
 ## Analítica
 
 `track(event, props)` en `src/lib/analytics.ts`. Sin proveedor configurado,
