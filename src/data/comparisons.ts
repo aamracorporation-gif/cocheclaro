@@ -83,4 +83,64 @@ export const comparisons: Comparison[] = [
     ],
     status: "published", reviewedAt: REVIEWED,
   },
+  {
+    id: "cmp-golf7-vs-leon5f",
+    slug: "volkswagen-golf-7-vs-seat-leon-mk3",
+    leftGenerationId: "volkswagen:golf:mk7",
+    rightGenerationId: "seat:leon:5f",
+    editorialSummary:
+      "Dos compactos de ocasión sobre la misma plataforma MQB. El Golf VII retiene mejor el valor y transmite algo más de calidad; el León Mk3 sale más barato y tiene un punto más de dinamismo.",
+    takeaways: [
+      "Mecánica: idéntica (1.0/1.4/1.5 TSI, 1.6/2.0 TDI). Los consejos de compra valen para ambos.",
+      "Precio de ocasión: el León Mk3 suele salir claramente más barato a igualdad de año y motor.",
+      "Retención de valor: mejor en el Golf VII.",
+      "Recomendación: León Mk3 por relación precio/producto; Golf VII si priorizas reventa y percepción de calidad.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
+  {
+    id: "cmp-qashqai-j11-vs-kadjar",
+    slug: "nissan-qashqai-j11-vs-renault-kadjar",
+    leftGenerationId: "nissan:qashqai:j11",
+    rightGenerationId: "renault:kadjar:ha",
+    editorialSummary:
+      "Mismo fondo técnico de la Alianza: comparten plataforma y motores (1.5 dCi, 1.2/1.3 TCe). La decisión se juega en diseño, equipamiento y precio de ocasión.",
+    takeaways: [
+      "Mecánica: prácticamente la misma; el 1.5 dCi es la opción más tranquila en ambos.",
+      "Puntos a vigilar: consumo de aceite del 1.2 TCe y caja automática (CVT en el Nissan, EDC en el Renault).",
+      "El Qashqai suele tener más oferta y mejor reventa; el Kadjar, precio de compra algo menor.",
+      "Recomendación: elige por diseño y por la unidad concreta con mejor historial; mecánicamente están empatados.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
+  {
+    id: "cmp-rav4-vs-cx5",
+    slug: "toyota-rav4-hybrid-vs-mazda-cx-5",
+    leftGenerationId: "toyota:rav4:xa50",
+    rightGenerationId: "mazda:cx-5:kf",
+    editorialSummary:
+      "El SUV medio híbrido más racional frente al que mejor se conduce. El RAV4 Hybrid gana en consumo urbano y fiabilidad esperada; el CX-5 ofrece mejor tacto de conducción y un interior que fue subiendo de calidad.",
+    takeaways: [
+      "Consumo: claramente a favor del RAV4 Hybrid, sobre todo en ciudad.",
+      "Conducción e interior: el CX-5 se siente más premium y noble al volante.",
+      "Mecánica: el RAV4 híbrido no tiene turbo ni embrague; el CX-5 diésel 2.2 pide recorridos largos.",
+      "Recomendación: RAV4 Hybrid para tranquilidad y ahorro; CX-5 si valoras cómo se conduce y el interior.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
+  {
+    id: "cmp-x1-vs-q3",
+    slug: "bmw-x1-f48-vs-audi-q3-f3",
+    leftGenerationId: "bmw:x1:f48",
+    rightGenerationId: "audi:q3:f3",
+    editorialSummary:
+      "Dos SUV premium compactos de kilómetros. El X1 F48 prioriza espacio y un diésel B47 sobrio; el Q3 F3 ofrece un interior algo más cuidado y mecánicas del Grupo VW muy conocidas.",
+    takeaways: [
+      "Espacio: muy parejo; el X1 aprovecha muy bien el interior para su tamaño.",
+      "Puntos a vigilar: cadena y EGR del B47 en el BMW; DSG y Haldex en el Audi.",
+      "Interior: ligera ventaja para el Q3 en percepción de calidad.",
+      "Recomendación: X1 sDrive18d o Q3 35 TDI según cuál encuentres con mejor historial y precio.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
 ];

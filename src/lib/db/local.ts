@@ -268,6 +268,10 @@ const FEATURED_SLUGS = [
   "peugeot:208:p21",
   "renault:clio:bja",
   "hyundai:tucson:nx4",
+  "nissan:qashqai:j11",
+  "mercedes-benz:clase-c:w205",
+  "volkswagen:passat:b8",
+  "mazda:3:bp",
 ];
 
 export async function getFeaturedGenerations(): Promise<

@@ -16,4 +16,11 @@ export const brands: Brand[] = [
   { id: "ford", slug: "ford", name: "Ford", country: "Estados Unidos" },
   { id: "hyundai", slug: "hyundai", name: "Hyundai", country: "Corea del Sur" },
   { id: "kia", slug: "kia", name: "Kia", country: "Corea del Sur" },
+  { id: "opel", slug: "opel", name: "Opel", country: "Alemania" },
+  { id: "citroen", slug: "citroen", name: "Citroën", country: "Francia" },
+  { id: "mazda", slug: "mazda", name: "Mazda", country: "Japón" },
+  { id: "fiat", slug: "fiat", name: "Fiat", country: "Italia" },
+  { id: "mini", slug: "mini", name: "MINI", country: "Reino Unido" },
+  { id: "volvo", slug: "volvo", name: "Volvo", country: "Suecia" },
+  { id: "honda", slug: "honda", name: "Honda", country: "Japón" },
 ];

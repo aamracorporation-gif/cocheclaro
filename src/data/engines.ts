@@ -217,4 +217,232 @@ export const engines: Engine[] = [
     summary: "Diésel 1.5 de Focus y Puma. Consumo real bajo en carretera; correa de distribución bañada en aceite con intervalo estricto de sustitución.",
     dataStatus: "demo",
   },
+
+  // ── Grupo Volkswagen (generaciones anteriores) ────────────
+  {
+    id: "ea111-1-4-tsi", slug: "ea111-1-4-tsi", code: "EA111 1.4 TSI Twincharger",
+    fuel: "gasolina", displacementCc: 1390, cylinders: 4, powerKw: 110, powerHp: 150, torqueNm: 240,
+    architecture: "4 cilindros en línea, compresor + turbo (versiones 150-180 CV), inyección directa, cadena de distribución",
+    summary: "El 1.4 TSI de Golf VI, León II y Scirocco. Prestaciones sorprendentes para la cilindrada, pero mala fama por estiramiento de la cadena de distribución y consumo de aceite en las series 2007-2012.",
+    dataStatus: "demo",
+  },
+  {
+    id: "ea211-1-2-tsi", slug: "ea211-1-2-tsi", code: "EA211 1.2 TSI",
+    fuel: "gasolina", displacementCc: 1197, cylinders: 4, powerKw: 66, powerHp: 90, torqueNm: 160,
+    architecture: "4 cilindros en línea, turbo, inyección directa, correa de distribución",
+    summary: "Gasolina de acceso de Polo, Ibiza y Golf VII de primeras series. Cumplidor en ciudad; menos elástico que el 1.0 TSI tricilíndrico que lo sustituyó.",
+    dataStatus: "demo",
+  },
+  {
+    id: "ea189-1-6-tdi", slug: "ea189-1-6-tdi", code: "EA189 1.6 TDI",
+    fuel: "diesel", displacementCc: 1598, cylinders: 4, powerKw: 77, powerHp: 105, torqueNm: 250,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "Diésel 1.6 de Golf VI/VII, A3 8P/8V, León II/III y Octavia II/III (2009-2015). Motor del caso de emisiones (dieselgate); tras la actualización, algunos propietarios reportan EGR y sensores más delicados.",
+    dataStatus: "demo",
+  },
+  {
+    id: "ea189-2-0-tdi", slug: "ea189-2-0-tdi", code: "EA189 2.0 TDI",
+    fuel: "diesel", displacementCc: 1968, cylinders: 4, powerKw: 103, powerHp: 140, torqueNm: 320,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "El 2.0 TDI de la generación anterior al EA288 (2008-2015). Muy sobrio en viaje; también afectado por el caso de emisiones. Volante bimasa, EGR y turbo son los gastos con kilómetros.",
+    dataStatus: "demo",
+  },
+  {
+    id: "pd-1-9-tdi", slug: "pd-1-9-tdi", code: "1.9 TDI PD (BXE/BLS)",
+    fuel: "diesel", displacementCc: 1896, cylinders: 4, powerKw: 77, powerHp: 105, torqueNm: 250,
+    architecture: "4 cilindros en línea, turbo, inyector-bomba (PD)",
+    summary: "El 1.9 TDI de bomba-inyector (Golf V, León II, Octavia II, A3 8P). Fama de indestructible en la base; los puntos débiles son el colector de admisión, la EGR y el volante bimasa. Muchas versiones sin filtro de partículas.",
+    dataStatus: "demo",
+  },
+  {
+    id: "ea288-2-0-bitdi", slug: "ea288-2-0-bitdi", code: "2.0 BiTDI 240 CV",
+    fuel: "diesel", displacementCc: 1968, cylinders: 4, powerKw: 176, powerHp: 240, torqueNm: 500,
+    architecture: "4 cilindros en línea, doble turbo secuencial, common-rail",
+    summary: "El 2.0 TDI biturbo de 240 CV (Passat B8, Tiguan, Kodiaq de gama alta). Prestaciones de un seis cilindros; mantenimiento riguroso y aceite exacto para cuidar los turbos.",
+    dataStatus: "demo",
+  },
+
+  // ── PSA / Stellantis (generaciones anteriores) ───────────
+  {
+    id: "hdi-1-6", slug: "hdi-1-6", code: "1.6 HDi / TDCi (DV6)",
+    fuel: "diesel", displacementCc: 1560, cylinders: 4, powerKw: 84, powerHp: 115, torqueNm: 270,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "El 1.6 HDi de PSA (208, 308, C3, C4, Berlingo; también Ford Focus/Fiesta como 1.6 TDCi). Sobrio; el turbo de geometría variable y el circuito de aceite piden aceite fresco para durar.",
+    dataStatus: "demo",
+  },
+  {
+    id: "puretech-1-2-na", slug: "puretech-1-2-na", code: "PureTech 1.2 atmosférico (EB2)",
+    fuel: "gasolina", displacementCc: 1199, cylinders: 3, powerKw: 60, powerHp: 82, torqueNm: 118,
+    architecture: "3 cilindros en línea, atmosférico, inyección indirecta, cadena de distribución",
+    summary: "Versión atmosférica del PureTech (208, C3, 108). Sin turbo ni correa bañada en aceite, evita el problema del PureTech turbo, pero rinde poco con el coche cargado o en cuesta.",
+    dataStatus: "demo",
+  },
+  {
+    id: "hdi-2-0-dw10-older", slug: "hdi-2-0-dw10-older", code: "2.0 HDi (DW10)",
+    fuel: "diesel", displacementCc: 1997, cylinders: 4, powerKw: 110, powerHp: 150, torqueNm: 340,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "El 2.0 HDi de 150-163 CV de 308, 3008, 508 y C5 de generación anterior. Muy buena reputación de fiabilidad y consumo en viaje; de los diésel más recomendables de PSA de esa época.",
+    dataStatus: "demo",
+  },
+
+  // ── Mazda ────────────────────────────────────────────────
+  {
+    id: "skyactiv-g-2-0", slug: "skyactiv-g-2-0", code: "Skyactiv-G 2.0",
+    fuel: "gasolina", displacementCc: 1998, cylinders: 4, powerKw: 89, powerHp: 122, torqueNm: 213,
+    architecture: "4 cilindros en línea, atmosférico, alta compresión, inyección directa",
+    summary: "El 2.0 atmosférico de Mazda3, CX-30 y MX-5. Sin turbo: respuesta lineal, mantenimiento sencillo y gran fiabilidad. A cambio hay que exprimirlo y el consumo urbano no baja tanto como un turbo pequeño.",
+    dataStatus: "demo",
+  },
+  {
+    id: "skyactiv-d-1-8", slug: "skyactiv-d-1-8", code: "Skyactiv-D 1.8",
+    fuel: "diesel", displacementCc: 1759, cylinders: 4, powerKw: 85, powerHp: 116, torqueNm: 270,
+    architecture: "4 cilindros en línea, turbo, baja compresión, common-rail",
+    summary: "Diésel de Mazda3 y CX-30. Refinado y elástico; su baja compresión reduce tensiones, pero exige recorridos largos y aceite específico para no acumular carbonilla ni diluir el aceite.",
+    dataStatus: "demo",
+  },
+  {
+    id: "skyactiv-x-2-0", slug: "skyactiv-x-2-0", code: "e-Skyactiv X 2.0",
+    fuel: "gasolina", displacementCc: 1998, cylinders: 4, powerKw: 137, powerHp: 186, torqueNm: 240,
+    architecture: "4 cilindros en línea, ignición por compresión controlada por chispa (SPCCI), 24 V mild-hybrid",
+    summary: "El gasolina que quiere consumir como un diésel. Tecnología única y suave; en la práctica el ahorro real frente al Skyactiv-G 2.0 es modesto y el sobreprecio de ocasión, alto.",
+    dataStatus: "demo",
+  },
+
+  // ── Fiat ─────────────────────────────────────────────────
+  {
+    id: "twinair-0-9", slug: "twinair-0-9", code: "0.9 TwinAir",
+    fuel: "gasolina", displacementCc: 875, cylinders: 2, powerKw: 63, powerHp: 85, torqueNm: 145,
+    architecture: "2 cilindros en línea, turbo, distribución MultiAir",
+    summary: "El bicilíndrico turbo de 500, Panda y Tipo. Simpático y con carácter, pero el consumo real está lejos del homologado y algunas unidades gastan aceite. Poca suavidad abajo.",
+    dataStatus: "demo",
+  },
+  {
+    id: "firefly-1-0", slug: "firefly-1-0", code: "1.0 FireFly",
+    fuel: "gasolina", displacementCc: 999, cylinders: 3, powerKw: 51, powerHp: 70, torqueNm: 92,
+    architecture: "3 cilindros en línea, atmosférico (versión mHEV con 12 V)",
+    summary: "Tricilíndrico moderno de 500, Panda y Tipo. En versión mild-hybrid mejora la respuesta en ciudad. Sencillo y barato de mantener; justo de fuerza en carretera.",
+    dataStatus: "demo",
+  },
+  {
+    id: "fiat-1-6-multijet", slug: "fiat-1-6-multijet", code: "1.6 MultiJet",
+    fuel: "diesel", displacementCc: 1598, cylinders: 4, powerKw: 88, powerHp: 120, torqueNm: 320,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "Diésel 1.6 de Tipo, 500X y varios modelos del grupo. Correcto en consumo; DPF y EGR piden uso de carretera y no solo ciudad.",
+    dataStatus: "demo",
+  },
+
+  // ── Volvo (Drive-E) ──────────────────────────────────────
+  {
+    id: "volvo-t3-t4", slug: "volvo-t3-t4", code: "2.0 T3 / T4 (Drive-E)",
+    fuel: "gasolina", displacementCc: 1969, cylinders: 4, powerKw: 140, powerHp: 190, torqueNm: 300,
+    architecture: "4 cilindros en línea, turbo, inyección directa",
+    summary: "El 2.0 gasolina de XC40, XC60 y V40/V60. Suave y con buen empuje; en primeras series hubo consumo de aceite y algún caso de cadena de distribución que Volvo fue corrigiendo.",
+    dataStatus: "demo",
+  },
+  {
+    id: "volvo-d3-d4", slug: "volvo-d3-d4", code: "2.0 D3 / D4 (Drive-E)",
+    fuel: "diesel", displacementCc: 1969, cylinders: 4, powerKw: 140, powerHp: 190, torqueNm: 400,
+    architecture: "4 cilindros en línea, turbo (D4 con doble turbo secuencial), common-rail",
+    summary: "El 2.0 diésel de XC40, XC60, V40 y V60. Consumo de autovía muy bajo; revisar el colector de admisión, la EGR y el filtro de partículas.",
+    dataStatus: "demo",
+  },
+
+  // ── Honda ────────────────────────────────────────────────
+  {
+    id: "honda-1-0-vtec-turbo", slug: "honda-1-0-vtec-turbo", code: "1.0 VTEC Turbo",
+    fuel: "gasolina", displacementCc: 988, cylinders: 3, powerKw: 95, powerHp: 129, torqueNm: 200,
+    architecture: "3 cilindros en línea, turbo, VTEC, inyección directa",
+    summary: "Tricilíndrico turbo de Civic X y HR-V. Rendimiento notable y buena fiabilidad general; en algunos Civic 2016-2018 hubo dilución de gasolina en el aceite en uso urbano en frío.",
+    dataStatus: "demo",
+  },
+  {
+    id: "honda-1-5-vtec-turbo", slug: "honda-1-5-vtec-turbo", code: "1.5 VTEC Turbo",
+    fuel: "gasolina", displacementCc: 1498, cylinders: 4, powerKw: 134, powerHp: 182, torqueNm: 240,
+    architecture: "4 cilindros en línea, turbo, VTEC, inyección directa",
+    summary: "El 1.5 turbo de Civic y CR-V. Ágil y con buen consumo en carretera; misma precaución de dilución de aceite en trayectos cortos con frío en las primeras series.",
+    dataStatus: "demo",
+  },
+  {
+    id: "honda-e-hev-2-0", slug: "honda-e-hev-2-0", code: "2.0 i-MMD e:HEV",
+    fuel: "hibrido", displacementCc: 1993, cylinders: 4, powerKw: 135, powerHp: 184, torqueNm: 315,
+    architecture: "4 cilindros ciclo Atkinson + dos motores eléctricos, sin caja de cambios convencional",
+    summary: "Híbrido de Civic, HR-V y CR-V. En ciudad y mixto circula casi siempre en eléctrico con el motor como generador; muy eficiente y refinado, con buena fiabilidad hasta la fecha.",
+    dataStatus: "demo",
+  },
+
+  // ── Toyota (ampliación) ──────────────────────────────────
+  {
+    id: "toyota-2-5-hybrid", slug: "toyota-2-5-hybrid", code: "A25A-FXS 2.5 Hybrid",
+    fuel: "hibrido", displacementCc: 2487, cylinders: 4, powerKw: 131, powerHp: 178, torqueNm: 221,
+    architecture: "4 cilindros ciclo Atkinson + motor eléctrico, cambio e-CVT, tracción total eléctrica opcional (E-Four)",
+    summary: "Híbrido 2.5 de RAV4 y Camry (218-222 CV de sistema). Prestaciones holgadas, consumo contenido para un SUV grande y la fiabilidad habitual de la marca.",
+    dataStatus: "demo",
+  },
+  {
+    id: "toyota-1-0-vvti", slug: "toyota-1-0-vvti", code: "1KR-FE 1.0 VVT-i",
+    fuel: "gasolina", displacementCc: 998, cylinders: 3, powerKw: 53, powerHp: 72, torqueNm: 93,
+    architecture: "3 cilindros en línea, atmosférico, cadena de distribución",
+    summary: "Tricilíndrico atmosférico de Aygo y Yaris de acceso (también Peugeot 108/Citroën C1). Muy fiable y barato de mantener; hay que llevarlo revolucionado y va justo en autovía.",
+    dataStatus: "demo",
+  },
+
+  // ── Renault / Nissan (generaciones anteriores) ───────────
+  {
+    id: "energy-tce-1-2", slug: "energy-tce-1-2", code: "1.2 TCe (H5Ft)",
+    fuel: "gasolina", displacementCc: 1197, cylinders: 4, powerKw: 85, powerHp: 115, torqueNm: 190,
+    architecture: "4 cilindros en línea, turbo, inyección directa",
+    summary: "El 1.2 TCe de Clio IV, Captur I, Mégane III y Kadjar. Buen rendimiento, pero con historial notable de consumo de aceite y averías de segmentos en 2013-2018; revisar niveles e historial.",
+    dataStatus: "demo",
+  },
+
+  // ── Opel (etapa pre-PSA) ─────────────────────────────────
+  {
+    id: "opel-1-6-cdti", slug: "opel-1-6-cdti", code: "1.6 CDTi (B16DT)",
+    fuel: "diesel", displacementCc: 1598, cylinders: 4, powerKw: 100, powerHp: 136, torqueNm: 320,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "El diésel 1.6 propio de Opel (Astra K, Corsa E, Mokka X, Insignia B), anterior a la etapa PSA. Silencioso para su clase; vigilar EGR, DPF y la correa de distribución.",
+    dataStatus: "demo",
+  },
+  {
+    id: "opel-1-4-turbo", slug: "opel-1-4-turbo", code: "1.4 Turbo (B14XFT)",
+    fuel: "gasolina", displacementCc: 1399, cylinders: 4, powerKw: 110, powerHp: 150, torqueNm: 245,
+    architecture: "4 cilindros en línea, turbo, inyección directa",
+    summary: "Gasolina 1.4 turbo de Astra K, Corsa E y Mokka X. Elástico y suficiente; algunas unidades consumen aceite y la bomba de agua es un punto a vigilar.",
+    dataStatus: "demo",
+  },
+  {
+    id: "skyactiv-g-1-5", slug: "skyactiv-g-1-5", code: "Skyactiv-G 1.5",
+    fuel: "gasolina", displacementCc: 1496, cylinders: 4, powerKw: 66, powerHp: 90, torqueNm: 148,
+    architecture: "4 cilindros en línea, atmosférico, alta compresión, inyección directa",
+    summary: "El 1.5 atmosférico de Mazda2, MX-5 y Mazda3 de acceso. Sin turbo: lineal, fiable y sencillo de mantener; hay que revolucionarlo para ir con brío.",
+    dataStatus: "demo",
+  },
+  {
+    id: "skyactiv-d-2-2", slug: "skyactiv-d-2-2", code: "Skyactiv-D 2.2",
+    fuel: "diesel", displacementCc: 2191, cylinders: 4, powerKw: 110, powerHp: 150, torqueNm: 380,
+    architecture: "4 cilindros en línea, doble turbo secuencial, baja compresión, common-rail",
+    summary: "El 2.2 diésel de CX-5, Mazda6 y CX-60. Elástico y con buen consumo en viaje; en uso solo urbano puede acumular carbonilla y diluir aceite, así que pide recorridos largos.",
+    dataStatus: "demo",
+  },
+  {
+    id: "honda-e-hev-1-5", slug: "honda-e-hev-1-5", code: "1.5 i-MMD e:HEV",
+    fuel: "hibrido", displacementCc: 1498, cylinders: 4, powerKw: 80, powerHp: 109, torqueNm: 253,
+    architecture: "4 cilindros ciclo Atkinson + dos motores eléctricos, sin caja de cambios convencional",
+    summary: "Híbrido del Jazz y del HR-V. En ciudad circula casi siempre en eléctrico con el motor de gasolina como generador; muy eficiente y con buena fiabilidad.",
+    dataStatus: "demo",
+  },
+  {
+    id: "honda-1-6-idtec", slug: "honda-1-6-idtec", code: "1.6 i-DTEC",
+    fuel: "diesel", displacementCc: 1597, cylinders: 4, powerKw: 88, powerHp: 120, torqueNm: 300,
+    architecture: "4 cilindros en línea, turbo, common-rail (motor propio de Honda)",
+    summary: "El diésel 1.6 propio de Honda (Civic, HR-V, CR-V). Ligero y sobrio en consumo; como todo diésel moderno, EGR y filtro de partículas piden uso de carretera.",
+    dataStatus: "demo",
+  },
+  {
+    id: "kappa-1-25-mpi", slug: "kappa-1-25-mpi", code: "1.25 MPi (Kappa)",
+    fuel: "gasolina", displacementCc: 1248, cylinders: 4, powerKw: 62, powerHp: 84, torqueNm: 122,
+    architecture: "4 cilindros en línea, atmosférico, inyección multipunto, cadena de distribución",
+    summary: "El 1.25 atmosférico de Picanto, Rio y i20 de acceso. Sencillo, fiable y barato de mantener; justo de fuerza en autovía y cargado.",
+    dataStatus: "demo",
+  },
 ];

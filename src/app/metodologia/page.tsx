@@ -74,9 +74,17 @@ export default function MethodologyPage() {
 
       <h2>Estado actual</h2>
       <p>
-        Este sitio arranca con un conjunto de fichas marcadas como <strong>datos de
-        demostración</strong>. Sirven para probar el producto y se sustituyen por datos
-        verificados con fuente antes de considerarse definitivas.
+        Muchas fichas están marcadas como <strong>&laquo;ficha en revisión&raquo;</strong>: los
+        campos técnicos y las averías son un punto de partida editorial que estamos contrastando
+        con documentación oficial y fecha de revisión. Mientras tengan esa marca, trátalas como
+        una guía orientativa, no como cifras cerradas, y verifica siempre el vehículo concreto
+        antes de comprar.
+      </p>
+      <p>
+        Las secciones de <strong>campañas y llamadas a revisión</strong> proceden de la base de
+        datos pública de la NHTSA de Estados Unidos y se etiquetan como tales: son datos del
+        mercado estadounidense y no sustituyen a una comprobación del historial del vehículo en
+        España.
       </p>
     </Prose>
   );

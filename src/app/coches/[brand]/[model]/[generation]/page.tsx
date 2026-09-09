@@ -72,12 +72,13 @@ export default async function GenerationPage({
 
   const path = `/coches/${b.slug}/${m.slug}/${g.slug}`;
   const fuels = Array.from(new Set(engines.map((e) => fuelLabel(e.fuel))));
-  const powerRange =
-    engines.length > 0
-      ? `${Math.min(...engines.map((e) => e.powerHp))}–${Math.max(
-          ...engines.map((e) => e.powerHp),
-        )} CV`
-      : "—";
+  const powerRange = (() => {
+    if (engines.length === 0) return "—";
+    const hp = engines.map((e) => e.powerHp);
+    const lo = Math.min(...hp);
+    const hi = Math.max(...hp);
+    return lo === hi ? `${lo} CV` : `${lo}–${hi} CV`;
+  })();
   const defaultConsumption = engines.find((e) => e.link.consumption)?.link.consumption;
 
   const recallsData = await getRecallsForGeneration(b, m, g);
