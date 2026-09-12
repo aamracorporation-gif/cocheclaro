@@ -102,10 +102,10 @@ Las clave:
 - [x] Fase 1 — Esqueleto técnico (Next, TS, Tailwind, SEO, sitemap, robots, tests).
 - [x] Fase 2 — Producto base (home, buscador, fichas, motores, calculadoras,
       comparador, páginas legales).
-- [x] Dataset ampliado (32 marcas, 198 modelos, 208 generaciones, 92 motores,
-      36 averías, 13 comparativas — incluye eléctricos, premium, todocamino
-      y utilitarios). Marcado como **"ficha en revisión"**: datos orientativos
-      pendientes de contrastar con fuente oficial.
+- [x] Dataset ampliado (32 marcas, 202 modelos, 237 generaciones, 102 motores,
+      40 averías, 13 comparativas — desde utilitarios de los 2000 hasta
+      eléctricos y premium actuales). Marcado como **"ficha en revisión"**:
+      datos orientativos pendientes de contrastar con fuente oficial.
 - [x] Integración con la API pública de recalls de la NHTSA (campañas por ficha).
 - [~] Fase 3 — Panel editorial: hecha la **consola de solo lectura** (`/admin`).
       Falta CRUD protegido con Supabase Auth e importación CSV con validación Zod.

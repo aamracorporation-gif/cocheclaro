@@ -315,4 +315,12 @@ export const models: Model[] = [
 
   // MINI (2ª ampliación)
   { id: "mini:clubman", brandId: "mini", slug: "clubman", name: "Clubman", bodyType: "Familiar" },
+
+  /* ═══ Tercera ampliación: generaciones muy presentes en el
+     mercado de ocasión español (2000-2010s) y algunos modelos
+     nuevos necesarios para alojarlas ═══ */
+  { id: "peugeot:207", brandId: "peugeot", slug: "207", name: "207", bodyType: "Utilitario" },
+  { id: "toyota:auris", brandId: "toyota", slug: "auris", name: "Auris", bodyType: "Compacto" },
+  { id: "toyota:avensis", brandId: "toyota", slug: "avensis", name: "Avensis", bodyType: "Berlina y Familiar" },
+  { id: "kia:sorento", brandId: "kia", slug: "sorento", name: "Sorento", bodyType: "SUV 7 plazas" },
 ];

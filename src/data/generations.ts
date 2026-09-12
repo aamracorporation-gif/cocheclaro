@@ -3118,10 +3118,426 @@ const extraGenerations3: Generation[] = [
   }),
 ];
 
-/** Todas las generaciones: base + tres ampliaciones. */
+/* ═══════════════════════════════════════════════════════════════
+   CUARTA AMPLIACIÓN — generaciones de los años 2000-2010 muy
+   presentes en el mercado de ocasión español (el tramo de precio
+   más buscado), sobre modelos ya existentes + 4 modelos nuevos
+   imprescindibles de esa época (207, Auris, Avensis, Sorento).
+   ═══════════════════════════════════════════════════════════════ */
+const extraGenerations4: Generation[] = [
+  g({
+    id: "bmw:serie-3:e90", modelId: "bmw:serie-3", code: "E90/E91", slug: "e90",
+    startYear: 2005, endYear: 2012, bodyType: "Berlina y Touring", lengthMm: 4520, bootLitres: 460,
+    oneLiner: "El Serie 3 que consolidó la fama de la berlina deportiva alemana; el 320d es de los diésel más buscados de ocasión, con el punto débil conocido de la cadena N47.",
+    intro:
+      "La quinta generación del Serie 3 (E90 berlina, E91 Touring) es un clásico del usado premium. Motores N43/N46 gasolina y N47 diésel (2007 en adelante; antes M47). El N47 de los primeros años tiene fama justificada de desgaste de cadena de distribución; conviene exigir historial.",
+    verdict: "Berlina deportiva de ocasión muy buscada. El 320d con historial de cadena documentado es la compra más razonable.",
+    strengths: ["Tracción trasera y dinámica de conducción de referencia", "Precio de ocasión ya muy accesible", "Touring con buen maletero"],
+    watchouts: ["Cadena de distribución del N47 (2007-2010), especialmente delicada en esta generación", "Caja de aguas bajo el parabrisas que puede filtrar y mojar la electrónica", "Suspensión y bujes con desgaste típico de un coche de más de 15 años"],
+    faq: [
+      { q: "¿El 320d E90 tiene problemas de cadena?", a: "Los N47 de 2007-2010 son los más afectados por el estiramiento de la cadena; exige historial de revisión o sustitución antes de comprar." },
+      { q: "¿Qué motor gasolina lleva el 320i E90?", a: "El N46, atmosférico de 6 cilindros en las primeras series y 4 cilindros después; motor con buena reputación de fiabilidad." },
+    ],
+  }),
+  g({
+    id: "bmw:serie-5:f10", modelId: "bmw:serie-5", code: "F10/F11", slug: "f10",
+    startYear: 2010, endYear: 2017, bodyType: "Berlina y Touring", lengthMm: 4899, bootLitres: 520,
+    oneLiner: "Berlina grande de kilómetros muy asentada en el usado: el 520d combina consumo bajo y confort a un precio ya muy razonable.",
+    intro:
+      "La sexta generación del Serie 5 (F10/F11) es una berlina grande muy racional de ocasión. Motores N47/B47 diésel y N20/N52 gasolina. El N47 de primeras series comparte la cautela de la cadena de distribución del resto de la familia; el B47 posterior (desde ~2015) es más tranquilo.",
+    verdict: "Mucha berlina por poco dinero. El 520d con B47 y mantenimiento documentado es la compra más razonable; con N47, exigir historial de cadena.",
+    strengths: ["Confort y aislamiento de nivel superior para su precio de ocasión", "520d con consumo muy bajo para su tamaño", "Touring con maletero de referencia"],
+    watchouts: ["Cadena de distribución del N47 en unidades de primeras series", "Suspensión neumática trasera si la equipa (coste si falla)", "Reparaciones de electrónica caras fuera de garantía"],
+    faq: [
+      { q: "¿Qué diferencia hay entre el N47 y el B47 del 520d F10?", a: "El N47 se montó hasta aproximadamente 2015 y es el que arrastra la fama de la cadena; el B47 posterior mejoró ese punto." },
+      { q: "¿El F10 Touring tiene buen maletero?", a: "Sí, en torno a 560 litros, muy competitivo para un familiar premium de ocasión." },
+    ],
+  }),
+  g({
+    id: "mercedes-benz:clase-c:w204", modelId: "mercedes-benz:clase-c", code: "W204", slug: "w204",
+    startYear: 2007, endYear: 2014, bodyType: "Berlina, Estate y Coupé", lengthMm: 4581, bootLitres: 475,
+    oneLiner: "Berlina premium de ocasión ya muy asequible: el C 220 CDI es sobrio y fiable, con la calidad de construcción típica de Mercedes de esa época.",
+    intro:
+      "La tercera generación de la Clase C (W204) es una compra premium de ocasión con precio ya muy contenido. Motores OM651 diésel (desde 2008) y M271 gasolina turbo. El OM651 es un diésel muy extendido y fiable con mantenimiento correcto; la EGR y el colector de admisión piden atención con kilómetros.",
+    verdict: "Berlina premium muy asequible de ocasión. El C 220 CDI con historial documentado es la compra más razonable.",
+    strengths: ["Calidad de construcción e interior por encima de su precio de ocasión", "OM651 diésel sobrio y muy extendido", "Estate con buen maletero"],
+    watchouts: ["Colector de admisión y EGR del OM651 con kilómetros", "Óxido en pasos de rueda en unidades mal cuidadas", "Suspensión y bujes con desgaste típico de un coche de más de 12 años"],
+    faq: [
+      { q: "¿El C 220 CDI W204 es fiable?", a: "Con mantenimiento correcto sí; el motor OM651 es uno de los diésel más extendidos y probados de Mercedes de esa década." },
+      { q: "¿Qué diferencia hay entre el Coupé y la berlina W204?", a: "El Coupé tiene dos puertas y una línea más deportiva; la berlina y el Estate priorizan espacio y practicidad." },
+    ],
+  }),
+  g({
+    id: "mercedes-benz:clase-a:w176", modelId: "mercedes-benz:clase-a", code: "W176", slug: "w176",
+    startYear: 2012, endYear: 2018, bodyType: "Compacto 5 puertas", lengthMm: 4292, bootLitres: 341,
+    oneLiner: "La Clase A que cambió de tracción delantera y de imagen: compacto premium con el A 200 CDI/220 CDI como diésel de referencia.",
+    intro:
+      "La tercera generación de la Clase A (W176) abandonó la carrocería monovolumen por un compacto deportivo de tracción delantera. Motores OM651/OM626 diésel y M270 gasolina turbo, con caja de doble embrague 7G-DCT en muchas versiones. Precio de ocasión ya muy asequible para la imagen que ofrece.",
+    verdict: "Compacto premium accesible de ocasión. El A 200 CDI con historial es la compra más razonable.",
+    strengths: ["Diseño deportivo y buena calidad percibida", "Precio de ocasión ya contenido para un compacto premium", "Motores diésel sobrios"],
+    watchouts: ["Tirones de la caja 7G-DCT en frío y maniobras", "Maletero algo justo para el segmento", "Suspensión firme en versiones AMG Line"],
+    faq: [
+      { q: "¿La Clase A W176 es la primera con tracción delantera?", a: "Sí, la generación anterior (W169) mantenía un planteamiento de monovolumen compacto; el W176 pasó a compacto deportivo de tracción delantera." },
+      { q: "¿Qué maletero tiene la Clase A W176?", a: "En torno a 341 litros, algo por debajo de la media de compactos generalistas de su tamaño." },
+    ],
+  }),
+  g({
+    id: "volkswagen:golf:mk5", modelId: "volkswagen:golf", code: "Mk5", slug: "mk5",
+    startYear: 2003, endYear: 2008, bodyType: "Compacto 5 puertas y Variant", lengthMm: 4204, bootLitres: 350,
+    oneLiner: "El Golf que redefinió la calidad de construcción del segmento; el 1.9 TDI PD es de los diésel más indestructibles jamás fabricados.",
+    intro:
+      "La quinta generación del Golf dio un salto de calidad de construcción notable frente a la anterior. Motores 1.6/2.0 FSI gasolina y 1.9/2.0 TDI PD diésel (inyector-bomba). El 1.9 TDI PD tiene fama de gran robustez mecánica; revisar colector de admisión, EGR y volante bimasa con muchos kilómetros.",
+    verdict: "Compra de ocasión muy madura y barata. El 1.9 TDI PD con historial de mantenimiento es de lo más recomendable en ese rango de precio.",
+    strengths: ["Calidad de construcción que marcó un antes y un después en el segmento", "1.9 TDI PD extremadamente robusto en la mecánica base", "Precio de ocasión ya muy accesible"],
+    watchouts: ["Colector de admisión (aletas de torbellino) del 1.9 TDI PD", "Consumo de aceite en el 2.0 FSI atmosférico de primeras series", "Antigüedad general: suspensión, bujes y electrónica de más de 18 años"],
+    faq: [
+      { q: "¿El Golf V 1.9 TDI PD es fiable?", a: "La mecánica base es de las más robustas jamás fabricadas por el Grupo VW; los puntos a vigilar son el colector de admisión, la EGR y el volante bimasa, no el bloque motor." },
+      { q: "¿Qué significa TDI PD?", a: "Pumpe-Düse (bomba-inyector): cada cilindro tiene su propio inyector con bomba integrada, en vez de un sistema common-rail centralizado." },
+    ],
+  }),
+  g({
+    id: "volkswagen:passat:b6", modelId: "volkswagen:passat", code: "B6 (3C)", slug: "b6",
+    startYear: 2005, endYear: 2010, bodyType: "Berlina y Variant", lengthMm: 4765, bootLitres: 565,
+    oneLiner: "Berlina grande de ocasión muy barata: el 2.0 TDI PD combina consumo bajo y un maletero de referencia a precio mínimo.",
+    intro:
+      "El Passat B6 introdujo la plataforma PQ46 con un salto notable de confort y aislamiento. Motores 1.8/2.0 FSI y TSI gasolina, y 1.9/2.0 TDI PD diésel. Buen equilibrio espacio/precio en el mercado de ocasión más económico.",
+    verdict: "Mucha berlina por muy poco dinero. El 2.0 TDI PD con historial documentado es la compra más razonable.",
+    strengths: ["Confort y aislamiento notables para su precio de ocasión", "Maletero y espacio de categoría superior", "Variant con maletero enorme"],
+    watchouts: ["Colector de admisión y EGR del TDI PD", "Consumo de aceite en el 2.0 FSI atmosférico", "Antigüedad general: componentes de suspensión y electrónica de casi 20 años"],
+    faq: [
+      { q: "¿Qué maletero tiene el Passat B6 Variant?", a: "En torno a 603 litros, de los mayores de su categoría incluso comparado con familiares actuales." },
+      { q: "¿El Passat B6 TSI consume aceite?", a: "Algunas unidades del 1.8/2.0 TSI de primeras series sí, por el diseño de los segmentos; conviene revisar el historial de consumo." },
+    ],
+  }),
+  g({
+    id: "seat:leon:1p", modelId: "seat:leon", code: "1P (Mk2)", slug: "1p",
+    startYear: 2005, endYear: 2012, bodyType: "Compacto 5 puertas", lengthMm: 4351, bootLitres: 341,
+    oneLiner: "Compacto deportivo de ocasión muy barato: comparte plataforma con el Golf V/VI, con el 1.9/2.0 TDI como motor de referencia.",
+    intro:
+      "La segunda generación del León (1P) comparte plataforma PQ35 con el Golf V/VI y el Audi A3 8P. Motores 1.6/2.0 FSI/TSI gasolina y 1.9/2.0 TDI PD diésel, incluida la deportiva Cupra. Precio de ocasión muy contenido para la dinámica que ofrece.",
+    verdict: "Compacto deportivo de ocasión muy asequible. El 2.0 TDI con historial es la compra más razonable.",
+    strengths: ["Buen comportamiento dinámico para su precio de ocasión", "Mecánicas compartidas con Golf V/VI, muy conocidas", "Precio ya muy accesible"],
+    watchouts: ["Colector de admisión y EGR del TDI PD", "Antigüedad general: suspensión y bujes de más de 15 años", "Consumo de aceite en gasolina FSI de primeras series"],
+    faq: [
+      { q: "¿El León 1P comparte plataforma con el Golf V?", a: "Sí, ambos usan la plataforma PQ35 del Grupo VW, con motores muy similares." },
+      { q: "¿Qué es el León 1P Cupra?", a: "La versión deportiva con el 2.0 TFSI de hasta 240 CV, muy apreciada de ocasión por su relación prestaciones/precio." },
+    ],
+  }),
+  g({
+    id: "renault:megane:ii", modelId: "renault:megane", code: "II", slug: "ii",
+    startYear: 2002, endYear: 2008, bodyType: "Compacto 5 puertas y Break", lengthMm: 4210, bootLitres: 340,
+    oneLiner: "Compacto de diseño muy personal en su época, hoy uno de los usados más baratos del mercado: el 1.5 dCi es el motor de referencia.",
+    intro:
+      "La segunda generación del Mégane, con un diseño trasero muy característico, es hoy uno de los compactos de ocasión más económicos. Motores 1.4/1.6 16V gasolina y 1.5/1.9 dCi diésel. Mecánica sencilla y muy conocida; el precio de compra es su gran baza.",
+    verdict: "Coste de compra mínimo. El 1.5 dCi con historial es la opción más razonable; revisar el estado general por la antigüedad.",
+    strengths: ["Precio de compra muy bajo", "1.5 dCi sobrio y muy extendido", "Mecánica sencilla y conocida en cualquier taller"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de casi 20 años", "Óxido en bajos en unidades mal cuidadas", "Equipamiento de seguridad muy por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿Merece la pena comprar un Mégane II en 2026?", a: "Solo como coche de bajo presupuesto y kilómetros moderados; su equipamiento de seguridad está muy por debajo de un compacto actual." },
+      { q: "¿El 1.5 dCi del Mégane II es fiable?", a: "Es un motor muy extendido y fiable con mantenimiento correcto; el turbo y el volante bimasa son los puntos a vigilar con muchos kilómetros." },
+    ],
+  }),
+  g({
+    id: "renault:clio:iii", modelId: "renault:clio", code: "III", slug: "iii",
+    startYear: 2005, endYear: 2012, bodyType: "Utilitario 5 puertas", lengthMm: 4023, bootLitres: 288,
+    oneLiner: "Utilitario de ocasión barato y sencillo: el 1.5 dCi es de los diésel más extendidos de Europa, con mecánica muy conocida.",
+    intro:
+      "La tercera generación del Clio es un utilitario de ocasión muy económico. Motores 1.2/1.4/1.6 16V gasolina y 1.5 dCi diésel. Mecánica sencilla, sin turbo en los gasolina atmosféricos ni correa bañada en aceite.",
+    verdict: "Utilitario de coste mínimo. El 1.5 dCi para consumo bajo; el 1.2 16V para sencillez máxima.",
+    strengths: ["Precio de compra y mantenimiento muy bajos", "1.5 dCi muy sobrio y extendido", "Mecánica sencilla sin sobresaltos"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de casi 20 años", "Equipamiento de seguridad limitado para los estándares actuales", "Óxido en bajos en unidades mal cuidadas"],
+    faq: [
+      { q: "¿El Clio III es fiable?", a: "Mecánicamente sencillo y muy probado; el punto a vigilar con la edad es el estado general de suspensión, frenos y electrónica, no el motor." },
+      { q: "¿Qué diésel lleva el Clio III?", a: "El 1.5 dCi, uno de los motores más fabricados de Europa, en potencias de 65 a 105 CV según año." },
+    ],
+  }),
+  g({
+    id: "renault:scenic:ii", modelId: "renault:scenic", code: "II", slug: "ii",
+    startYear: 2003, endYear: 2009, bodyType: "Monovolumen", lengthMm: 4259, bootLitres: 428,
+    oneLiner: "Monovolumen de ocasión muy barato con buen espacio interior: el 1.9 dCi es el motor de referencia para quien hace kilómetros.",
+    intro:
+      "La segunda generación del Scénic mantiene la vocación práctica y modular del original. Motores 1.6 16V gasolina y 1.5/1.9 dCi diésel, con el Grand Scénic de 7 plazas como variante. Precio de ocasión muy contenido para el espacio que ofrece.",
+    verdict: "Monovolumen familiar de coste mínimo. El 1.9 dCi con historial es la opción más razonable para kilómetros.",
+    strengths: ["Buen espacio interior y maletero para su precio", "Modularidad de asientos típica del Scénic", "Precio de compra muy bajo"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de casi 20 años", "Turbo y volante bimasa del dCi con muchos kilómetros", "Equipamiento de seguridad por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿El Scénic II Grand tiene 7 plazas?", a: "Sí, la versión Grand Scénic alarga la carrocería para alojar una tercera fila, con espacio ajustado para niños o trayectos cortos." },
+      { q: "¿Merece la pena de ocasión en 2026?", a: "Como coche de presupuesto muy ajustado y espacio familiar, sí; su equipamiento de seguridad es muy inferior al de un monovolumen actual." },
+    ],
+  }),
+  g({
+    id: "peugeot:207:default", modelId: "peugeot:207", code: "1ª gen", slug: "1",
+    startYear: 2006, endYear: 2014, bodyType: "Utilitario 3 y 5 puertas, SW y CC", lengthMm: 4030, bootLitres: 270,
+    oneLiner: "El sustituto del 206, con más espacio y mejor comportamiento; el 1.6 HDi es el diésel más extendido, el 1.6 THP ofrece más brío en gasolina.",
+    intro:
+      "El 207 mejoró notablemente el comportamiento y la insonorización respecto al 206. Motores 1.4/1.6 16V gasolina, 1.6 THP turbo (co-desarrollado con BMW) y 1.4/1.6 HDi diésel. El THP de primeras series tiene historial de estiramiento de cadena de distribución en algunas unidades.",
+    verdict: "Utilitario de ocasión muy barato. El 1.6 HDi con historial es la compra más razonable; con THP, revisar la cadena.",
+    strengths: ["Buen comportamiento y aislamiento para su época", "1.6 HDi sobrio y muy extendido", "Precio de compra muy bajo"],
+    watchouts: ["Cadena de distribución del 1.6 THP en algunas unidades de primeras series", "Antigüedad general: suspensión y electrónica de más de 12 años en las unidades más recientes", "Óxido en bajos en unidades mal cuidadas"],
+    faq: [
+      { q: "¿El 207 1.6 THP da problemas de cadena?", a: "Algunas unidades de primeras series han reportado estiramiento de cadena; conviene revisar el historial y el ruido en arranque en frío." },
+      { q: "¿Qué es el 207 CC?", a: "La versión descapotable con techo rígido retráctil, sobre la base mecánica del 207 convencional." },
+    ],
+  }),
+  g({
+    id: "peugeot:308:t7", modelId: "peugeot:308", code: "T7 (1ª gen)", slug: "t7",
+    startYear: 2007, endYear: 2013, bodyType: "Compacto 5 puertas y SW", lengthMm: 4276, bootLitres: 348,
+    oneLiner: "El primer 308: sustituto del 307, con el 1.6 HDi como motor de referencia y precio de ocasión ya muy contenido.",
+    intro:
+      "La primera generación del 308 (T7) es un compacto de ocasión asequible. Motores 1.4/1.6 16V y 1.6 THP gasolina, y 1.6/2.0 HDi diésel. El SW (familiar) tiene buen maletero. Mismas cautelas del 1.6 THP que en el 207 de la misma época.",
+    verdict: "Compacto de ocasión barato. El 1.6 HDi con historial es la compra más razonable.",
+    strengths: ["Precio de compra ya muy bajo", "1.6 HDi sobrio y extendido", "SW con buen maletero para su clase"],
+    watchouts: ["Cadena de distribución del 1.6 THP en algunas unidades", "Antigüedad general: suspensión y electrónica de más de 13 años", "EGR y FAP del HDi con uso muy urbano"],
+    faq: [
+      { q: "¿El 308 T7 es el mismo coche que el actual 308?", a: "No, es la primera generación (2007-2013), muy distinta mecánica y tecnológicamente del 308 actual sobre plataforma EMP2." },
+      { q: "¿Qué diésel del 308 T7 es más recomendable?", a: "El 1.6 HDi de 90-112 CV para uso normal; el 2.0 HDi si buscas más empuje en carretera." },
+    ],
+  }),
+  g({
+    id: "citroen:c4:i", modelId: "citroen:c4", code: "I", slug: "i",
+    startYear: 2004, endYear: 2010, bodyType: "Compacto 3/5 puertas", lengthMm: 4260, bootLitres: 314,
+    oneLiner: "El primer C4: diseño arriesgado para su época, hoy un compacto de ocasión muy barato con el 1.6 HDi como motor de referencia.",
+    intro:
+      "La primera generación del C4 (berlina Coupé de 3 puertas y 5 puertas convencional) comparte base con el Peugeot 307/308 de la época. Motores 1.4/1.6 16V gasolina y 1.6 HDi diésel. Precio de ocasión ya muy contenido.",
+    verdict: "Compacto de ocasión de coste mínimo. El 1.6 HDi con historial es la compra más razonable.",
+    strengths: ["Diseño diferenciado para su época", "1.6 HDi sobrio y extendido", "Precio de compra muy bajo"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de más de 15 años", "EGR y FAP del HDi con uso muy urbano", "Dirección asistida eléctrica con averías ocasionales por la edad"],
+    faq: [
+      { q: "¿El C4 Coupé y el C4 normal son el mismo coche?", a: "Comparten plataforma y motores; el Coupé es de 3 puertas con techo más bajo y línea más deportiva." },
+      { q: "¿Merece la pena en 2026?", a: "Solo como coche de presupuesto muy ajustado; su equipamiento de seguridad está muy por debajo de un compacto actual." },
+    ],
+  }),
+  g({
+    id: "citroen:c3:ii", modelId: "citroen:c3", code: "II", slug: "ii",
+    startYear: 2009, endYear: 2016, bodyType: "Utilitario 5 puertas", lengthMm: 3941, bootLitres: 300,
+    oneLiner: "Utilitario de ocasión barato con buen maletero para su clase: el 1.4 HDi es el diésel de referencia, sencillo y sobrio.",
+    intro:
+      "La segunda generación del C3 destacó por su luneta trasera panorámica (Airscape opcional con techo descapotable de lona). Motores 1.1/1.4/1.6 16V gasolina y 1.4/1.6 HDi diésel. Precio de ocasión ya contenido.",
+    verdict: "Utilitario de ocasión de coste bajo. El 1.4 HDi con historial es la compra más razonable.",
+    strengths: ["Buena visibilidad delantera gracias a la luneta panorámica", "1.4/1.6 HDi sobrios y extendidos", "Precio de compra contenido"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de más de 10 años en las unidades más recientes", "EGR y FAP del HDi con uso muy urbano", "Equipamiento de seguridad por debajo de un C3 actual"],
+    faq: [
+      { q: "¿Qué es el C3 Airscape?", a: "Una versión con techo de lona retráctil sobre gran parte del techo, manteniendo la carrocería de 5 puertas convencional." },
+      { q: "¿El C3 II es fiable?", a: "Mecánicamente sencillo y sin grandes sorpresas; el punto a vigilar con la edad es el estado general, no el motor." },
+    ],
+  }),
+  g({
+    id: "opel:astra:h", modelId: "opel:astra", code: "H", slug: "h",
+    startYear: 2004, endYear: 2009, bodyType: "Compacto 3/5 puertas y Caravan", lengthMm: 4278, bootLitres: 380,
+    oneLiner: "Uno de los compactos de ocasión más abundantes en España: el 1.7/1.9 CDTi es el diésel de referencia, con precio ya mínimo.",
+    intro:
+      "La tercera generación del Astra (H) es uno de los compactos de ocasión más numerosos del parque español. Motores 1.4/1.6/1.8 16V gasolina y 1.3/1.7/1.9 CDTi diésel (los CDTi grandes con tecnología de Fiat/GM). El Caravan (familiar) tiene buen maletero.",
+    verdict: "Compacto de ocasión de coste mínimo. El 1.7 CDTi con historial es la compra más razonable.",
+    strengths: ["Precio de compra muy bajo y oferta abundante", "1.7/1.9 CDTi sobrios", "Caravan con buen maletero para su clase"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de casi 20 años", "EGR y turbo del CDTi con muchos kilómetros", "Correa de distribución con intervalo a respetar"],
+    faq: [
+      { q: "¿El Astra H es fiable?", a: "Mecánicamente sencillo y muy conocido en cualquier taller; el punto a vigilar con la edad es el estado general del coche, no el motor." },
+      { q: "¿Qué diferencia hay entre el CDTi 1.7 y el 1.9?", a: "El 1.9 CDTi ofrece más par y prestaciones, con un consumo algo superior; el 1.7 CDTi es más sobrio para uso normal." },
+    ],
+  }),
+  g({
+    id: "opel:astra:j", modelId: "opel:astra", code: "J", slug: "j",
+    startYear: 2009, endYear: 2015, bodyType: "Compacto 5 puertas y Sports Tourer", lengthMm: 4419, bootLitres: 350,
+    oneLiner: "Compacto de ocasión con buen comportamiento y precio ya muy contenido: el 1.7 CDTi y el 2.0 CDTi son los diésel de referencia.",
+    intro:
+      "La cuarta generación del Astra (J) mejoró notablemente el diseño y el comportamiento respecto al Astra H. Motores 1.4/1.6/1.8 16V y 1.4/1.6 Turbo gasolina, y 1.3/1.7/2.0 CDTi diésel. El Sports Tourer familiar tiene buen maletero.",
+    verdict: "Compacto de ocasión racional y ya muy asequible. El 1.7 CDTi con historial es la compra más razonable.",
+    strengths: ["Buen comportamiento y confort para su precio de ocasión", "1.7/2.0 CDTi sobrios", "Sports Tourer con buen maletero"],
+    watchouts: ["EGR y DPF del CDTi en uso urbano", "Correa de distribución con intervalo a respetar", "Multimedia IntelliLink básica en las versiones que la montan"],
+    faq: [
+      { q: "¿El Astra J es mejor que el Astra H?", a: "Sí, mejora diseño, comportamiento y consumo; a cambio, de ocasión suele costar algo más que el H por ser más reciente." },
+      { q: "¿Qué maletero tiene el Astra J Sports Tourer?", a: "En torno a 500 litros, competitivo frente a familiares compactos generalistas de su época." },
+    ],
+  }),
+  g({
+    id: "ford:focus:mk2", modelId: "ford:focus", code: "Mk2", slug: "mk2",
+    startYear: 2004, endYear: 2011, bodyType: "Compacto 3/5 puertas y Familiar", lengthMm: 4342, bootLitres: 385,
+    oneLiner: "Uno de los compactos de ocasión más recomendables de su precio: el chasis Ford sigue siendo de lo mejor, con el 1.6 TDCi como diésel de referencia.",
+    intro:
+      "La segunda generación del Focus mantuvo el comportamiento dinámico de referencia del segmento a un precio de ocasión ya muy bajo. Motores 1.4/1.6/1.8/2.0 16V gasolina y 1.6/1.8/2.0 TDCi diésel (el 1.6 TDCi compartido con PSA). El restyling de 2008 mejoró interior y motores.",
+    verdict: "De los compactos de ocasión más recomendables por dinámica y precio. El 1.6 TDCi con historial es la compra más razonable.",
+    strengths: ["Comportamiento y tacto de conducción de referencia para su precio", "1.6 TDCi sobrio y extendido", "Oferta abundante y precios muy bajos"],
+    watchouts: ["EGR y turbo del TDCi con muchos kilómetros", "Antigüedad general: suspensión y electrónica de hasta 20 años", "Correa de distribución con intervalo a respetar"],
+    faq: [
+      { q: "¿El Focus Mk2 sigue siendo divertido de conducir?", a: "Sí, es de los compactos de su época con mejor chasis y dirección, una referencia que Ford mantuvo en generaciones posteriores." },
+      { q: "¿Qué diferencia hay entre el Focus Mk2 pre y post restyling?", a: "El restyling de 2008 trajo un frontal renovado, mejor interior y motores diésel más modernos y eficientes." },
+    ],
+  }),
+  g({
+    id: "ford:fiesta:mk7", modelId: "ford:fiesta", code: "Mk7", slug: "mk7",
+    startYear: 2008, endYear: 2017, bodyType: "Utilitario 3 y 5 puertas", lengthMm: 3950, bootLitres: 290,
+    oneLiner: "Utilitario de ocasión muy recomendable por dinámica y precio: el 1.4/1.6 TDCi es sobrio, el 1.25/1.4 Duratec gasolina, sencillo y fiable.",
+    intro:
+      "La sexta generación del Fiesta (Mk7) mantuvo el buen chasis Ford a un precio de ocasión muy asequible. Motores 1.25/1.4/1.6 Duratec gasolina y 1.4/1.6 TDCi diésel (compartido con PSA), con el 1.0 EcoBoost turbo en el restyling de 2013. Buen comportamiento para el segmento.",
+    verdict: "Utilitario de ocasión muy recomendable. El 1.4 TDCi para consumo bajo; el 1.25 Duratec para sencillez máxima.",
+    strengths: ["Comportamiento y tacto de conducción de referencia en el segmento", "1.4/1.6 TDCi sobrios", "Oferta abundante y precios ya bajos"],
+    watchouts: ["EGR y turbo del TDCi con muchos kilómetros", "Correa de distribución con intervalo a respetar", "1.0 EcoBoost de primeras series: revisar historial de refrigeración"],
+    faq: [
+      { q: "¿Qué Fiesta Mk7 comprar de ocasión?", a: "El restyling de 2013 con el 1.0 EcoBoost o el 1.5 TDCi es la opción más moderna; las unidades anteriores con 1.25 Duratec o 1.4 TDCi son más baratas y igual de sencillas." },
+      { q: "¿El Fiesta Mk7 es divertido de conducir?", a: "Sí, mantiene el buen chasis que caracteriza a la saga Fiesta, de lo mejor del segmento en su época." },
+    ],
+  }),
+  g({
+    id: "toyota:auris:i", modelId: "toyota:auris", code: "E150 (1ª gen)", slug: "e150",
+    startYear: 2007, endYear: 2012, bodyType: "Compacto 5 puertas", lengthMm: 4220, bootLitres: 354,
+    oneLiner: "El sustituto del Corolla en Europa: compacto de ocasión muy fiable, con el 1.6 Valvematic gasolina y el 2.0 D-4D diésel como motores de referencia.",
+    intro:
+      "El Auris sustituyó al Corolla en el mercado europeo. Motores 1.33/1.4/1.6/1.8 gasolina atmosférico y 1.4/2.0 D-4D diésel, con la primera versión híbrida (HSD) llegando en 2010. Fiabilidad de referencia típica de Toyota de esa época.",
+    verdict: "Compacto de ocasión muy fiable y sin sorpresas. El 1.6 Valvematic o el 2.0 D-4D son las compras más razonables.",
+    strengths: ["Fiabilidad mecánica de referencia", "Motores sin turbo ni correa bañada en aceite", "Mantenimiento barato y espaciado"],
+    watchouts: ["Diseño e interior algo anodinos para su época", "Antigüedad general: suspensión y electrónica de casi 20 años", "Prestaciones ajustadas en las versiones de acceso"],
+    faq: [
+      { q: "¿El Auris es lo mismo que el Corolla?", a: "El Auris fue el nombre europeo del compacto Toyota entre 2007 y 2018, cuando la marca recuperó el nombre Corolla a nivel global." },
+      { q: "¿Hay Auris híbrido de primera generación?", a: "Sí, desde 2010 se ofreció una versión HSD 1.8 híbrida, precursora del actual sistema de Corolla." },
+    ],
+  }),
+  g({
+    id: "toyota:avensis:t27", modelId: "toyota:avensis", code: "T27", slug: "t27",
+    startYear: 2009, endYear: 2018, bodyType: "Berlina y Wagon", lengthMm: 4695, bootLitres: 509,
+    oneLiner: "Berlina/familiar grande de fiabilidad de referencia: el 2.0 D-4D es sobrio y muy probado, con un Wagon de maletero enorme.",
+    intro:
+      "La tercera generación del Avensis apostó por la solidez y la fiabilidad más que por el diseño llamativo. Motores 1.6/1.8/2.0 gasolina atmosférico y 1.6/2.0/2.2 D-4D diésel. El Wagon (familiar) tiene uno de los maleteros más grandes de su categoría.",
+    verdict: "Berlina/familiar grande de mucha confianza. El 2.0 D-4D con mantenimiento correcto es la compra más razonable.",
+    strengths: ["Fiabilidad mecánica de referencia", "Wagon con maletero de los mayores de su categoría", "Mantenimiento barato y espaciado"],
+    watchouts: ["Diseño e interior conservadores", "Antigüedad general en las unidades más viejas", "Prestaciones ajustadas en las versiones de acceso"],
+    faq: [
+      { q: "¿Qué maletero tiene el Avensis Wagon?", a: "En torno a 543 litros, uno de los mayores entre los familiares grandes de su época." },
+      { q: "¿El Avensis T27 es fiable?", a: "Muy: es de los modelos con mejor reputación de durabilidad de su segmento, con mantenimiento correcto y sin grandes sorpresas mecánicas." },
+    ],
+  }),
+  g({
+    id: "honda:cr-v:mk4", modelId: "honda:cr-v", code: "Mk4 (RM)", slug: "mk4",
+    startYear: 2012, endYear: 2018, bodyType: "SUV", lengthMm: 4570, bootLitres: 589,
+    oneLiner: "SUV familiar de fiabilidad de referencia: el 2.2 i-DTEC ofrece buen par y consumo, con la solidez mecánica habitual de Honda.",
+    intro:
+      "La cuarta generación del CR-V (RM) mantuvo el planteamiento sensato y fiable de la saga. Motores 2.0 i-VTEC gasolina y 2.2 i-DTEC diésel, con tracción total Real Time 4WD opcional. Buen maletero y habitabilidad para la época.",
+    verdict: "SUV familiar de mucha confianza. El 2.2 i-DTEC con mantenimiento correcto es la compra más razonable.",
+    strengths: ["Fiabilidad mecánica de referencia", "2.2 i-DTEC con buen par y consumo contenido", "Buen maletero y habitabilidad"],
+    watchouts: ["EGR y filtro de partículas del i-DTEC con uso muy urbano", "Antigüedad general en las unidades más viejas de la gama", "Consumo del 2.0 i-VTEC gasolina algo alto"],
+    faq: [
+      { q: "¿El CR-V Mk4 tiene tracción total?", a: "Sí, opcionalmente con el sistema Real Time 4WD, que conecta el eje trasero automáticamente cuando detecta pérdida de tracción." },
+      { q: "¿Es fiable el 2.2 i-DTEC?", a: "Sí, es un diésel propio de Honda muy bien considerado; el filtro de partículas y la EGR piden uso de carretera para no acumular problemas." },
+    ],
+  }),
+  g({
+    id: "kia:ceed:jd", modelId: "kia:ceed", code: "JD (2ª gen)", slug: "jd",
+    startYear: 2012, endYear: 2018, bodyType: "Compacto 5 puertas, SW y Pro_cee'd", lengthMm: 4310, bootLitres: 380,
+    oneLiner: "Compacto de ocasión con 7 años de garantía Kia: el 1.6 CRDi es el diésel de referencia, con precio ya muy contenido.",
+    intro:
+      "La segunda generación del Ceed (JD) ofreció ya un diseño y una calidad percibida notables para su precio, con el respaldo de la garantía de 7 años de Kia. Motores 1.4/1.6/1.6 T-GDi gasolina y 1.4/1.6 CRDi diésel. El SW (familiar) y el Pro_cee'd (3 puertas deportivo) amplían la gama de carrocerías.",
+    verdict: "Compacto de ocasión racional con la garantía más larga del segmento. El 1.6 CRDi con historial es la compra más razonable.",
+    strengths: ["Garantía de fábrica de 7 años (si aún está vigente)", "Buena calidad percibida para su precio de ocasión", "1.6 CRDi sobrio"],
+    watchouts: ["Carbonilla en admisión del T-GDi en uso solo urbano", "EGR y DPF del CRDi en uso muy urbano", "Multimedia básica en acabados de acceso"],
+    faq: [
+      { q: "¿El Ceed JD todavía tiene garantía vigente?", a: "Depende del año de matriculación: la garantía de 7 años solo sigue vigente en las unidades más recientes de esta generación." },
+      { q: "¿Qué es el Pro_cee'd JD?", a: "La versión de 3 puertas y línea más deportiva del Ceed de esta generación, con la misma gama mecánica." },
+    ],
+  }),
+  g({
+    id: "kia:sorento:um", modelId: "kia:sorento", code: "UM (3ª gen)", slug: "um",
+    startYear: 2015, endYear: 2020, bodyType: "SUV 7 plazas", lengthMm: 4780, bootLitres: 605,
+    oneLiner: "SUV familiar grande con 7 plazas y garantía de 7 años: el 2.2 CRDi ofrece buen par para viajar cargado y remolcar.",
+    intro:
+      "La tercera generación del Sorento (UM) es un SUV grande de 7 plazas con buen equipamiento y el respaldo de la garantía de 7 años de Kia. Motor 2.2 CRDi diésel (motor principal en Europa), con tracción total AWD opcional. Tercera fila más usable que en SUV más pequeños.",
+    verdict: "SUV familiar de 7 plazas muy completo. El 2.2 CRDi con historial documentado es la compra más razonable.",
+    strengths: ["Espacio y maletero de referencia entre SUV de 7 plazas", "Garantía de fábrica de 7 años (si aún vigente)", "2.2 CRDi con buen par para carga y remolque"],
+    watchouts: ["EGR y sistema de postratamiento del CRDi con mantenimiento exigente", "Consumo alto con el vehículo cargado", "Tercera fila justa para adultos en viaje largo"],
+    faq: [
+      { q: "¿El Sorento UM tiene tracción total?", a: "Sí, opcionalmente con el sistema AWD, especialmente recomendable si vas a remolcar o circular con nieve." },
+      { q: "¿Qué maletero tiene el Sorento UM con 5 plazas?", a: "En torno a 605 litros, de los mayores de su categoría con la tercera fila plegada." },
+    ],
+  }),
+  g({
+    id: "skoda:octavia:1z", modelId: "skoda:octavia", code: "1Z (2ª gen)", slug: "1z",
+    startYear: 2004, endYear: 2013, bodyType: "Berlina liftback y Combi", lengthMm: 4569, bootLitres: 560,
+    oneLiner: "Uno de los usados con mejor relación espacio/precio del mercado: el 1.9/2.0 TDI PD es extremadamente robusto, con un Combi de maletero enorme.",
+    intro:
+      "La segunda generación del Octavia (1Z) comparte plataforma con el Golf V. Motores 1.4/1.6/2.0 FSI gasolina y 1.9/2.0 TDI PD diésel. El Combi (familiar) tiene uno de los maleteros más grandes de cualquier compacto, clásico o actual.",
+    verdict: "De los usados con mejor relación espacio/precio del mercado. El 1.9 TDI PD con historial es la compra más recomendable.",
+    strengths: ["Maletero y habitabilidad de referencia, incluso comparado con coches actuales", "1.9/2.0 TDI PD extremadamente robustos en la mecánica base", "Precio de ocasión ya muy accesible"],
+    watchouts: ["Colector de admisión (aletas de torbellino) del TDI PD", "Consumo de aceite en el 2.0 FSI atmosférico de primeras series", "Antigüedad general: suspensión y electrónica de hasta 20 años"],
+    faq: [
+      { q: "¿Qué maletero tiene el Octavia Combi 1Z?", a: "En torno a 580 litros, una cifra que iguala o supera a muchos familiares actuales de segmento superior." },
+      { q: "¿El Octavia 1Z comparte motor con el Golf V?", a: "Sí, plataforma PQ35 y gama de motores prácticamente idénticas." },
+    ],
+  }),
+  g({
+    id: "audi:a6:c6", modelId: "audi:a6", code: "C6", slug: "c6",
+    startYear: 2004, endYear: 2011, bodyType: "Berlina y Avant", lengthMm: 4915, bootLitres: 546,
+    oneLiner: "Berlina grande premium de ocasión ya muy asequible: el 2.7/3.0 TDI ofrece refinamiento y par sobrados para viajar.",
+    intro:
+      "La tercera generación del A6 (C6) es una berlina grande premium con precio de ocasión ya muy contenido. Motores 2.0 TFSI y V6/V8 gasolina, y 2.0/2.7/3.0 TDI diésel, con tracción quattro en las versiones de 6 cilindros. Confort y calidad de construcción de referencia para su precio.",
+    verdict: "Mucha berlina premium por poco dinero. El 2.7/3.0 TDI con mantenimiento documentado es la compra más razonable.",
+    strengths: ["Confort y calidad de construcción por encima de su precio de ocasión", "Diésel V6 refinado y con mucho par", "Avant con maletero de referencia"],
+    watchouts: ["Coste de mantenimiento superior a un generalista pese al precio de compra bajo", "EGR y sistema de inyección del TDI con muchos kilómetros", "Antigüedad general: suspensión neumática y electrónica de hasta 20 años"],
+    faq: [
+      { q: "¿El A6 C6 es una buena compra de ocasión barata?", a: "Mecánicamente sí, sobre todo los diésel V6; conviene presupuestar un mantenimiento superior al de un coche generalista de precio similar." },
+      { q: "¿Qué diferencia hay entre el 2.7 TDI y el 3.0 TDI?", a: "El 3.0 TDI ofrece más potencia y suavidad; el 2.7 TDI es algo más sobrio en consumo para un uso similar." },
+    ],
+  }),
+  g({
+    id: "audi:a4:b7", modelId: "audi:a4", code: "B6/B7", slug: "b6-b7",
+    startYear: 2000, endYear: 2007, bodyType: "Berlina y Avant", lengthMm: 4586, bootLitres: 460,
+    oneLiner: "Berlina premium de ocasión ya muy barata: el 2.0 TDI PD es sobrio y robusto, con precio de compra mínimo para la imagen que ofrece.",
+    intro:
+      "Las generaciones B6 y B7 del A4 comparten plataforma y planteamiento mecánico, con el restyling B7 (2004) aportando mejoras de diseño y equipamiento. Motores 1.8T/2.0 FSI gasolina y 1.9/2.0 TDI PD diésel, con quattro opcional. Precio de ocasión ya muy accesible.",
+    verdict: "Berlina premium de coste mínimo. El 2.0 TDI PD con historial es la compra más razonable.",
+    strengths: ["Precio de compra muy bajo para una berlina premium", "2.0 TDI PD sobrio y robusto en la mecánica base", "Buena calidad de construcción para su antigüedad"],
+    watchouts: ["Colector de admisión y EGR del TDI PD con kilómetros", "Antigüedad general: suspensión, bujes y electrónica de más de 18 años", "Consumo de aceite en el 1.8T de algunas unidades"],
+    faq: [
+      { q: "¿Qué diferencia hay entre el A4 B6 y el B7?", a: "El B7 (2004) es un restyling del B6 con cambios de diseño, algún motor actualizado y mejoras de equipamiento." },
+      { q: "¿Merece la pena un A4 B6/B7 en 2026?", a: "Como berlina premium de presupuesto muy ajustado, sí; conviene presupuestar un mantenimiento algo superior al de un generalista de la misma edad." },
+    ],
+  }),
+  g({
+    id: "hyundai:i30:gd", modelId: "hyundai:i30", code: "GD (2ª gen)", slug: "gd",
+    startYear: 2012, endYear: 2017, bodyType: "Compacto 5 puertas y Tourer", lengthMm: 4300, bootLitres: 378,
+    oneLiner: "Compacto de ocasión con 5 años de garantía Hyundai: el 1.6 CRDi es el diésel de referencia, con precio ya muy contenido.",
+    intro:
+      "La segunda generación del i30 (GD) ofreció ya un diseño maduro y buena calidad percibida, con el respaldo de la garantía de 5 años de Hyundai. Motores 1.4/1.6/1.6 T-GDi gasolina y 1.4/1.6 CRDi diésel. El Tourer (familiar) amplía la practicidad.",
+    verdict: "Compacto de ocasión racional con buen respaldo de garantía. El 1.6 CRDi con historial es la compra más razonable.",
+    strengths: ["Garantía de fábrica de 5 años (si aún vigente)", "Buena calidad percibida para su precio de ocasión", "1.6 CRDi sobrio"],
+    watchouts: ["EGR y DPF del CRDi en uso muy urbano", "Multimedia básica en acabados de acceso", "Carbonilla en admisión del T-GDi en uso solo urbano"],
+    faq: [
+      { q: "¿El i30 GD todavía tiene garantía vigente?", a: "Depende del año de matriculación: la garantía de 5 años solo sigue vigente en las unidades más recientes de esta generación." },
+      { q: "¿Qué maletero tiene el i30 GD Tourer?", a: "En torno a 528 litros, competitivo frente a familiares compactos de su época." },
+    ],
+  }),
+  g({
+    id: "mazda:3:bl", modelId: "mazda:3", code: "BL (2ª gen)", slug: "bl",
+    startYear: 2009, endYear: 2013, bodyType: "Compacto 5 puertas y Sedán", lengthMm: 4460, bootLitres: 340,
+    oneLiner: "Compacto de ocasión con buen tacto de conducción, típico de Mazda: el 1.6 MZ-CD diésel es sobrio, el 2.0 MZR gasolina, sencillo y fiable.",
+    intro:
+      "La segunda generación del Mazda3 (BL) mantuvo el ADN de conducción divertida de la marca. Motores 1.6/2.0 MZR gasolina atmosférico y 1.6 MZ-CD diésel (motor de origen PSA/Ford). Precio de ocasión ya contenido para lo que ofrece en dinámica.",
+    verdict: "Compacto de ocasión con buen comportamiento. El 1.6 MZ-CD para consumo bajo; el 2.0 MZR para sencillez máxima sin turbo.",
+    strengths: ["Comportamiento y tacto de conducción por encima de la media de su época", "2.0 MZR atmosférico sencillo y fiable", "Precio de ocasión ya contenido"],
+    watchouts: ["EGR y FAP del 1.6 MZ-CD con uso muy urbano", "Antigüedad general: suspensión y electrónica de más de 13 años", "Multimedia básica o inexistente en acabados de acceso"],
+    faq: [
+      { q: "¿El Mazda3 BL comparte motor diésel con Peugeot/Citroën?", a: "Sí, el 1.6 MZ-CD es una variante del motor DV6 de PSA (el mismo bloque que el 1.6 HDi), con calibración propia de Mazda." },
+      { q: "¿Vale la pena el 2.0 MZR atmosférico?", a: "Es una mecánica muy sencilla y fiable sin turbo; a cambio el consumo no baja tanto como en un diésel de la época." },
+    ],
+  }),
+  g({
+    id: "seat:ibiza:6l", modelId: "seat:ibiza", code: "6L (3ª gen)", slug: "6l",
+    startYear: 2002, endYear: 2008, bodyType: "Utilitario 3 y 5 puertas", lengthMm: 3934, bootLitres: 292,
+    oneLiner: "Utilitario de ocasión de coste mínimo: comparte plataforma con el Polo/Fabia de la época, con el 1.9 TDI PD como motor de referencia.",
+    intro:
+      "La tercera generación de la Ibiza (6L) comparte plataforma PQ24 con el Polo y el Škoda Fabia de esos años. Motores 1.2/1.4/1.6 gasolina atmosférico y 1.4/1.9 TDI PD diésel, incluida la deportiva Cupra/FR. Precio de compra ya muy bajo.",
+    verdict: "Utilitario de ocasión de coste mínimo. El 1.9 TDI con historial es la compra más razonable para quien hace kilómetros.",
+    strengths: ["Precio de compra muy bajo", "1.9 TDI PD robusto en la mecánica base", "Mecánica sencilla y muy conocida en cualquier taller"],
+    watchouts: ["Colector de admisión y EGR del TDI PD con kilómetros", "Antigüedad general: suspensión y electrónica de casi 20 años", "Equipamiento de seguridad muy por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿La Ibiza 6L comparte plataforma con el Polo de esa época?", a: "Sí, plataforma PQ24 compartida con el Volkswagen Polo y el Škoda Fabia de la misma generación." },
+      { q: "¿Merece la pena en 2026?", a: "Solo como coche de presupuesto muy ajustado; su equipamiento de seguridad está muy por debajo de una Ibiza actual." },
+    ],
+  }),
+];
+
+/** Todas las generaciones: base + cuatro ampliaciones. */
 export const generations: Generation[] = [
   ...baseGenerations,
   ...extraGenerations,
   ...extraGenerations2,
   ...extraGenerations3,
+  ...extraGenerations4,
 ];

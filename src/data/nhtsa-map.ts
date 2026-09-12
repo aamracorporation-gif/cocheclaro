@@ -158,4 +158,16 @@ export const NHTSA_OVERRIDES: Record<string, { models?: string[]; years?: number
   "volvo:xc90:256": { models: ["XC90"] },
   "volvo:v60:225": { models: ["V60"] },
   "volvo:s60:224": { models: ["S60"] },
+
+  // ── Cuarta ampliación ──────────────────────────────────────
+  "bmw:serie-3:e90": { models: ["320I", "328I", "335I", "3 SERIES"] },
+  "bmw:serie-5:f10": { models: ["528I", "535I", "550I", "5 SERIES"] },
+  "mercedes-benz:clase-c:w204": { models: ["C300", "C 300", "C250", "C-CLASS"] },
+  "ford:focus:mk2": { models: ["FOCUS"] },
+  "ford:fiesta:mk7": { models: ["FIESTA"] },
+  "honda:cr-v:mk4": { models: ["CR-V"] },
+  "kia:sorento:um": { models: ["SORENTO"] },
+  "audi:a6:c6": { models: ["A6"] },
+  "audi:a4:b7": { models: ["A4"] },
+  "mazda:3:bl": { models: ["MAZDA3", "3"] },
 };

@@ -343,4 +343,42 @@ export const knownIssues: KnownIssue[] = [
     confidence: "solida", status: "published",
     sourceIds: ["src-medio-tecnico", "src-comunidad"],
   },
+
+  /* ── Cuarta ampliación (generaciones 2000-2010) ────────────── */
+  {
+    id: "issue-n47-cadena-2", engineId: "bmw-n47-2-0d",
+    title: "Desgaste de la cadena de distribución",
+    symptoms: "Ruido metálico o 'sonajero' en el arranque en frío, tintineo bajo carga; en casos avanzados, salto de sincronización del árbol de levas.",
+    cause: "Tensor y guías de la cadena con desgaste prematuro, especialmente en las unidades fabricadas entre 2007 y 2010.",
+    severity: "alta", mileageMin: 100000, mileageMax: 200000, costMin: 1000, costMax: 2200,
+    confidence: "solida", status: "published",
+    sourceIds: ["src-boletin-tecnico", "src-medio-tecnico", "src-comunidad"],
+  },
+  {
+    id: "issue-vag20fsi-cadena", engineId: "vag-2-0-fsi",
+    title: "Consumo de aceite y estiramiento de cadena en la versión turbo (2.0 TFSI)",
+    symptoms: "Necesidad de rellenar aceite entre revisiones, ruido de cadena en frío, testigo de motor por desajuste de sincronización.",
+    cause: "Segmentos de pistón con desgaste prematuro en parte de la producción 2006-2010, y tensor de cadena insuficiente en las primeras versiones turbo.",
+    severity: "media", mileageMin: 80000, mileageMax: 170000, costMin: 400, costMax: 2000,
+    confidence: "moderada", status: "published",
+    sourceIds: ["src-medio-tecnico", "src-comunidad"],
+  },
+  {
+    id: "issue-psa16thp-cadena", engineId: "psa-1-6-vti",
+    title: "Estiramiento de la cadena de distribución en la versión turbo (THP)",
+    symptoms: "Ruido de cadena en frío, tirón al arrancar, testigo de motor por desajuste de sincronización.",
+    cause: "El tensor de cadena de las primeras series del 1.6 THP (co-desarrollado con BMW) puede desgastarse antes de tiempo.",
+    severity: "media", mileageMin: 90000, mileageMax: 180000, costMin: 600, costMax: 1400,
+    confidence: "moderada", status: "published",
+    sourceIds: ["src-medio-tecnico", "src-comunidad"],
+  },
+  {
+    id: "issue-om651-admision", engineId: "mercedes-om651",
+    title: "Acumulación de carbonilla en el colector de admisión y averías de EGR",
+    symptoms: "Pérdida de potencia, testigo de motor, ralentí irregular; en casos avanzados, entrada en modo de emergencia.",
+    cause: "Acumulación de carbonilla en las aletas del colector de admisión variable y en la válvula EGR, acentuada por uso urbano.",
+    severity: "media", mileageMin: 100000, mileageMax: 200000, costMin: 300, costMax: 900,
+    confidence: "moderada", status: "published",
+    sourceIds: ["src-medio-tecnico", "src-comunidad"],
+  },
 ];
