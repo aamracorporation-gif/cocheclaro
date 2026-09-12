@@ -201,4 +201,14 @@ export const maintenanceItems: MaintenanceItem[] = [
   { id: "m-renault16-correa", engineId: "renault-1-6-16v", item: "Correa de distribución", intervalKm: 90000, intervalMonths: 84 },
   { id: "m-om651-aceite", engineId: "mercedes-om651", item: "Cambio de aceite y filtro", intervalKm: 20000, intervalMonths: 12 },
   { id: "m-om651-combustible", engineId: "mercedes-om651", item: "Filtro de combustible", intervalKm: 60000 },
+
+  /* ── Quinta ampliación ──────────────────────────────────────── */
+  { id: "m-jeepv6-aceite", engineId: "jeep-v6-3-6", item: "Cambio de aceite y filtro", intervalKm: 15000, intervalMonths: 12 },
+  { id: "m-jeep30crd-aceite", engineId: "jeep-3-0-crd", item: "Cambio de aceite y filtro", intervalKm: 15000, intervalMonths: 12 },
+  { id: "m-jeep30crd-adblue", engineId: "jeep-3-0-crd", item: "Relleno de AdBlue", intervalKm: 10000 },
+  { id: "m-lrsdv6-aceite", engineId: "landrover-3-0-sdv6", item: "Cambio de aceite y filtro", intervalKm: 20000, intervalMonths: 12 },
+  { id: "m-lrsdv6-adblue", engineId: "landrover-3-0-sdv6", item: "Relleno de AdBlue", intervalKm: 10000 },
+  { id: "m-mitsu25did-aceite", engineId: "mitsubishi-2-5-did", item: "Cambio de aceite y filtro", intervalKm: 15000, intervalMonths: 12 },
+  { id: "m-ssangyong22-aceite", engineId: "ssangyong-2-2-diesel", item: "Cambio de aceite y filtro", intervalKm: 15000, intervalMonths: 12 },
+  { id: "m-tesla-awd2-frenos", engineId: "tesla-electric-awd", item: "Líquido de frenos", intervalMonths: 24 },
 ];

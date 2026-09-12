@@ -381,4 +381,24 @@ export const knownIssues: KnownIssue[] = [
     confidence: "moderada", status: "published",
     sourceIds: ["src-medio-tecnico", "src-comunidad"],
   },
+
+  /* ── Quinta ampliación ──────────────────────────────────────── */
+  {
+    id: "issue-jeep30crd-egr", engineId: "jeep-3-0-crd",
+    title: "Averías de EGR y sistema de postratamiento",
+    symptoms: "Pérdida de potencia, testigo de motor, entrada en modo de emergencia, avisos de sistema anticontaminación.",
+    cause: "El sistema de postratamiento (EGR, SCR) de este V6 diésel de origen Mercedes/VM Motori es exigente y requiere mantenimiento estricto.",
+    severity: "media", mileageMin: 100000, mileageMax: 200000, costMin: 400, costMax: 1500,
+    confidence: "moderada", status: "published",
+    sourceIds: ["src-medio-tecnico", "src-comunidad"],
+  },
+  {
+    id: "issue-lrsdv6-admision", engineId: "landrover-3-0-sdv6",
+    title: "Carbonilla en el colector de admisión y averías de EGR",
+    symptoms: "Pérdida de potencia, testigo de motor, ralentí irregular con muchos kilómetros.",
+    cause: "Acumulación de carbonilla en las aletas del colector de admisión variable, acentuada por uso urbano.",
+    severity: "media", mileageMin: 100000, mileageMax: 200000, costMin: 400, costMax: 1200,
+    confidence: "moderada", status: "published",
+    sourceIds: ["src-medio-tecnico", "src-comunidad"],
+  },
 ];

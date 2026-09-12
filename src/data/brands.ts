@@ -33,4 +33,6 @@ export const brands: Brand[] = [
   { id: "smart", slug: "smart", name: "smart", country: "Alemania" },
   { id: "tesla", slug: "tesla", name: "Tesla", country: "Estados Unidos" },
   { id: "mg", slug: "mg", name: "MG", country: "China" },
+  { id: "ssangyong", slug: "ssangyong", name: "SsangYong", country: "Corea del Sur" },
+  { id: "chevrolet", slug: "chevrolet", name: "Chevrolet", country: "Estados Unidos" },
 ];

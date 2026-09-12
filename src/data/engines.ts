@@ -759,4 +759,41 @@ export const engines: Engine[] = [
     summary: "El diésel 2.1 más extendido de Mercedes en la década de 2010 (Clase C W204, Clase A W176, Vito, Sprinter). Muy sobrio y probado; el colector de admisión y la EGR piden atención con kilómetros.",
     dataStatus: "demo",
   },
+
+  /* ── Quinta ampliación: motores de nameplates adicionales ──── */
+  {
+    id: "jeep-3-0-crd", slug: "jeep-3-0-crd", code: "3.0 CRD V6",
+    fuel: "diesel", displacementCc: 2987, cylinders: 6, powerKw: 184, powerHp: 250, torqueNm: 570,
+    architecture: "6 cilindros en V, turbo, common-rail (motor de origen Mercedes/VM Motori)",
+    summary: "El diésel grande de Grand Cherokee y Wrangler. Buen par para remolcar y off-road; mantenimiento caro y sistema de postratamiento exigente.",
+    dataStatus: "demo",
+  },
+  {
+    id: "jeep-v6-3-6", slug: "jeep-v6-3-6", code: "3.6 Pentastar V6",
+    fuel: "gasolina", displacementCc: 3604, cylinders: 6, powerKw: 209, powerHp: 284, torqueNm: 347,
+    architecture: "6 cilindros en V, atmosférico, distribución variable",
+    summary: "El gasolina atmosférico de Wrangler y Grand Cherokee. Sonoro y sin turbo que falle; consumo alto para los estándares actuales.",
+    dataStatus: "demo",
+  },
+  {
+    id: "landrover-3-0-sdv6", slug: "landrover-3-0-sdv6", code: "3.0 SDV6 / D300",
+    fuel: "diesel", displacementCc: 2993, cylinders: 6, powerKw: 190, powerHp: 258, torqueNm: 600,
+    architecture: "6 cilindros en V (o en línea Ingenium en las versiones más recientes), turbo, common-rail",
+    summary: "El diésel grande de Range Rover, Discovery y Defender. Refinamiento y par de referencia para remolcar y viajar cargado; mantenimiento propio de un todocamino de lujo.",
+    dataStatus: "demo",
+  },
+  {
+    id: "mitsubishi-2-5-did", slug: "mitsubishi-2-5-did", code: "2.5 DI-D",
+    fuel: "diesel", displacementCc: 2477, cylinders: 4, powerKw: 131, powerHp: 178, torqueNm: 400,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "El diésel grande de Pajero y L200. Reputación de robustez y durabilidad extrema, muy usado en flotas y zonas rurales; mantenimiento caro pero mecánica muy fiable si se respeta.",
+    dataStatus: "demo",
+  },
+  {
+    id: "ssangyong-2-2-diesel", slug: "ssangyong-2-2-diesel", code: "2.2 e-XDi220",
+    fuel: "diesel", displacementCc: 2157, cylinders: 4, powerKw: 133, powerHp: 181, torqueNm: 400,
+    architecture: "4 cilindros en línea, turbo, common-rail",
+    summary: "El diésel principal de Korando, Tivoli y Rexton en Europa. Buen par para su segmento; red de talleres más reducida que las marcas generalistas, aunque la mecánica en sí es sencilla y conocida.",
+    dataStatus: "demo",
+  },
 ];

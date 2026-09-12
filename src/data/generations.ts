@@ -3533,11 +3533,818 @@ const extraGenerations4: Generation[] = [
   }),
 ];
 
-/** Todas las generaciones: base + cuatro ampliaciones. */
+/* ═══════════════════════════════════════════════════════════════
+   QUINTA AMPLIACIÓN — más nameplates de marcas ya presentes
+   (premium grande, todocamino, deportivos icónicos, pick-ups,
+   eléctricos grandes) + SsangYong y Chevrolet.
+   ═══════════════════════════════════════════════════════════════ */
+const extraGenerations5: Generation[] = [
+  g({
+    id: "audi:a8:d5", modelId: "audi:a8", code: "D5", slug: "d5",
+    startYear: 2017, bodyType: "Berlina de representación", lengthMm: 5172, bootLitres: 505,
+    oneLiner: "La berlina insignia de Audi: tecnología y confort de vanguardia, con el 50 TDI como motor de referencia.",
+    intro:
+      "La cuarta generación del A8 (D5) aportó chasis mixto de aluminio y suspensión predictiva que lee la carretera con cámara. Motores 50/60 TDI diésel y 55/60 TFSI gasolina, todos con quattro y mild-hybrid de 48 V. Tecnología y confort de referencia; mantenimiento y reparaciones muy caros fuera de garantía.",
+    verdict: "Berlina de representación con mucho contenido tecnológico. El 50 TDI es la compra más razonable si asumes el coste de mantenimiento.",
+    strengths: ["Confort y aislamiento de referencia", "Suspensión predictiva que anticipa baches", "Tecnología y equipamiento de vanguardia"],
+    watchouts: ["Coste de mantenimiento y reparaciones muy elevado", "Suspensión neumática y electrónica compleja", "Depreciación rápida (a favor del comprador de ocasión con presupuesto de mantenimiento)"],
+    faq: [
+      { q: "¿Qué es la suspensión predictiva del A8 D5?", a: "Usa una cámara para leer el estado de la carretera y ajusta la suspensión antes de llegar a un bache o resalto." },
+      { q: "¿El A8 D5 es fiable?", a: "Mecánicamente sólido, pero la enorme cantidad de electrónica y sistemas de confort eleva el riesgo y coste de averías fuera de garantía." },
+    ],
+  }),
+  g({
+    id: "audi:q8:4m", modelId: "audi:q8", code: "4M", slug: "4m",
+    startYear: 2018, bodyType: "SUV coupé", lengthMm: 4986, bootLitres: 605,
+    oneLiner: "El SUV insignia de Audi con línea de coupé: mismo fondo mecánico que el Q7, con más imagen y menos maletero.",
+    intro:
+      "El Q8 comparte plataforma MLB evo con el Q7, con una carrocería de techo más bajo y deportivo. Motores 45/50 TDI diésel y 55/60 TFSI gasolina, todos con quattro de serie y mild-hybrid de 48 V. Confort y tecnología de referencia; mantenimiento y neumáticos muy caros.",
+    verdict: "SUV grande de imagen. El 50 TDI con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Diseño más deseable que el Q7 equivalente", "Confort de marcha de referencia", "Tracción quattro de serie"],
+    watchouts: ["Coste de mantenimiento, neumáticos y frenos muy elevado", "Maletero inferior al del Q7 por la línea de techo", "Visibilidad trasera reducida por el diseño"],
+    faq: [
+      { q: "¿El Q8 es un Q7 con otra carrocería?", a: "Comparte plataforma y motores con el Q7; el Q8 apuesta por una línea de coupé más baja y deportiva, a costa de maletero." },
+      { q: "¿Cuánto maletero pierde el Q8 frente al Q7?", a: "En torno a 165 litros menos, por la caída del techo trasero." },
+    ],
+  }),
+  g({
+    id: "mercedes-benz:cls:c257", modelId: "mercedes-benz:cls", code: "C257", slug: "c257",
+    startYear: 2018, endYear: 2023, bodyType: "Berlina coupé", lengthMm: 4996, bootLitres: 490,
+    oneLiner: "La berlina coupé que inventó el segmento: diseño elegante sobre la base de la Clase E, con el CLS 300 d como motor de referencia.",
+    intro:
+      "La tercera generación del CLS comparte plataforma y motores con la Clase E W213. Diésel OM654 (300 d) y OM656 (400 d), gasolina M264 con mild-hybrid. Cuatro plazas reales (sin plaza central trasera) y maletero práctico pese a la línea de coupé.",
+    verdict: "Berlina de imagen con la mecánica fiable de la Clase E. El CLS 300 d es la opción más razonable.",
+    strengths: ["Diseño elegante y diferenciado", "Mecánica compartida con la Clase E, bien conocida", "Confort de marcha notable"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Visibilidad trasera limitada por el diseño", "Solo 4 plazas (sin plaza central trasera)"],
+    faq: [
+      { q: "¿El CLS es una Clase E con otra carrocería?", a: "Comparte plataforma y motores con la Clase E W213; el CLS apuesta por una línea de coupé de cuatro puertas." },
+      { q: "¿El CLS tiene 5 plazas?", a: "No, la banqueta trasera está diseñada para dos plazas individuales, sin plaza central." },
+    ],
+  }),
+  g({
+    id: "mercedes-benz:gls:x167", modelId: "mercedes-benz:gls", code: "X167", slug: "x167",
+    startYear: 2019, bodyType: "SUV 7 plazas", lengthMm: 5207, bootLitres: 890,
+    oneLiner: "El SUV más grande de Mercedes: 7 plazas de verdad, suspensión E-Active Body Control opcional y motores OM656 refinados.",
+    intro:
+      "La segunda generación del GLS comparte plataforma con el GLE, en un tamaño mayor con 7 plazas reales. Motores OM656 diésel (400 d) y gasolina de 6 cilindros mild-hybrid (450). Confort de referencia; mantenimiento y reparaciones muy caros.",
+    verdict: "SUV grande de 7 plazas muy tecnológico. El 400 d con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Espacio y confort de referencia con 7 plazas reales", "Motores de 6 cilindros muy refinados", "Suspensión E-Active Body Control opcional (si la equipa)"],
+    watchouts: ["Coste de mantenimiento y reparaciones muy elevado", "Consumo real alto", "Tamaño exterior poco práctico en ciudad"],
+    faq: [
+      { q: "¿El GLS tiene 7 plazas de verdad?", a: "Sí, es de los pocos SUV donde la tercera fila es realmente usable por adultos en trayectos largos, gracias a su gran tamaño." },
+      { q: "¿GLS o GLE?", a: "El GLS es más grande y con 7 plazas reales; el GLE es más manejable y suficiente para la mayoría de familias." },
+    ],
+  }),
+  g({
+    id: "volkswagen:beetle:a5", modelId: "volkswagen:beetle", code: "A5 (2ª gen 'New Beetle')", slug: "a5",
+    startYear: 2011, endYear: 2019, bodyType: "Urbano 3 puertas y Cabrio", lengthMm: 4278, bootLitres: 310,
+    oneLiner: "El heredero del icónico Escarabajo: mecánica del Golf VI/VII bajo una carrocería de diseño retro.",
+    intro:
+      "La segunda generación del New Beetle (A5) se aleja algo de la forma redondeada original hacia una silueta más deportiva, sobre plataforma compartida con el Golf VI. Motores 1.2/1.4/2.0 TSI gasolina y 1.6/2.0 TDI diésel. Compra emocional: diseño por encima de espacio y practicidad.",
+    verdict: "Coche de imagen con mecánica del Grupo VW bien conocida. El 1.4 TSI o el 1.6 TDI son las compras más razonables.",
+    strengths: ["Diseño icónico y muy reconocible", "Mecánicas del Grupo VW conocidas y fiables", "Cabrio con techo de lona bien resuelto"],
+    watchouts: ["Maletero y plazas traseras reducidos", "Visibilidad trasera limitada por el diseño", "Precio de ocasión con prima frente a un Golf equivalente"],
+    faq: [
+      { q: "¿El Beetle A5 comparte mecánica con el Golf?", a: "Sí, plataforma y motores compartidos con el Golf VI/VII de su época." },
+      { q: "¿Hay Beetle Cabrio?", a: "Sí, con techo de lona retráctil, manteniendo la misma gama de motores que la versión cerrada." },
+    ],
+  }),
+  g({
+    id: "volkswagen:scirocco:iii", modelId: "volkswagen:scirocco", code: "III (1K8)", slug: "iii",
+    startYear: 2008, endYear: 2017, bodyType: "Coupé deportivo", lengthMm: 4256, bootLitres: 292,
+    oneLiner: "Coupé deportivo sobre base de Golf: buen tacto de conducción con mecánicas TSI/TDI muy conocidas.",
+    intro:
+      "La tercera generación del Scirocco recuperó el nombre para un coupé deportivo de 3 puertas sobre plataforma PQ35/Golf VI. Motores 1.4/2.0 TSI gasolina y 2.0 TDI diésel, con la versión R de altas prestaciones. Comportamiento ágil; maletero y plazas traseras reducidos.",
+    verdict: "Coupé deportivo con mecánica de bajo riesgo. El 2.0 TSI 210 CV es la compra más equilibrada.",
+    strengths: ["Buen tacto de conducción y chasis ágil", "Mecánicas TSI/TDI del Grupo VW muy conocidas", "Diseño deportivo bien resuelto"],
+    watchouts: ["Maletero y plazas traseras reducidos", "Visibilidad trasera limitada", "Suspensión firme en las versiones R"],
+    faq: [
+      { q: "¿El Scirocco comparte plataforma con el Golf?", a: "Sí, plataforma PQ35 compartida con el Golf VI, con un ajuste de chasis más deportivo." },
+      { q: "¿Qué es el Scirocco R?", a: "La versión de altas prestaciones con el 2.0 TSI de hasta 280 CV y chasis reforzado." },
+    ],
+  }),
+  g({
+    id: "volkswagen:transporter:t6", modelId: "volkswagen:transporter", code: "T6 / Multivan", slug: "t6",
+    startYear: 2015, endYear: 2024, bodyType: "Furgoneta de pasajeros 7/9 plazas", lengthMm: 4892, bootLitres: 1200,
+    oneLiner: "La furgoneta de pasajeros de referencia: acabado premium en el Multivan, espacio descomunal y mecánica diésel muy probada.",
+    intro:
+      "El T6 mantiene la fórmula de la saga Transporter: chasis robusto, tracción trasera o total (4Motion) y motor 2.0 TDI en varias potencias. El Multivan (acabado de pasajeros) ofrece asientos giratorios y mesa desplegable; la Caravelle prioriza más plazas. Mecánica muy extendida y conocida en cualquier taller.",
+    verdict: "Máximo espacio con mecánica de bajo riesgo. El 2.0 TDI 150 es la compra más razonable.",
+    strengths: ["Espacio y versatilidad de referencia", "2.0 TDI muy extendido y fiable", "Multivan con acabado casi de turismo"],
+    watchouts: ["Consumo alto con el vehículo cargado", "Comportamiento y aislamiento de furgoneta en las versiones básicas", "Precio de ocasión del Multivan bien equipado, elevado"],
+    faq: [
+      { q: "¿Qué diferencia hay entre Transporter, Multivan y Caravelle?", a: "El Transporter es la base de carga/pasajeros; la Caravelle prioriza plazas; el Multivan añade acabado premium, asientos giratorios y mesa." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, con el sistema 4Motion en varias versiones del T6." },
+    ],
+  }),
+  g({
+    id: "cupra:tavascan:default", modelId: "cupra:tavascan", code: "1ª gen", slug: "1",
+    startYear: 2024, bodyType: "SUV coupé eléctrico", lengthMm: 4644, bootLitres: 540,
+    oneLiner: "El SUV coupé eléctrico de CUPRA sobre plataforma MEB: diseño muy trabajado y tracción trasera o total.",
+    intro:
+      "El Tavascan comparte plataforma MEB con el resto de eléctricos del Grupo VW (ID.4, Enyaq), con una carrocería de SUV coupé y un enfoque muy deportivo en diseño e interior. Versiones de tracción trasera y total (VZ). Modelo reciente, sin apenas historial todavía.",
+    verdict: "Eléctrico de diseño muy trabajado. Historial de fiabilidad todavía por hacer; revisar autonomía real y actualizaciones de software.",
+    strengths: ["Diseño interior y exterior muy cuidado", "Buen comportamiento dinámico para un SUV eléctrico", "Plataforma MEB ya madura en el resto de la gama del grupo"],
+    watchouts: ["Modelo muy reciente: historial de fiabilidad prácticamente inexistente", "Precio de ocasión todavía alto", "Visibilidad trasera limitada por el diseño"],
+    faq: [
+      { q: "¿El Tavascan es un ID.4 de CUPRA?", a: "Comparte plataforma MEB con el resto de eléctricos del grupo; CUPRA aporta un diseño de SUV coupé y un enfoque más deportivo." },
+      { q: "¿Qué autonomía tiene el Tavascan?", a: "Según versión, entre 500 y 560 km WLTP homologados; en uso real, bastante menos según clima y velocidad." },
+    ],
+  }),
+  g({
+    id: "toyota:verso:ar20", modelId: "toyota:verso", code: "AR20", slug: "ar20",
+    startYear: 2009, endYear: 2018, bodyType: "Monovolumen 5/7 plazas", lengthMm: 4460, bootLitres: 484,
+    oneLiner: "Monovolumen de fiabilidad de referencia con opción de 7 plazas: el 2.0 D-4D es sobrio, con la solidez habitual de Toyota.",
+    intro:
+      "El Verso sustituyó al Corolla Verso como monovolumen compacto/mediano de Toyota. Motores 1.6/1.8 gasolina atmosférico y 1.6/2.0 D-4D diésel, con tercera fila opcional. Fiabilidad de referencia y mantenimiento barato.",
+    verdict: "Monovolumen de mucha confianza. El 2.0 D-4D con mantenimiento correcto es la compra más razonable.",
+    strengths: ["Fiabilidad mecánica de referencia", "Buen espacio y modularidad de asientos", "Mantenimiento barato y espaciado"],
+    watchouts: ["Diseño e interior conservadores", "Tercera fila justa para adultos", "Prestaciones ajustadas en las versiones de acceso"],
+    faq: [
+      { q: "¿El Verso tiene 7 plazas de verdad?", a: "La tercera fila es opcional y sirve para niños o trayectos cortos, como en la mayoría de monovolúmenes de este tamaño." },
+      { q: "¿El Verso es fiable?", a: "Sí, es de los modelos con mejor reputación de durabilidad de su segmento, con mantenimiento correcto y sin grandes sorpresas mecánicas." },
+    ],
+  }),
+  g({
+    id: "toyota:hilux:an120", modelId: "toyota:hilux", code: "AN120/130 (8ª gen)", slug: "an120",
+    startYear: 2015, bodyType: "Pick-up", lengthMm: 5330, bootLitres: 0,
+    oneLiner: "El pick-up de referencia por durabilidad extrema: el 2.4/2.8 D-4D combina capacidad de carga y una fiabilidad legendaria.",
+    intro:
+      "La octava generación del Hilux mantiene la reputación de indestructibilidad de la saga. Motor 2.4/2.8 D-4D diésel, con tracción total conectable y reductora. Capacidad de carga y remolque de referencia; mecánica sencilla y muy probada en las condiciones más duras.",
+    verdict: "El pick-up para quien de verdad necesita durabilidad extrema. Mantenimiento caro pero mecánica prácticamente indestructible.",
+    strengths: ["Fiabilidad y durabilidad de referencia en el segmento", "Capacidad de carga y remolque de primer nivel", "Tracción total con reductora real"],
+    watchouts: ["Consumo alto con el vehículo cargado", "Comportamiento de carretera propio de un pick-up, no de un turismo", "Precio de compra y mantenimiento superior a un turismo generalista"],
+    faq: [
+      { q: "¿Por qué el Hilux tiene fama de indestructible?", a: "Por décadas de uso en condiciones extremas (minería, ONG, zonas de conflicto) sin apenas averías mecánicas graves con mantenimiento básico." },
+      { q: "¿Cuánto puede remolcar el Hilux?", a: "Hasta 3.500 kg en las versiones con mayor capacidad, cifra de referencia en el segmento." },
+    ],
+  }),
+  g({
+    id: "nissan:navara:np300", modelId: "nissan:navara", code: "NP300 (D23)", slug: "np300",
+    startYear: 2015, bodyType: "Pick-up", lengthMm: 5255, bootLitres: 0,
+    oneLiner: "Pick-up con suspensión trasera multibrazo, poco habitual en el segmento: mejor comportamiento en carretera sin renunciar a la capacidad de carga.",
+    intro:
+      "El Navara NP300 destacó por incorporar una suspensión trasera multibrazo (en vez del eje rígido con ballestas habitual), mejorando el confort en carretera. Motor 2.3 dCi biturbo diésel, con tracción total conectable. Buen equilibrio entre uso profesional y turismo.",
+    verdict: "Pick-up con mejor comportamiento de carretera que la media del segmento. El 2.3 dCi biturbo es la opción con más empuje.",
+    strengths: ["Suspensión trasera multibrazo: mejor confort en carretera", "Buena capacidad de carga y remolque", "Tracción total con reductora"],
+    watchouts: ["Consumo alto con el vehículo cargado", "Turbo biturbo con historial de averías en algunas unidades de primeras series", "Precio de mantenimiento superior a un turismo"],
+    faq: [
+      { q: "¿Qué ventaja tiene la suspensión multibrazo del Navara?", a: "Mejora notablemente el confort y el comportamiento en carretera en vacío, frente al eje rígido de ballestas típico de otros pick-ups." },
+      { q: "¿El motor biturbo del Navara es fiable?", a: "En general sí, aunque algunas unidades de primeras series reportaron averías del turbo; conviene revisar el historial de mantenimiento." },
+    ],
+  }),
+  g({
+    id: "peugeot:206:default", modelId: "peugeot:206", code: "1ª gen", slug: "1",
+    startYear: 1998, endYear: 2012, bodyType: "Utilitario 3 y 5 puertas, SW y CC", lengthMm: 3835, bootLitres: 245,
+    oneLiner: "Uno de los utilitarios más vendidos de la historia en España: precio de ocasión mínimo, con el 1.4 HDi como diésel de referencia.",
+    intro:
+      "El 206 fue durante años el coche más vendido de España. Motores 1.1/1.4/1.6 16V gasolina y 1.4/2.0 HDi diésel. Mecánica muy sencilla y extremadamente conocida en cualquier taller; el precio de compra es su gran atractivo.",
+    verdict: "Coste de compra mínimo. El 1.4 HDi con historial es la opción más razonable; revisar el estado general por la edad.",
+    strengths: ["Precio de compra muy bajo y oferta enorme", "Mecánica sencilla y muy conocida", "1.4 HDi sobrio"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de hasta 25 años", "Óxido en bajos en unidades mal cuidadas", "Equipamiento de seguridad muy por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿Merece la pena un 206 en 2026?", a: "Solo como coche de presupuesto mínimo y kilómetros moderados; su equipamiento de seguridad está muy por debajo de un utilitario actual." },
+      { q: "¿Qué es el 206 CC?", a: "La versión descapotable con techo rígido retráctil, sobre la base mecánica del 206 convencional." },
+    ],
+  }),
+  g({
+    id: "peugeot:307:default", modelId: "peugeot:307", code: "1ª gen", slug: "1",
+    startYear: 2001, endYear: 2008, bodyType: "Compacto 3/5 puertas, SW y CC", lengthMm: 4202, bootLitres: 341,
+    oneLiner: "El predecesor del 308: compacto de ocasión muy barato, con el 1.6/2.0 HDi como motor de referencia y un SW de maletero enorme.",
+    intro:
+      "El 307 fue el compacto de Peugeot antes del 308. Motores 1.4/1.6/2.0 16V gasolina y 1.4/1.6/2.0 HDi diésel. El SW (familiar) tiene un maletero muy amplio para su época. Precio de ocasión ya muy contenido.",
+    verdict: "Compacto de ocasión de coste mínimo. El 2.0 HDi con historial es la compra más razonable para kilómetros.",
+    strengths: ["Precio de compra muy bajo", "SW con maletero muy amplio para su época", "2.0 HDi sobrio y con buen par"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de más de 18 años", "Dirección asistida eléctrica con averías ocasionales por la edad", "EGR y FAP del HDi con uso muy urbano"],
+    faq: [
+      { q: "¿Qué maletero tiene el 307 SW?", a: "En torno a 552 litros con los asientos traseros en posición normal, una cifra notable para su época." },
+      { q: "¿Merece la pena en 2026?", a: "Solo como coche de presupuesto muy ajustado; su equipamiento de seguridad está muy por debajo de un compacto actual." },
+    ],
+  }),
+  g({
+    id: "peugeot:407:default", modelId: "peugeot:407", code: "1ª gen", slug: "1",
+    startYear: 2004, endYear: 2011, bodyType: "Berlina y SW", lengthMm: 4823, bootLitres: 407,
+    oneLiner: "Berlina grande de ocasión de diseño llamativo para su época: el 2.0/2.2 HDi ofrece buen par y consumo contenido.",
+    intro:
+      "El 407 apostó por un diseño muy expresivo en el segmento de berlinas grandes. Motores 1.8/2.0/3.0 V6 gasolina y 1.6/2.0/2.2/2.7 V6 HDi diésel. El SW (familiar) tiene buen maletero. Precio de ocasión ya muy contenido para el tamaño y equipamiento que ofrece.",
+    verdict: "Mucha berlina por poco dinero. El 2.0 HDi con historial es la compra más razonable.",
+    strengths: ["Diseño llamativo y buena presencia", "Confort de marcha por encima de la media", "SW con buen maletero"],
+    watchouts: ["EGR y FAP del HDi con uso muy urbano", "Antigüedad general: suspensión y electrónica de hasta 20 años", "Coste de mantenimiento superior a un compacto de la misma edad"],
+    faq: [
+      { q: "¿El 407 tiene versión V6 diésel?", a: "Sí, el 2.7 HDi V6 (compartido con Citroën C6 y algunos Jaguar/Land Rover de la época), con más refinamiento y par que las versiones de 4 cilindros." },
+      { q: "¿Merece la pena en 2026?", a: "Como berlina grande de presupuesto ajustado, sí; conviene presupuestar un mantenimiento algo superior al de un compacto de la misma edad." },
+    ],
+  }),
+  g({
+    id: "renault:laguna:iii", modelId: "renault:laguna", code: "III", slug: "iii",
+    startYear: 2007, endYear: 2015, bodyType: "Berlina, Estate y Coupé", lengthMm: 4569, bootLitres: 468,
+    oneLiner: "Berlina grande de ocasión muy barata: 5 estrellas Euro NCAP en su lanzamiento, con el 1.5/2.0 dCi como motor de referencia.",
+    intro:
+      "La tercera generación del Laguna destacó por su seguridad pasiva, referencia en su momento. Motores 1.6/2.0 16V gasolina y 1.5/2.0/3.0 V6 dCi diésel. El Estate (familiar) tiene buen maletero, y existió una variante Coupé. Precio de ocasión muy contenido.",
+    verdict: "Mucha berlina por poco dinero. El 2.0 dCi con historial es la compra más razonable.",
+    strengths: ["Buena seguridad pasiva para su época", "Confort de marcha por encima de la media", "Estate con buen maletero"],
+    watchouts: ["Caja automática CVT en algunas versiones (tacto elástico)", "EGR y turbo del dCi con muchos kilómetros", "Antigüedad general en las unidades más viejas de la gama"],
+    faq: [
+      { q: "¿El Laguna III era seguro para su época?", a: "Sí, fue de los primeros coches en lograr la máxima puntuación Euro NCAP con el nuevo protocolo de la época." },
+      { q: "¿Qué es el Laguna Coupé?", a: "Una variante de dos puertas y línea deportiva, con motores de hasta el V6 3.0 dCi en sus versiones más potentes." },
+    ],
+  }),
+  g({
+    id: "renault:koleos:hy0", modelId: "renault:koleos", code: "II (HY)", slug: "hy0",
+    startYear: 2017, bodyType: "SUV", lengthMm: 4673, bootLitres: 458,
+    oneLiner: "SUV medio de Renault, hermano del Nissan X-Trail: buen espacio y el 1.7/2.0 dCi como motores de referencia.",
+    intro:
+      "La segunda generación del Koleos comparte plataforma con el Nissan X-Trail T32, con un posicionamiento algo más orientado al confort. Motores 1.3/1.6 TCe gasolina y 1.7/2.0 dCi diésel, con tracción total opcional. Buen espacio interior y maletero.",
+    verdict: "SUV medio racional. El 2.0 dCi con historial es la compra más razonable para quien hace kilómetros.",
+    strengths: ["Buen espacio interior y maletero", "Mecánicas compartidas con el X-Trail, conocidas", "Confort de marcha por encima de la media"],
+    watchouts: ["Consumo alto en las versiones de gasolina con caja automática", "Turbo y volante bimasa del dCi con muchos kilómetros", "Precio de ocasión con prima frente al X-Trail equivalente"],
+    faq: [
+      { q: "¿El Koleos es un X-Trail de Renault?", a: "Comparte plataforma y buena parte de los motores con el Nissan X-Trail T32; Renault ajusta diseño, interior y confort." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, en las versiones diésel más potentes." },
+    ],
+  }),
+  g({
+    id: "dacia:spring:default", modelId: "dacia:spring", code: "1ª gen", slug: "1",
+    startYear: 2021, bodyType: "Urbano eléctrico", lengthMm: 3733, bootLitres: 300,
+    oneLiner: "El eléctrico más barato del mercado: autonomía y prestaciones justas, pero un precio de entrada al coche eléctrico sin competencia.",
+    intro:
+      "El Dacia Spring es el eléctrico de acceso del grupo Renault, con un planteamiento centrado en el coste. Motor eléctrico de 45/65 CV según versión, batería pequeña orientada a uso urbano. Prestaciones y autonomía justas, pero precio de compra y de uso muy por debajo de cualquier rival eléctrico.",
+    verdict: "El eléctrico para quien solo necesita moverse por ciudad y quiere gastar lo mínimo. No es para autovía habitual.",
+    strengths: ["Precio de compra imbatible entre los eléctricos", "Coste de uso mínimo (electricidad + mantenimiento casi nulo)", "Tamaño perfecto para aparcar en ciudad"],
+    watchouts: ["Autonomía y prestaciones justas, sobre todo en autovía", "Materiales interiores muy básicos", "Equipamiento de seguridad y asistencias limitado"],
+    faq: [
+      { q: "¿Qué autonomía real tiene el Dacia Spring?", a: "En torno a 150-180 km reales en ciudad, bastante menos en autovía; la cifra WLTP homologada es algo superior." },
+      { q: "¿Sirve para carretera?", a: "Para trayectos cortos ocasionales sí; no está pensado para autovía habitual por sus prestaciones y autonomía limitadas." },
+    ],
+  }),
+  g({
+    id: "ford:ka:mk3", modelId: "ford:ka", code: "Mk3 (basado en Fiat 500)", slug: "mk3",
+    startYear: 2009, endYear: 2016, bodyType: "Urbano 3 puertas", lengthMm: 3625, bootLitres: 224,
+    oneLiner: "El Ka desarrollado junto a Fiat sobre la base del 500: motor 1.2 atmosférico, sencillo y fiable, con buen tacto de conducción para un urbano.",
+    intro:
+      "La tercera generación del Ka se desarrolló junto a Fiat, compartiendo plataforma con el 500 de esa época. Motor 1.2 atmosférico Fiat FIRE. Buen tacto de conducción heredado del ADN Ford, con la sencillez mecánica del motor Fiat.",
+    verdict: "Urbano ágil y sencillo. El 1.2 atmosférico basta de sobra para ciudad; justo en autovía.",
+    strengths: ["Buen tacto de conducción para un urbano", "Mecánica Fiat 1.2 sencilla y fiable", "Precio de compra y mantenimiento bajos"],
+    watchouts: ["Solo 3 puertas y maletero pequeño", "Motor justo de fuerza en autovía y cargado", "Equipamiento de seguridad limitado en acabados de acceso"],
+    faq: [
+      { q: "¿El Ka Mk3 es un Fiat 500 de Ford?", a: "Comparte plataforma y motor con el Fiat 500 de su época, con carrocería y diseño propios de Ford." },
+      { q: "¿Es fiable?", a: "Sí, el motor 1.2 Fiat FIRE es sencillo y muy probado; el punto flojo son los acabados de las versiones básicas." },
+    ],
+  }),
+  g({
+    id: "ford:c-max:mk2", modelId: "ford:c-max", code: "Mk2 (DXA)", slug: "mk2",
+    startYear: 2010, endYear: 2019, bodyType: "Monovolumen compacto", lengthMm: 4380, bootLitres: 471,
+    oneLiner: "Monovolumen compacto con el buen chasis Ford: el 1.6/2.0 TDCi es sobrio, con opción de Grand C-Max de 7 plazas.",
+    intro:
+      "El C-Max Mk2 comparte plataforma con el Focus Mk3. Motores 1.0 EcoBoost y 1.6/2.0 gasolina, y 1.5/1.6/2.0 TDCi diésel. El Grand C-Max añade una tercera fila opcional. Buen comportamiento dinámico heredado del Focus.",
+    verdict: "Monovolumen compacto racional. El 1.6/2.0 TDCi con historial es la compra más razonable.",
+    strengths: ["Comportamiento dinámico por encima de la media del segmento", "Buen espacio y modularidad de asientos", "1.6/2.0 TDCi sobrios"],
+    watchouts: ["EGR y turbo del TDCi con muchos kilómetros", "Refrigeración del 1.0 EcoBoost en primeras series (revisar historial)", "Tercera fila del Grand C-Max justa para adultos"],
+    faq: [
+      { q: "¿Qué diferencia hay entre C-Max y Grand C-Max?", a: "El Grand C-Max es la versión alargada con tercera fila opcional para 7 plazas; el C-Max normal tiene 5 plazas." },
+      { q: "¿El C-Max se conduce bien?", a: "Sí, hereda buena parte del chasis del Focus de su época, de lo mejor del segmento de monovolúmenes compactos." },
+    ],
+  }),
+  g({
+    id: "ford:ecosport:mk2", modelId: "ford:ecosport", code: "Mk2 (restyling europeo)", slug: "mk2",
+    startYear: 2017, endYear: 2022, bodyType: "SUV", lengthMm: 4273, bootLitres: 333,
+    oneLiner: "B-SUV con base del Fiesta: motores 1.0 EcoBoost conocidos, rueda de repuesto visible en el portón trasero como seña de identidad.",
+    intro:
+      "El EcoSport de venta europea comparte plataforma con el Fiesta Mk7/Mk8. Motores 1.0 EcoBoost gasolina y 1.5 TDCi diésel. Detalle característico: la rueda de repuesto en algunas versiones se aloja en el propio portón trasero, que se abre lateralmente.",
+    verdict: "B-SUV correcto con mecánica conocida. El 1.0 EcoBoost 125 es la compra más equilibrada.",
+    strengths: ["Mecánicas 1.0 EcoBoost conocidas del Fiesta/Focus", "Buena posición de conducción para el segmento", "Precio de ocasión contenido"],
+    watchouts: ["Portón trasero de apertura lateral, poco práctico en aparcamientos estrechos", "Refrigeración del 1.0 EcoBoost en primeras series (revisar historial)", "Comportamiento menos ágil que otros B-SUV del grupo Ford"],
+    faq: [
+      { q: "¿Por qué el portón del EcoSport se abre hacia el lado?", a: "Para alojar la rueda de repuesto en algunas versiones; es menos práctico que un portón convencional en aparcamientos estrechos." },
+      { q: "¿El EcoSport comparte motor con el Fiesta?", a: "Sí, el 1.0 EcoBoost y el 1.5 TDCi son los mismos que monta el Fiesta de su época." },
+    ],
+  }),
+  g({
+    id: "ford:galaxy:mk3", modelId: "ford:galaxy", code: "Mk3", slug: "mk3",
+    startYear: 2015, bodyType: "Monovolumen 7 plazas", lengthMm: 4855, bootLitres: 300,
+    oneLiner: "El hermano de 7 plazas 'de serie' del S-Max: buen comportamiento y motores compartidos, con más practicidad familiar.",
+    intro:
+      "El Galaxy Mk3 comparte plataforma y motores con el S-Max, pero con 7 plazas de serie en todas las versiones. Motores 1.5/2.0 EcoBoost gasolina y 2.0 EcoBlue diésel, con caja automática Powershift en varias versiones.",
+    verdict: "Monovolumen familiar de 7 plazas muy completo. El 2.0 EcoBlue con historial es la compra más recomendable.",
+    strengths: ["7 plazas de serie en toda la gama", "Comportamiento dinámico por encima de la media del segmento", "2.0 EcoBlue sobrio"],
+    watchouts: ["Caja Powershift de doble embrague (tirones, revisar historial)", "Consumo alto en las versiones de gasolina", "Maletero con las 7 plazas desplegadas muy justo"],
+    faq: [
+      { q: "¿Galaxy o S-Max?", a: "El Galaxy tiene 7 plazas de serie en toda la gama; el S-Max las ofrece como opción y prioriza algo más la dinámica de conducción." },
+      { q: "¿La caja Powershift del Galaxy es fiable?", a: "Puede dar tirones y desgaste en uso urbano intensivo; revisa el historial de mantenimiento y si ha recibido actualizaciones." },
+    ],
+  }),
+  g({
+    id: "hyundai:bayon:default", modelId: "hyundai:bayon", code: "1ª gen", slug: "1",
+    startYear: 2021, bodyType: "SUV", lengthMm: 4180, bootLitres: 411,
+    oneLiner: "B-SUV sobre base del i20: buen maletero para el segmento, con el 1.0 T-GDi como motor de referencia y garantía de 5 años.",
+    intro:
+      "El Bayon comparte plataforma con el i20 de su generación. Motor 1.0 T-GDi (con opción mild-hybrid de 48 V) y 1.2 atmosférico. Buen maletero para un B-SUV y el respaldo de la garantía de fábrica de 5 años.",
+    verdict: "B-SUV racional con buen respaldo de garantía. El 1.0 T-GDi 100 es la compra más equilibrada.",
+    strengths: ["Garantía de fábrica de 5 años", "Buen maletero para el segmento", "1.0 T-GDi elástico"],
+    watchouts: ["Carbonilla en admisión del T-GDi en uso solo urbano", "1.2 atmosférico justo de fuerza con carga", "Multimedia básica en acabados de acceso"],
+    faq: [
+      { q: "¿El Bayon es un i20 más alto?", a: "Comparte plataforma y motores con el i20; añade carrocería SUV y algo más de altura libre." },
+      { q: "¿Qué maletero tiene el Bayon?", a: "En torno a 411 litros, por encima de la media de su segmento." },
+    ],
+  }),
+  g({
+    id: "kia:carnival:ka4", modelId: "kia:carnival", code: "KA4 (Sedona en Europa)", slug: "ka4",
+    startYear: 2014, endYear: 2021, bodyType: "Monovolumen 7/8 plazas", lengthMm: 4995, bootLitres: 960,
+    oneLiner: "Monovolumen grande con hasta 8 plazas y garantía de 7 años: el 2.2 CRDi ofrece buen par para viajar cargado de familia.",
+    intro:
+      "El Carnival (comercializado como Sedona en algunos mercados europeos, incluida España) es un monovolumen grande de hasta 8 plazas. Motor 2.2 CRDi diésel, con buen equipamiento y el respaldo de la garantía de 7 años de Kia. Maletero enorme incluso con todas las plazas ocupadas.",
+    verdict: "Monovolumen familiar de gran capacidad. El 2.2 CRDi con historial es la compra más razonable.",
+    strengths: ["Hasta 8 plazas y maletero enorme", "Garantía de fábrica de 7 años (si aún vigente)", "2.2 CRDi con buen par para carga"],
+    watchouts: ["Consumo alto con el vehículo cargado", "Tamaño exterior poco práctico en ciudad", "EGR y sistema de postratamiento del CRDi con mantenimiento exigente"],
+    faq: [
+      { q: "¿El Sedona y el Carnival son el mismo coche?", a: "Sí, Sedona fue el nombre comercial en varios mercados europeos, incluida España, del mismo monovolumen que en otros mercados se llama Carnival." },
+      { q: "¿Cuántas plazas tiene?", a: "Hasta 8 según configuración, con maletero considerable incluso con todas las plazas en uso." },
+    ],
+  }),
+  g({
+    id: "opel:meriva:b", modelId: "opel:meriva", code: "B", slug: "b",
+    startYear: 2010, endYear: 2017, bodyType: "Monovolumen pequeño", lengthMm: 4288, bootLitres: 400,
+    oneLiner: "Monovolumen pequeño con puertas traseras 'FlexDoors' que se abren en sentido contrario: acceso muy cómodo, con el 1.7 CDTi como diésel de referencia.",
+    intro:
+      "La segunda generación del Meriva incorporó las puertas traseras 'FlexDoors', que se abren hacia atrás facilitando mucho el acceso, sobre todo con sillitas infantiles. Motores 1.4/1.4 Turbo gasolina y 1.3/1.7 CDTi diésel. Buen espacio interior para su tamaño exterior.",
+    verdict: "Monovolumen pequeño muy práctico para familias con niños pequeños. El 1.7 CDTi con historial es la compra más razonable.",
+    strengths: ["Puertas FlexDoors: acceso muy cómodo a las plazas traseras", "Buen espacio interior para su tamaño exterior", "1.7 CDTi sobrio"],
+    watchouts: ["EGR y DPF del CDTi en uso urbano", "Correa de distribución con intervalo a respetar", "Comportamiento algo blando en curva"],
+    faq: [
+      { q: "¿Qué son las puertas FlexDoors del Meriva?", a: "Las puertas traseras se abren en sentido contrario a las convencionales (como las de un coche antiguo 'suicide doors'), facilitando mucho el acceso a las sillitas infantiles." },
+      { q: "¿El Meriva B es fiable?", a: "Mecánicamente sencillo y conocido; el punto a vigilar con la edad es el sistema de gases del diésel en uso muy urbano." },
+    ],
+  }),
+  g({
+    id: "opel:vectra:c", modelId: "opel:vectra", code: "C", slug: "c",
+    startYear: 2002, endYear: 2008, bodyType: "Berlina y Caravan", lengthMm: 4597, bootLitres: 500,
+    oneLiner: "Berlina grande de ocasión muy barata: el 1.9 CDTi ofrece buen consumo, con un Caravan de maletero muy amplio.",
+    intro:
+      "El Vectra C es una berlina grande de ocasión con precio de compra ya mínimo. Motores 1.8/2.2 16V gasolina y 1.9/3.0 CDTi diésel. El Caravan (familiar) tiene un maletero muy amplio para su época. Mecánica sencilla y muy conocida en cualquier taller.",
+    verdict: "Mucha berlina por muy poco dinero. El 1.9 CDTi con historial es la compra más razonable.",
+    strengths: ["Precio de compra muy bajo", "Caravan con maletero muy amplio", "1.9 CDTi sobrio y extendido"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de hasta 24 años", "EGR y turbo del CDTi con muchos kilómetros", "Equipamiento de seguridad muy por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿Merece la pena un Vectra C en 2026?", a: "Solo como coche de presupuesto muy ajustado; su equipamiento de seguridad está muy por debajo de una berlina actual." },
+      { q: "¿Qué maletero tiene el Vectra C Caravan?", a: "En torno a 500 litros, una cifra notable incluso comparada con familiares actuales." },
+    ],
+  }),
+  g({
+    id: "opel:antara:default", modelId: "opel:antara", code: "1ª gen", slug: "1",
+    startYear: 2006, endYear: 2015, bodyType: "SUV", lengthMm: 4575, bootLitres: 420,
+    oneLiner: "SUV medio hermano del Chevrolet Captiva: buen equipamiento para su época, con el 2.0/2.2 CDTi como diésel de referencia.",
+    intro:
+      "El Antara comparte plataforma con el Chevrolet Captiva de la era GM. Motores 2.4 gasolina y 2.0/2.2 CDTi diésel, con tracción total opcional. Precio de ocasión ya muy contenido para un SUV medio de su época.",
+    verdict: "SUV medio de ocasión asequible. El 2.2 CDTi con historial es la compra más razonable.",
+    strengths: ["Precio de ocasión ya muy contenido", "Buen equipamiento para su época", "2.2 CDTi con buen par"],
+    watchouts: ["EGR y turbo del CDTi con muchos kilómetros", "Antigüedad general en las unidades más viejas de la gama", "Consumo alto en la versión de gasolina 2.4"],
+    faq: [
+      { q: "¿El Antara es un Captiva de Opel?", a: "Comparte plataforma y motores con el Chevrolet Captiva de la era GM; cambian diseño y algunos detalles de equipamiento." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, en varias versiones diésel." },
+    ],
+  }),
+  g({
+    id: "citroen:xsara:n1", modelId: "citroen:xsara", code: "N1/N2", slug: "n1",
+    startYear: 1997, endYear: 2005, bodyType: "Compacto 3/5 puertas", lengthMm: 4194, bootLitres: 400,
+    oneLiner: "Compacto de ocasión de coste mínimo: mecánica PSA muy sencilla y conocida, con el 1.9/2.0 HDi como diésel de referencia.",
+    intro:
+      "El Xsara fue el compacto de Citroën antes del C4. Motores 1.4/1.6/1.8/2.0 16V gasolina y 1.9/2.0 HDi diésel, incluida la deportiva VTS. Mecánica muy sencilla y extremadamente conocida en cualquier taller; precio de compra ya mínimo.",
+    verdict: "Coste de compra mínimo. El 1.9/2.0 HDi con historial es la opción más razonable para kilómetros.",
+    strengths: ["Precio de compra muy bajo", "Mecánica sencilla y muy conocida", "HDi sobrio y extendido"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de hasta 28 años", "Óxido en bajos en unidades mal cuidadas", "Equipamiento de seguridad muy por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿Merece la pena un Xsara en 2026?", a: "Solo como coche de presupuesto mínimo y kilómetros moderados; su equipamiento de seguridad está muy por debajo de un compacto actual." },
+      { q: "¿Qué es el Xsara VTS?", a: "La versión deportiva de altas prestaciones, muy apreciada por los aficionados de la época por su motor 2.0 16V." },
+    ],
+  }),
+  g({
+    id: "citroen:saxo:default", modelId: "citroen:saxo", code: "1996-2003", slug: "1996-2003",
+    startYear: 1996, endYear: 2003, bodyType: "Urbano 3 y 5 puertas", lengthMm: 3720, bootLitres: 225,
+    oneLiner: "Urbano clásico de precio mínimo: mecánica muy sencilla, popular en su día en versiones VTS/VTR deportivas.",
+    intro:
+      "El Saxo fue uno de los urbanos más populares de finales de los 90 y principios de los 2000. Motores 1.0/1.1/1.4/1.6 gasolina atmosférico y 1.5/1.9 diésel, con las deportivas VTS/VTR muy recordadas. Mecánica extremadamente sencilla.",
+    verdict: "Coste de compra mínimo para quien busca el urbano más barato posible. Revisar a fondo el estado general por la edad.",
+    strengths: ["Precio de compra prácticamente simbólico", "Mecánica muy sencilla de mantener", "Piezas todavía disponibles en desguaces y recambios genéricos"],
+    watchouts: ["Antigüedad extrema: suspensión, bujes, frenos y electrónica de hasta 30 años", "Prácticamente sin equipamiento de seguridad para los estándares actuales", "Óxido y corrosión muy probables en unidades no garajeadas"],
+    faq: [
+      { q: "¿Es recomendable comprar un Saxo en 2026?", a: "Solo como coche muy económico y de uso ocasional; carece de la seguridad pasiva y activa de cualquier coche moderno." },
+      { q: "¿Qué es el Saxo VTS?", a: "La versión deportiva con el motor 1.6 16V de 118 CV, muy popular entre aficionados por su ligereza y agilidad." },
+    ],
+  }),
+  g({
+    id: "citroen:c2:default", modelId: "citroen:c2", code: "2003-2009", slug: "2003-2009",
+    startYear: 2003, endYear: 2009, bodyType: "Urbano 3 puertas", lengthMm: 3666, bootLitres: 166,
+    oneLiner: "Urbano de ocasión barato, gemelo del C3 de la época en versión de 3 puertas: mecánica PSA sencilla y conocida.",
+    intro:
+      "El C2 comparte plataforma con el C3 de su generación, en una carrocería de 3 puertas más deportiva. Motores 1.1/1.4/1.6 16V gasolina y 1.4 HDi diésel, con la versión VTS/VTR de altas prestaciones. Precio de ocasión ya muy contenido.",
+    verdict: "Urbano de coste mínimo. El 1.4 HDi para consumo bajo; el 1.1/1.4 gasolina para sencillez máxima.",
+    strengths: ["Precio de compra muy bajo", "Comportamiento ágil para su tamaño", "Mecánica sencilla y conocida"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de hasta 22 años", "Maletero y plazas traseras muy reducidos", "Equipamiento de seguridad por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿El C2 comparte plataforma con el C3?", a: "Sí, ambos comparten base mecánica de su época, con el C2 en una carrocería de 3 puertas más corta y deportiva." },
+      { q: "¿Qué es el C2 VTS?", a: "La versión deportiva con el motor 1.6 16V de 125 CV, apreciada por su ligereza." },
+    ],
+  }),
+  g({
+    id: "mazda:5:cw", modelId: "mazda:5", code: "CW (2ª gen)", slug: "cw",
+    startYear: 2010, endYear: 2018, bodyType: "Monovolumen", lengthMm: 4585, bootLitres: 426,
+    oneLiner: "Monovolumen con puertas correderas traseras poco habitual en su segmento: buen tacto de conducción típico de Mazda.",
+    intro:
+      "El Mazda5 CW destaca por sus puertas correderas traseras, muy prácticas en aparcamientos estrechos, algo inusual en un monovolumen de tamaño medio. Motores 1.8/2.0 MZR gasolina atmosférico y 1.6 MZ-CD diésel. Comportamiento ágil para un monovolumen de 7 plazas.",
+    verdict: "Monovolumen práctico y agradable de conducir. El 1.6 MZ-CD con historial es la compra más razonable.",
+    strengths: ["Puertas correderas traseras muy prácticas", "Comportamiento dinámico por encima de la media del segmento", "7 plazas con maletero razonable"],
+    watchouts: ["EGR y FAP del 1.6 MZ-CD con uso muy urbano", "Tercera fila justa para adultos", "Multimedia básica o inexistente en acabados de acceso"],
+    faq: [
+      { q: "¿El Mazda5 tiene 7 plazas de verdad?", a: "Sí, con una tercera fila usable para trayectos cortos o niños, como en la mayoría de monovolúmenes de este tamaño." },
+      { q: "¿Qué ventaja tienen las puertas correderas?", a: "Facilitan mucho el acceso en plazas de aparcamiento estrechas, al no necesitar espacio para abrir una puerta convencional." },
+    ],
+  }),
+  g({
+    id: "fiat:sedici:default", modelId: "fiat:sedici", code: "2006-2014", slug: "2006-2014",
+    startYear: 2006, endYear: 2014, bodyType: "SUV pequeño", lengthMm: 4110, bootLitres: 300,
+    oneLiner: "SUV pequeño gemelo del Suzuki SX4: mecánica sencilla, con opción de tracción total poco habitual en su segmento y precio de ocasión ya muy bajo.",
+    intro:
+      "El Fiat Sedici se desarrolló junto a Suzuki y comparte plataforma y motores con el SX4 de su época. Motores 1.6/2.0 gasolina atmosférico y 1.9 Multijet diésel, con tracción total opcional. Precio de ocasión ya muy contenido.",
+    verdict: "SUV pequeño de coste bajo con capacidad todocamino ligera. El 1.9 Multijet con historial es la compra más razonable.",
+    strengths: ["Opción de tracción total poco habitual en su segmento y precio", "Mecánica sencilla y conocida", "Precio de ocasión ya muy contenido"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de hasta 20 años", "EGR y FAP del diésel con uso muy urbano", "Equipamiento tecnológico muy básico para los estándares actuales"],
+    faq: [
+      { q: "¿El Sedici es un Suzuki con emblema Fiat?", a: "Comparte plataforma y motores con el Suzuki SX4 de su época, fruto de un desarrollo conjunto entre ambas marcas." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, en varias versiones, algo poco habitual en un SUV pequeño de ese precio y época." },
+    ],
+  }),
+  g({
+    id: "volvo:v50:default", modelId: "volvo:v50", code: "545", slug: "545",
+    startYear: 2004, endYear: 2012, bodyType: "Familiar compacto", lengthMm: 4522, bootLitres: 417,
+    oneLiner: "Familiar compacto premium de ocasión ya muy asequible: buen equipamiento de seguridad para su época y motores diésel sobrios.",
+    intro:
+      "El V50 comparte plataforma con el Ford Focus/Mazda3 de su época (era Ford-Volvo). Motores 1.6/1.8/2.0/2.4 gasolina y 1.6/2.0 D diésel. Buen equipamiento de seguridad típico de Volvo; precio de ocasión ya muy contenido para un familiar premium.",
+    verdict: "Familiar premium de coste mínimo. El 2.0 D con historial es la compra más razonable.",
+    strengths: ["Buen equipamiento de seguridad para su época", "Precio de ocasión ya muy contenido", "Diseño e interior que envejecen razonablemente bien"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de hasta 22 años", "EGR y turbo del diésel con muchos kilómetros", "Coste de mantenimiento superior a un familiar generalista de la misma edad"],
+    faq: [
+      { q: "¿El V50 comparte plataforma con el Ford Focus?", a: "Sí, de la era en que Volvo pertenecía al grupo Ford, comparten plataforma y algunos motores con el Focus/Mazda3 de la misma época." },
+      { q: "¿Merece la pena en 2026?", a: "Como familiar premium de presupuesto ajustado, sí; conviene presupuestar un mantenimiento algo superior al de un generalista de la misma edad." },
+    ],
+  }),
+  g({
+    id: "volvo:s40:default", modelId: "volvo:s40", code: "MS", slug: "ms",
+    startYear: 2004, endYear: 2012, bodyType: "Berlina compacta", lengthMm: 4468, bootLitres: 404,
+    oneLiner: "Berlina compacta premium de ocasión ya muy asequible: la versión berlina del V50, con la misma mecánica y buen equipamiento de seguridad.",
+    intro:
+      "El S40 comparte plataforma y motores con el V50 de la misma época (era Ford-Volvo). Motores 1.6/1.8/2.0/2.4 gasolina y 1.6/2.0 D diésel. Precio de ocasión ya muy contenido para una berlina premium compacta.",
+    verdict: "Berlina premium compacta de coste mínimo. El 2.0 D con historial es la compra más razonable.",
+    strengths: ["Buen equipamiento de seguridad para su época", "Precio de ocasión ya muy contenido", "Mecánica compartida con el V50, bien conocida"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de hasta 22 años", "EGR y turbo del diésel con muchos kilómetros", "Maletero inferior al del V50 familiar"],
+    faq: [
+      { q: "¿S40 o V50?", a: "Mecánicamente son iguales; el V50 es familiar con mucho más maletero, el S40 prioriza la estética de berlina." },
+      { q: "¿El S40 es fiable?", a: "Con mantenimiento correcto sí; conviene revisar el historial del turbo diésel y el estado general por la antigüedad." },
+    ],
+  }),
+  g({
+    id: "volvo:c30:default", modelId: "volvo:c30", code: "M", slug: "m",
+    startYear: 2006, endYear: 2013, bodyType: "Compacto deportivo 3 puertas", lengthMm: 4252, bootLitres: 372,
+    oneLiner: "Compacto deportivo con portón de cristal muy característico: buen tacto de conducción y motores compartidos con el S40/V50.",
+    intro:
+      "El C30 se diferenció por su diseño de 3 puertas con portón trasero completamente acristalado. Comparte plataforma y motores con el S40/V50 (era Ford-Volvo). Motores 1.6/1.8/2.0/2.5 T5 gasolina y 1.6/2.0 D diésel. Compra emocional con buen equipamiento de seguridad.",
+    verdict: "Compacto deportivo de diseño distintivo. El 2.0 D con historial es la compra más razonable.",
+    strengths: ["Diseño muy reconocible con el portón acristalado", "Buen equipamiento de seguridad para su época", "Comportamiento ágil para un Volvo de su época"],
+    watchouts: ["Solo 3 puertas y plazas traseras reducidas", "Antigüedad general: suspensión y electrónica de hasta 20 años", "T5 turbo: consumo alto y coste de mantenimiento superior"],
+    faq: [
+      { q: "¿Qué es especial del portón del C30?", a: "Es una luna trasera completa que se abre como portón, dándole una imagen muy característica y diferenciada del resto de compactos de su época." },
+      { q: "¿El C30 T5 es fiable?", a: "Con mantenimiento correcto sí; el turbo y los componentes de admisión piden atención con muchos kilómetros." },
+    ],
+  }),
+  g({
+    id: "alfa-romeo:147:937", modelId: "alfa-romeo:147", code: "937", slug: "937",
+    startYear: 2000, endYear: 2010, bodyType: "Compacto 3/5 puertas", lengthMm: 4155, bootLitres: 280,
+    oneLiner: "Compacto de diseño muy celebrado en su época: el 1.9 JTD es el diésel de referencia, con precio de ocasión ya mínimo.",
+    intro:
+      "El Alfa 147 ganó el premio Car of the Year en su lanzamiento por su diseño. Motores 1.6/2.0 Twin Spark gasolina y 1.9 JTD diésel, incluida la GTA con V6 3.2. Precio de ocasión ya muy contenido; conviene presupuestar un mantenimiento algo superior al de un generalista.",
+    verdict: "Compacto de diseño distintivo y coste ya bajo. El 1.9 JTD con historial es la compra más razonable.",
+    strengths: ["Diseño muy celebrado en su época, todavía atractivo", "Buen tacto de dirección para el segmento", "Precio de ocasión ya muy contenido"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de hasta 26 años", "Electrónica y sensores más delicados que la media generalista", "Recambios y mano de obra algo más caros que un compacto generalista"],
+    faq: [
+      { q: "¿Merece la pena un 147 en 2026?", a: "Solo como coche de presupuesto ajustado y diseño diferenciado; presupuesta un mantenimiento algo superior al de un generalista de la misma edad." },
+      { q: "¿Qué es el 147 GTA?", a: "La versión de altas prestaciones con motor V6 3.2 atmosférico de 250 CV, muy apreciada por los aficionados." },
+    ],
+  }),
+  g({
+    id: "alfa-romeo:156:932", modelId: "alfa-romeo:156", code: "932", slug: "932",
+    startYear: 1997, endYear: 2005, bodyType: "Berlina y Sportwagon", lengthMm: 4430, bootLitres: 355,
+    oneLiner: "Berlina icónica de diseño muy influyente en su época: el 1.9 JTD es sobrio, con un Sportwagon de buen maletero.",
+    intro:
+      "El Alfa 156 marcó un antes y un después en el diseño de berlinas de su segmento. Motores 1.6/1.8/2.0/2.5 V6 gasolina y 1.9/2.4 JTD diésel. El Sportwagon (familiar) mantiene la misma estética deportiva con más maletero. Precio de ocasión ya muy bajo.",
+    verdict: "Berlina de diseño influyente y coste ya mínimo. El 1.9 JTD con historial es la compra más razonable.",
+    strengths: ["Diseño muy influyente, todavía atractivo hoy", "Buen tacto de conducción para su segmento y época", "Precio de compra muy bajo"],
+    watchouts: ["Antigüedad general: suspensión, bujes y electrónica de hasta 29 años", "Electrónica y sensores más delicados que la media generalista", "Óxido en unidades mal cuidadas"],
+    faq: [
+      { q: "¿Merece la pena un 156 en 2026?", a: "Solo como coche de presupuesto mínimo y kilómetros moderados; su equipamiento de seguridad está muy por debajo de una berlina actual." },
+      { q: "¿Qué es el 156 Sportwagon?", a: "La versión familiar, con la misma línea deportiva y más maletero que la berlina." },
+    ],
+  }),
+  g({
+    id: "jeep:grand-cherokee:wk2", modelId: "jeep:grand-cherokee", code: "WK2", slug: "wk2",
+    startYear: 2011, bodyType: "SUV", lengthMm: 4828, bootLitres: 782,
+    oneLiner: "SUV grande con capacidad todocamino real: el 3.0 CRD V6 ofrece buen par para remolcar, con tracción total Quadra-Trac.",
+    intro:
+      "El Grand Cherokee WK2 combina confort de carretera con capacidad todocamino genuina gracias a sus sistemas Quadra-Trac/Quadra-Drive. Motores V6 3.6 Pentastar gasolina y V6 3.0 CRD diésel (de origen Mercedes/VM Motori), con suspensión neumática opcional.",
+    verdict: "SUV grande muy capaz dentro y fuera de carretera. El 3.0 CRD con mantenimiento documentado es la compra más razonable.",
+    strengths: ["Capacidad todocamino real con los sistemas Quadra-Trac/Drive", "Buen par del 3.0 CRD para remolcar y viajar cargado", "Confort de marcha notable para un todocamino"],
+    watchouts: ["Suspensión neumática opcional (coste elevado si falla)", "Consumo alto, sobre todo en el V6 gasolina", "Coste de mantenimiento superior a un SUV generalista"],
+    faq: [
+      { q: "¿Qué es Quadra-Trac?", a: "El sistema de tracción total de Jeep, con distintas variantes según el nivel de capacidad todocamino que ofrece cada versión." },
+      { q: "¿El Grand Cherokee sirve para remolcar?", a: "Sí, con el 3.0 CRD puede remolcar hasta unos 3.500 kg según configuración, cifra de referencia en su segmento." },
+    ],
+  }),
+  g({
+    id: "jeep:wrangler:jl", modelId: "jeep:wrangler", code: "JL", slug: "jl",
+    startYear: 2018, bodyType: "Todoterreno", lengthMm: 4334, bootLitres: 548,
+    oneLiner: "El todoterreno icónico por excelencia: chasis en escalera, ejes rígidos y reductora real, con capotas y puertas desmontables.",
+    intro:
+      "El Wrangler JL mantiene la fórmula clásica de todoterreno auténtico: chasis en escalera, ejes rígidos delante y detrás, y reductora en toda la gama. Motor gasolina V6 3.6 Pentastar (y 4 cilindros turbo en versiones más recientes), con capota y puertas desmontables. Capacidad off-road de referencia; comportamiento de carretera propio de un todoterreno clásico.",
+    verdict: "Para quien de verdad quiere un todoterreno puro. Poco coche para uso exclusivamente urbano por su consumo y comportamiento en carretera.",
+    strengths: ["Capacidad todocamino genuina, de las más altas de serie del mercado", "Capota y puertas desmontables: experiencia única de conducción al aire libre", "Buena retención de valor por su carácter icónico"],
+    watchouts: ["Consumo alto, especialmente en el V6 gasolina", "Comportamiento de carretera propio de un todoterreno clásico (menos refinado que un SUV)", "Seguros y mantenimiento más caros que un SUV generalista"],
+    faq: [
+      { q: "¿El Wrangler JL tiene reductora real?", a: "Sí, en toda la gama, con chasis en escalera y ejes rígidos: capacidad todocamino genuina muy por encima de cualquier SUV con 'modo nieve'." },
+      { q: "¿Se pueden quitar las puertas y la capota?", a: "Sí, es una de sus señas de identidad: capota y puertas son desmontables para una experiencia de conducción al aire libre." },
+    ],
+  }),
+  g({
+    id: "land-rover:range-rover:l405", modelId: "land-rover:range-rover", code: "L405", slug: "l405",
+    startYear: 2012, endYear: 2022, bodyType: "SUV de lujo", lengthMm: 4999, bootLitres: 909,
+    oneLiner: "El SUV de lujo de referencia: chasis de aluminio, capacidad todocamino de primer nivel y el 3.0 SDV6 como motor más razonable.",
+    intro:
+      "El Range Rover L405 dio un salto de peso notable con un chasis íntegramente de aluminio. Motores V6/V8 diésel y gasolina, con el 3.0 SDV6 como opción más equilibrada entre prestaciones y consumo. Capacidad todocamino y confort de carretera de referencia; mantenimiento propio de un SUV de lujo.",
+    verdict: "SUV de lujo con capacidad todocamino real. El 3.0 SDV6 con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Confort de marcha y capacidad todocamino de referencia", "Chasis de aluminio: peso reducido para su tamaño", "Interior de gran calidad y equipamiento"],
+    watchouts: ["Coste de mantenimiento y reparaciones muy elevado", "Suspensión neumática compleja (coste si falla)", "Electrónica sofisticada y sensible"],
+    faq: [
+      { q: "¿El Range Rover L405 es fiable?", a: "Ha mejorado respecto a generaciones anteriores, pero el coste de mantenimiento y reparaciones sigue siendo de los más altos del mercado." },
+      { q: "¿Qué motor del Range Rover L405 es más razonable?", a: "El 3.0 SDV6 diésel ofrece el mejor equilibrio entre prestaciones, consumo y coste de mantenimiento frente a los V8." },
+    ],
+  }),
+  g({
+    id: "land-rover:defender:l663", modelId: "land-rover:defender", code: "L663", slug: "l663",
+    startYear: 2020, bodyType: "Todoterreno", lengthMm: 4758, bootLitres: 397,
+    oneLiner: "El renacer del icono: chasis monocasco moderno (no en escalera como el original), con capacidad todocamino real y motores Ingenium/SDV6.",
+    intro:
+      "El nuevo Defender L663 abandonó el chasis en escalera clásico por una estructura monocasco de aluminio, ganando confort de carretera sin renunciar a mucha capacidad todocamino. Motores Ingenium diésel y gasolina, con el 3.0 D300 SDV6 como opción de más par. Tecnología y confort muy superiores al Defender original.",
+    verdict: "Todoterreno moderno con mucho contenido tecnológico. El D250/D300 con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Capacidad todocamino real con confort de SUV moderno", "Interior y tecnología muy superiores al Defender clásico", "Buena imagen y retención de valor"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Modelo relativamente reciente: historial de fiabilidad a largo plazo todavía por confirmar", "Precio de ocasión todavía alto"],
+    faq: [
+      { q: "¿El nuevo Defender tiene chasis en escalera como el clásico?", a: "No, pasó a una estructura monocasco de aluminio, que mejora el confort de carretera aunque cambia la filosofía constructiva del modelo original." },
+      { q: "¿Sigue siendo capaz fuera de asfalto?", a: "Sí, mantiene una capacidad todocamino muy alta, aunque el planteamiento constructivo sea distinto al del Defender clásico." },
+    ],
+  }),
+  g({
+    id: "land-rover:discovery:l462", modelId: "land-rover:discovery", code: "L462 (5ª gen)", slug: "l462",
+    startYear: 2017, bodyType: "SUV 7 plazas", lengthMm: 4970, bootLitres: 1231,
+    oneLiner: "SUV grande de 7 plazas con capacidad todocamino real: el 3.0 SDV6 ofrece buen par para remolcar y viajar cargado.",
+    intro:
+      "La quinta generación del Discovery pasó a un chasis monocasco de aluminio, ganando confort sin perder demasiada capacidad todocamino. Motores Ingenium diésel/gasolina y el 3.0 SDV6 en las versiones de más par. Tercera fila plegable eléctricamente y maletero enorme.",
+    verdict: "SUV grande de 7 plazas muy completo. El 3.0 SDV6 con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Espacio y maletero de referencia con 7 plazas reales", "Capacidad todocamino notable para un SUV de este confort", "Tercera fila plegable eléctricamente"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Suspensión neumática (coste si falla)", "Consumo real alto"],
+    faq: [
+      { q: "¿El Discovery L462 tiene 7 plazas de verdad?", a: "Sí, es de los SUV con mejor espacio en la tercera fila, usable por adultos en trayectos largos." },
+      { q: "¿Cuánto puede remolcar el Discovery?", a: "Hasta 3.500 kg en las versiones con mayor capacidad, cifra de referencia en su segmento." },
+    ],
+  }),
+  g({
+    id: "lexus:is:xe30", modelId: "lexus:is", code: "XE30 (3ª gen)", slug: "xe30",
+    startYear: 2013, bodyType: "Berlina deportiva", lengthMm: 4665, bootLitres: 450,
+    oneLiner: "Berlina deportiva premium solo con motores de gasolina/híbrido: el IS 300h combina consumo bajo con la fiabilidad de Lexus.",
+    intro:
+      "La tercera generación del IS abandonó el diésel en Europa, centrándose en gasolina atmosférica y el híbrido 2.5 (IS 300h). Diseño deportivo y buen tacto de conducción, con la fiabilidad y el bajo mantenimiento habituales de Lexus.",
+    verdict: "Berlina deportiva de mucha confianza. El IS 300h es la compra más razonable de ocasión.",
+    strengths: ["Fiabilidad mecánica y bajo mantenimiento", "Buen tacto de conducción para una berlina premium", "Consumo contenido en el híbrido"],
+    watchouts: ["Sin versión diésel, a diferencia de sus rivales alemanes de la época", "Maletero algo reducido en el híbrido", "Precio de ocasión con prima por la percepción de fiabilidad"],
+    faq: [
+      { q: "¿Hay IS diésel?", a: "No en esta generación; Lexus centró la gama europea en gasolina atmosférico e híbrido." },
+      { q: "¿El IS 300h es fiable?", a: "Sí, hereda la mecánica híbrida de Lexus/Toyota, de las más fiables y con menor coste de mantenimiento del segmento premium." },
+    ],
+  }),
+  g({
+    id: "lexus:es:xz10", modelId: "lexus:es", code: "XZ10 (7ª gen)", slug: "xz10",
+    startYear: 2018, bodyType: "Berlina", lengthMm: 4975, bootLitres: 454,
+    oneLiner: "Berlina grande premium solo híbrida: confort de referencia y la fiabilidad más probada del segmento premium.",
+    intro:
+      "El ES XZ10 se vende en Europa únicamente en versión híbrida (ES 300h), con un planteamiento centrado en confort y fiabilidad más que en dinámica de conducción. Consumo bajo para una berlina de su tamaño y mantenimiento barato.",
+    verdict: "Berlina grande premium de tranquilidad total. Consumo muy contenido y fiabilidad de referencia.",
+    strengths: ["Fiabilidad y bajo mantenimiento de referencia en el segmento", "Confort de marcha notable", "Consumo bajo para una berlina de su tamaño"],
+    watchouts: ["Dinámica de conducción más conservadora que rivales alemanes", "El cambio e-CVT 'estira' de vueltas al exigir el motor", "Oferta de ocasión todavía limitada en España"],
+    faq: [
+      { q: "¿El ES se vende con motor de gasolina puro en España?", a: "No, en el mercado europeo solo se ofrece en versión híbrida (ES 300h)." },
+      { q: "¿Cuánto consume el ES 300h?", a: "En uso mixto puede moverse en torno a 5,5-6 l/100 km reales, una cifra baja para una berlina de su tamaño." },
+    ],
+  }),
+  g({
+    id: "suzuki:sx4:default", modelId: "suzuki:sx4", code: "1ª gen", slug: "1",
+    startYear: 2006, endYear: 2014, bodyType: "Compacto / SUV pequeño", lengthMm: 4115, bootLitres: 270,
+    oneLiner: "Compacto/SUV pequeño con opción de tracción total poco habitual en su segmento y época: mecánica sencilla, gemelo del Fiat Sedici.",
+    intro:
+      "El SX4 se desarrolló junto a Fiat (Sedici). Motores 1.6 gasolina y 1.9 diésel, con tracción total ALLGRIP opcional. Mecánica sencilla y muy conocida; precio de ocasión ya muy contenido.",
+    verdict: "SUV/compacto de coste bajo con capacidad todocamino ligera. El diésel con historial es la compra más razonable.",
+    strengths: ["Opción de tracción total poco habitual en su segmento y precio", "Mecánica sencilla y conocida", "Precio de ocasión ya muy contenido"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de hasta 20 años", "Equipamiento tecnológico muy básico para los estándares actuales", "EGR y FAP del diésel con uso muy urbano"],
+    faq: [
+      { q: "¿El SX4 es lo mismo que el Fiat Sedici?", a: "Comparten plataforma y motores, fruto de un desarrollo conjunto entre ambas marcas." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, en varias versiones, algo poco habitual en un compacto/SUV pequeño de ese precio y época." },
+    ],
+  }),
+  g({
+    id: "suzuki:baleno:default", modelId: "suzuki:baleno", code: "2ª gen (2016-)", slug: "2016",
+    startYear: 2016, bodyType: "Utilitario 5 puertas", lengthMm: 3995, bootLitres: 355,
+    oneLiner: "Utilitario ligero con buen maletero para su clase: mecánica 1.0 Boosterjet turbo elástica y sencilla, mild-hybrid en las últimas series.",
+    intro:
+      "El Baleno actual apuesta por la ligereza, típica de Suzuki, y un maletero superior a la media del segmento. Motor 1.0 Boosterjet turbo y 1.2 Dualjet atmosférico mild-hybrid. Mecánica sencilla y fiable, sin grandes sorpresas.",
+    verdict: "Utilitario ligero y bien resuelto. El 1.0 Boosterjet es la compra más equilibrada.",
+    strengths: ["Buen maletero para el segmento", "Ligereza y agilidad típicas de Suzuki", "Mecánica sencilla y fiable"],
+    watchouts: ["Insonorización básica", "Equipamiento de asistencias limitado en acabados de acceso", "Red de talleres más reducida que las marcas generalistas grandes"],
+    faq: [
+      { q: "¿Qué maletero tiene el Baleno?", a: "En torno a 355 litros, por encima de la media de utilitarios de su tamaño." },
+      { q: "¿Es fiable?", a: "Sí, mecánica sencilla y muy en línea con la reputación de fiabilidad habitual de Suzuki." },
+    ],
+  }),
+  g({
+    id: "mitsubishi:colt:z30", modelId: "mitsubishi:colt", code: "Z30 (6ª gen)", slug: "z30",
+    startYear: 2004, endYear: 2012, bodyType: "Utilitario 3 y 5 puertas", lengthMm: 3880, bootLitres: 235,
+    oneLiner: "Utilitario de ocasión barato, desarrollado junto a Smart: mecánica sencilla, con precio de compra ya mínimo.",
+    intro:
+      "El Colt Z30 se desarrolló en colaboración con DaimlerChrysler (base compartida con el smart forfour de la época). Motores 1.1/1.3/1.5 gasolina atmosférico y 1.5 DI-D diésel. Precio de ocasión ya muy contenido.",
+    verdict: "Utilitario de coste mínimo. El 1.5 DI-D para consumo bajo; el 1.1/1.3 gasolina para sencillez máxima.",
+    strengths: ["Precio de compra muy bajo", "Mecánica sencilla y conocida", "Buen comportamiento para su clase y época"],
+    watchouts: ["Antigüedad general: suspensión y electrónica de hasta 22 años", "Oferta de recambios más limitada que en marcas generalistas grandes", "Equipamiento de seguridad por debajo de los estándares actuales"],
+    faq: [
+      { q: "¿El Colt Z30 comparte base con el smart forfour?", a: "Sí, ambos se desarrollaron conjuntamente en la época de colaboración entre Mitsubishi y DaimlerChrysler." },
+      { q: "¿Merece la pena en 2026?", a: "Solo como coche de presupuesto muy ajustado; su equipamiento de seguridad está muy por debajo de un utilitario actual." },
+    ],
+  }),
+  g({
+    id: "mitsubishi:pajero:v80", modelId: "mitsubishi:pajero", code: "V80 (4ª gen)", slug: "v80",
+    startYear: 2006, endYear: 2021, bodyType: "Todoterreno 5/7 plazas", lengthMm: 4900, bootLitres: 545,
+    oneLiner: "Todoterreno de referencia por durabilidad extrema: chasis monocasco reforzado, reductora y el 3.2 DI-D como motor principal.",
+    intro:
+      "El Pajero V80 mantiene una reputación de robustez extrema, muy usado en flotas exigentes, ONG y zonas rurales. Motor 3.2 DI-D diésel, con tracción total Super Select II y reductora. Comportamiento de carretera propio de un todoterreno clásico.",
+    verdict: "Para quien de verdad necesita capacidad todocamino y durabilidad probada. El 3.2 DI-D con mantenimiento correcto es prácticamente indestructible.",
+    strengths: ["Fiabilidad y durabilidad de referencia en condiciones extremas", "Capacidad todocamino real con reductora", "Buen espacio con la opción de 7 plazas"],
+    watchouts: ["Consumo alto para los estándares actuales", "Comportamiento de carretera propio de un todoterreno clásico", "Descatalogado: la disponibilidad de algunas piezas puede alargarse"],
+    faq: [
+      { q: "¿Por qué el Pajero tiene fama de indestructible?", a: "Por décadas de uso en condiciones extremas (rally Dakar, ONG, zonas rurales) sin apenas averías mecánicas graves con mantenimiento básico." },
+      { q: "¿Qué es Super Select II?", a: "El sistema de tracción total de Mitsubishi, que permite circular en tracción total permanente en asfalto sin desgastar la transmisión." },
+    ],
+  }),
+  g({
+    id: "mitsubishi:l200:kb", modelId: "mitsubishi:l200", code: "KB/KL (5ª/6ª gen)", slug: "kb-kl",
+    startYear: 2015, bodyType: "Pick-up", lengthMm: 5305, bootLitres: 0,
+    oneLiner: "Pick-up de fiabilidad de referencia: el 2.2 DI-D combina buen par y consumo contenido, con tracción total Super Select.",
+    intro:
+      "El L200 mantiene la reputación de robustez de la saga Pajero/L200. Motor 2.2/2.4 DI-D diésel, con tracción total conectable o el sistema Super Select en las versiones más completas. Capacidad de carga y remolque de referencia en su segmento.",
+    verdict: "Pick-up muy fiable para trabajo y uso mixto. El 2.2 DI-D con mantenimiento correcto es una compra de mucha confianza.",
+    strengths: ["Fiabilidad y durabilidad de referencia", "Buena capacidad de carga y remolque", "Consumo contenido para el segmento"],
+    watchouts: ["Consumo alto con el vehículo cargado", "Comportamiento de carretera propio de un pick-up", "Precio de mantenimiento superior a un turismo generalista"],
+    faq: [
+      { q: "¿Cuánto puede remolcar el L200?", a: "Hasta 3.100-3.500 kg según versión, una cifra competitiva en su segmento." },
+      { q: "¿El L200 es fiable?", a: "Muy: hereda la reputación de robustez de la saga Pajero, con mantenimiento correcto es de los pick-ups más fiables del mercado." },
+    ],
+  }),
+  g({
+    id: "tesla:model-s:default", modelId: "tesla:model-s", code: "1ª gen (restyling)", slug: "1",
+    startYear: 2016, bodyType: "Berlina eléctrica grande", lengthMm: 4979, bootLitres: 894,
+    oneLiner: "La berlina eléctrica grande que puso a Tesla en el mapa: autonomía muy alta, prestaciones extremas en las versiones Plaid y acceso a Supercargadores.",
+    intro:
+      "El Model S es el buque insignia histórico de Tesla, con maletero delantero y trasero (más de 800 litros combinados) y versiones que van desde la Long Range hasta la Plaid de prestaciones extremas. Mismo mantenimiento mínimo que el resto de la gama Tesla; revisar el estado de la batería y del sistema de asistencia a la conducción de la unidad concreta.",
+    verdict: "Berlina eléctrica grande de referencia por autonomía y prestaciones. Revisar historial de batería y de reparaciones antes de comprar.",
+    strengths: ["Autonomía muy alta para su clase", "Maletero delantero y trasero combinados, muy amplio", "Acceso a la red de Supercargadores"],
+    watchouts: ["Reparaciones de carrocería y suspensión caras y con talleres limitados", "Precio de ocasión todavía alto en las versiones recientes", "Consumo real superior al homologado a alta velocidad"],
+    faq: [
+      { q: "¿Qué autonomía tiene el Model S?", a: "Según versión y año, entre 500 y más de 600 km WLTP homologados; en uso real y autovía, bastante menos." },
+      { q: "¿Qué es el Model S Plaid?", a: "La versión de altas prestaciones con tres motores eléctricos y aceleraciones propias de un hiperdeportivo." },
+    ],
+  }),
+  g({
+    id: "tesla:model-x:default", modelId: "tesla:model-x", code: "1ª gen (restyling)", slug: "1",
+    startYear: 2016, bodyType: "SUV eléctrico grande", lengthMm: 5057, bootLitres: 2180,
+    oneLiner: "SUV eléctrico grande con puertas traseras 'Falcon Wing' verticales: hasta 7 plazas, autonomía alta y prestaciones muy fuertes.",
+    intro:
+      "El Model X comparte gran parte de la mecánica con el Model S, en carrocería de SUV con puertas traseras 'Falcon Wing' que se abren en vertical. Tracción total de serie, con opción de 7 plazas. Muy espacioso pero con un coste de mantenimiento de las puertas superior al resto de la gama.",
+    verdict: "SUV eléctrico grande con mucho espacio y prestaciones. Revisar historial de las puertas Falcon Wing y de la batería.",
+    strengths: ["Espacio interior y de carga enormes", "Tracción total de serie y prestaciones muy altas", "Opción de 7 plazas real"],
+    watchouts: ["Puertas Falcon Wing: mecanismo complejo y caro de reparar si falla", "Reparaciones de carrocería caras y con talleres limitados", "Consumo real superior al homologado a alta velocidad"],
+    faq: [
+      { q: "¿Qué son las puertas Falcon Wing del Model X?", a: "Puertas traseras que se abren hacia arriba en vertical, pensadas para facilitar el acceso en plazas de aparcamiento estrechas; su mecanismo es complejo y caro de reparar." },
+      { q: "¿El Model X tiene 7 plazas?", a: "Opcionalmente, con una configuración de asientos individuales en la segunda y tercera fila." },
+    ],
+  }),
+  g({
+    id: "mg:mg5:default", modelId: "mg:mg5", code: "1ª gen", slug: "1",
+    startYear: 2022, bodyType: "Familiar eléctrico", lengthMm: 4600, bootLitres: 479,
+    oneLiner: "Uno de los pocos familiares 100% eléctricos del mercado: buen maletero, precio competitivo y garantía amplia.",
+    intro:
+      "El MG5 es de los pocos familiares eléctricos del mercado, con carrocería tipo Sports Tourer y maletero competitivo. Motor eléctrico de tracción delantera con una única capacidad de batería en la mayoría de mercados. Historial de fiabilidad todavía corto en Europa.",
+    verdict: "Familiar eléctrico de nicho con buen maletero y precio competitivo. Historial de fiabilidad todavía por hacer.",
+    strengths: ["De los pocos familiares eléctricos del mercado", "Buen maletero para un eléctrico", "Precio competitivo frente a rivales de origen europeo"],
+    watchouts: ["Historial de fiabilidad todavía corto en el mercado europeo", "Red de talleres más reducida que las marcas establecidas", "Retención de valor por confirmar a largo plazo"],
+    faq: [
+      { q: "¿Qué maletero tiene el MG5?", a: "En torno a 479 litros, competitivo frente a familiares de combustión de tamaño similar." },
+      { q: "¿Qué autonomía tiene el MG5?", a: "En torno a 320-400 km WLTP según versión; en uso real, algo menos." },
+    ],
+  }),
+  g({
+    id: "ssangyong:korando:default", modelId: "ssangyong:korando", code: "4ª gen (2019-)", slug: "4",
+    startYear: 2019, bodyType: "SUV", lengthMm: 4450, bootLitres: 551,
+    oneLiner: "SUV medio con buen maletero y precio competitivo: el 1.6 diésel es el motor de referencia, con red de talleres más reducida que las generalistas.",
+    intro:
+      "El Korando de cuarta generación ofrece un diseño más convencional y competitivo que generaciones anteriores. Motores 1.5 turbo gasolina y 1.6 diésel, con tracción total opcional. Buen maletero y equipamiento para su precio; la marca tiene menos presencia y red de talleres que las generalistas europeas o japonesas.",
+    verdict: "SUV medio de buena relación equipamiento/precio. El 1.6 diésel es la opción más razonable para kilómetros.",
+    strengths: ["Buen maletero y equipamiento para su precio", "Garantía de fábrica competitiva", "Tracción total opcional"],
+    watchouts: ["Red de talleres y recambios más reducida que las marcas generalistas", "Retención de valor inferior a marcas más establecidas", "Historial de fiabilidad menos documentado en España"],
+    faq: [
+      { q: "¿SsangYong y KGM son la misma marca?", a: "KGM es el nombre que adoptó SsangYong tras un cambio de propietario; los modelos y la red comercial son continuidad de la misma marca." },
+      { q: "¿Es fácil encontrar taller para un SsangYong en España?", a: "La red es más reducida que la de marcas generalistas grandes, aunque existe presencia en las principales ciudades." },
+    ],
+  }),
+  g({
+    id: "ssangyong:tivoli:default", modelId: "ssangyong:tivoli", code: "1ª gen (2015-)", slug: "1",
+    startYear: 2015, bodyType: "SUV pequeño", lengthMm: 4225, bootLitres: 423,
+    oneLiner: "B-SUV con buen maletero y precio competitivo: el 1.6 diésel es el motor de referencia, con garantía de fábrica generosa.",
+    intro:
+      "El Tivoli es el B-SUV de SsangYong, con un diseño competitivo y buen equipamiento para su precio. Motores 1.2/1.5 turbo gasolina y 1.6 diésel, con tracción total opcional en algunas versiones. Buen maletero para el segmento.",
+    verdict: "B-SUV de buena relación equipamiento/precio. El 1.6 diésel es la opción más razonable para kilómetros.",
+    strengths: ["Buen maletero para el segmento", "Precio y equipamiento competitivos", "Garantía de fábrica generosa"],
+    watchouts: ["Red de talleres y recambios más reducida que las marcas generalistas", "Retención de valor inferior a marcas más establecidas", "Multimedia y asistencias básicas en acabados de acceso"],
+    faq: [
+      { q: "¿Qué maletero tiene el Tivoli?", a: "En torno a 423 litros, por encima de la media de su segmento." },
+      { q: "¿Merece la pena por precio?", a: "Sí, si priorizas equipamiento y maletero por el dinero y no te preocupa la red de talleres más reducida." },
+    ],
+  }),
+  g({
+    id: "ssangyong:rexton:default", modelId: "ssangyong:rexton", code: "3ª gen (2017-)", slug: "3",
+    startYear: 2017, bodyType: "SUV grande 7 plazas", lengthMm: 4850, bootLitres: 649,
+    oneLiner: "SUV grande de 7 plazas con capacidad de remolque notable: el 2.2 diésel ofrece buen par, con precio competitivo frente a rivales generalistas.",
+    intro:
+      "El Rexton de tercera generación es un SUV grande de 7 plazas con capacidad de remolque de referencia en su segmento (hasta 3.500 kg). Motor 2.2 diésel, con tracción total y reductora en varias versiones. Buen equipamiento para su precio; red de talleres más reducida que las generalistas.",
+    verdict: "SUV grande de 7 plazas con buena capacidad de remolque por un precio competitivo. El 2.2 diésel es la compra más razonable.",
+    strengths: ["Capacidad de remolque de referencia en su segmento y precio", "Buen espacio y maletero con 7 plazas", "Precio competitivo frente a rivales generalistas equivalentes"],
+    watchouts: ["Red de talleres y recambios más reducida que las marcas generalistas", "Retención de valor inferior a marcas más establecidas", "Consumo alto con el vehículo cargado"],
+    faq: [
+      { q: "¿Cuánto puede remolcar el Rexton?", a: "Hasta 3.500 kg en las versiones con reductora, una cifra de referencia en su segmento y rango de precio." },
+      { q: "¿Tiene reductora?", a: "Sí, en las versiones con tracción total más completas, dándole una capacidad todocamino real poco habitual a este precio." },
+    ],
+  }),
+  g({
+    id: "chevrolet:aveo:t300", modelId: "chevrolet:aveo", code: "T300 (2ª gen)", slug: "t300",
+    startYear: 2011, endYear: 2015, bodyType: "Utilitario 5 puertas", lengthMm: 4039, bootLitres: 290,
+    oneLiner: "Utilitario de ocasión de coste mínimo: mecánica GM sencilla, compartida en parte con Opel de la misma época.",
+    intro:
+      "El Aveo T300 fue el utilitario de acceso de Chevrolet en Europa antes de la retirada de la marca del mercado europeo de turismos en 2015. Motores 1.2/1.4/1.6 gasolina atmosférico y 1.3 diésel (de origen GM/Fiat). Precio de ocasión ya muy contenido.",
+    verdict: "Utilitario de coste mínimo. El 1.3 diésel para consumo bajo; el 1.2/1.4 gasolina para sencillez máxima.",
+    strengths: ["Precio de compra muy bajo", "Buen maletero para su clase", "Mecánica sencilla de origen GM"],
+    watchouts: ["Marca retirada de Europa desde 2015: red de talleres y recambios muy limitada", "Antigüedad general: suspensión y electrónica de más de 10 años", "Equipamiento tecnológico muy básico"],
+    faq: [
+      { q: "¿Por qué es difícil encontrar recambios para un Chevrolet en España?", a: "Chevrolet se retiró del mercado europeo de turismos en 2015; los recambios dependen de proveedores genéricos o piezas compartidas con modelos Opel/GM de la misma época." },
+      { q: "¿Merece la pena comprarlo en 2026?", a: "Solo como coche de presupuesto muy ajustado, asumiendo que encontrar recambios específicos puede ser más complicado." },
+    ],
+  }),
+  g({
+    id: "chevrolet:cruze:j300", modelId: "chevrolet:cruze", code: "J300", slug: "j300",
+    startYear: 2009, endYear: 2015, bodyType: "Compacto 5 puertas y SW", lengthMm: 4597, bootLitres: 400,
+    oneLiner: "Compacto de ocasión con buen equipamiento para su época y precio ya mínimo: el 2.0 VCDi es el diésel de referencia.",
+    intro:
+      "El Cruze J300 ofreció un buen nivel de equipamiento para su precio en su lanzamiento. Motores 1.6/1.8 gasolina y 1.7/2.0 VCDi diésel (de origen GM/Fiat), con el SW (familiar) ampliando la practicidad. Marca retirada de Europa desde 2015, lo que limita la red de recambios.",
+    verdict: "Compacto de coste mínimo. El 2.0 VCDi con historial es la opción más razonable para kilómetros.",
+    strengths: ["Precio de compra muy bajo", "Buen equipamiento para su época y precio original", "2.0 VCDi con buen par"],
+    watchouts: ["Marca retirada de Europa desde 2015: red de talleres y recambios muy limitada", "EGR y turbo del VCDi con muchos kilómetros", "Antigüedad general en las unidades más viejas de la gama"],
+    faq: [
+      { q: "¿El Cruze comparte motor con algún Opel?", a: "Sí, los diésel VCDi de esta época son de la misma familia que los CDTi de Opel, con calibración propia de Chevrolet." },
+      { q: "¿Es arriesgado comprarlo en 2026?", a: "El principal riesgo no es mecánico sino de disponibilidad de recambios y talleres especializados, al haberse retirado la marca de Europa." },
+    ],
+  }),
+  g({
+    id: "chevrolet:captiva:c100", modelId: "chevrolet:captiva", code: "C100", slug: "c100",
+    startYear: 2006, endYear: 2015, bodyType: "SUV 7 plazas", lengthMm: 4635, bootLitres: 465,
+    oneLiner: "SUV de 7 plazas de ocasión ya muy barato, hermano del Opel Antara: el 2.2 VCDi es el diésel de referencia.",
+    intro:
+      "El Captiva comparte plataforma con el Opel Antara, con la ventaja de ofrecer una tercera fila opcional de 7 plazas. Motores 2.4 gasolina y 2.0/2.2 VCDi diésel, con tracción total opcional. Precio de ocasión ya muy contenido; misma limitación de red de recambios que el resto de la gama Chevrolet en Europa.",
+    verdict: "SUV de 7 plazas de coste ya mínimo. El 2.2 VCDi con historial es la compra más razonable.",
+    strengths: ["Precio de ocasión ya muy contenido para un SUV de 7 plazas", "Tercera fila opcional poco habitual a este precio", "2.2 VCDi con buen par"],
+    watchouts: ["Marca retirada de Europa desde 2015: red de talleres y recambios muy limitada", "EGR y turbo del VCDi con muchos kilómetros", "Tercera fila muy justa para adultos"],
+    faq: [
+      { q: "¿El Captiva es un Antara con 7 plazas?", a: "Comparte plataforma y motores con el Opel Antara; el Captiva añade la opción de una tercera fila de asientos." },
+      { q: "¿Es arriesgado comprarlo en 2026?", a: "El principal riesgo no es mecánico sino de disponibilidad de recambios y talleres especializados, al haberse retirado la marca de Europa." },
+    ],
+  }),
+];
+
+/** Todas las generaciones: base + cinco ampliaciones. */
 export const generations: Generation[] = [
   ...baseGenerations,
   ...extraGenerations,
   ...extraGenerations2,
   ...extraGenerations3,
   ...extraGenerations4,
+  ...extraGenerations5,
 ];

@@ -32,8 +32,10 @@ const MAKE_BY_BRAND: Record<string, string> = {
   Mitsubishi: "MITSUBISHI",
   smart: "SMART",
   Tesla: "TESLA",
-  // Opel, Citroën, Dacia, SEAT, CUPRA, Škoda, DS, Suzuki (desde 2012) y MG
-  // no se comercializan en EE. UU. en el periodo relevante.
+  Chevrolet: "CHEVROLET",
+  // Opel, Citroën, Dacia, SEAT, CUPRA, Škoda, DS, Suzuki (desde 2012),
+  // MG, SsangYong y Fiat Sedici no se comercializan en EE. UU. en el
+  // periodo relevante.
 };
 
 /** Marcas sin presencia en EE. UU.: no se consulta la NHTSA. */
@@ -170,4 +172,25 @@ export const NHTSA_OVERRIDES: Record<string, { models?: string[]; years?: number
   "audi:a6:c6": { models: ["A6"] },
   "audi:a4:b7": { models: ["A4"] },
   "mazda:3:bl": { models: ["MAZDA3", "3"] },
+
+  // ── Quinta ampliación ──────────────────────────────────────
+  "audi:a8:d5": { models: ["A8"] },
+  "audi:q8:4m": { models: ["Q8"] },
+  "mercedes-benz:cls:c257": { models: ["CLS450", "CLS 450", "CLS-CLASS"] },
+  "mercedes-benz:gls:x167": { models: ["GLS450", "GLS 450", "GLS-CLASS"] },
+  "volkswagen:beetle:a5": { models: ["BEETLE"] },
+  "ford:c-max:mk2": { models: ["C-MAX"] },
+  "ford:ecosport:mk2": { models: ["ECOSPORT"] },
+  "kia:carnival:ka4": { models: ["SEDONA", "CARNIVAL"] },
+  "jeep:grand-cherokee:wk2": { models: ["GRAND CHEROKEE"] },
+  "jeep:wrangler:jl": { models: ["WRANGLER"] },
+  "land-rover:range-rover:l405": { models: ["RANGE ROVER"] },
+  "land-rover:defender:l663": { models: ["DEFENDER"] },
+  "land-rover:discovery:l462": { models: ["DISCOVERY"] },
+  "lexus:is:xe30": { models: ["IS 300", "IS 350", "IS"] },
+  "lexus:es:xz10": { models: ["ES 300H", "ES 350", "ES"] },
+  "tesla:model-s:default": { models: ["MODEL S"] },
+  "tesla:model-x:default": { models: ["MODEL X"] },
+  "chevrolet:aveo:t300": { models: ["AVEO"] },
+  "chevrolet:cruze:j300": { models: ["CRUZE"] },
 };
