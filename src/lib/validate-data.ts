@@ -68,7 +68,9 @@ export function validateDataset(): ValidationIssue[] {
   }
   for (const e of engines) {
     if (e.powerHp <= 0) add("error", `engine ${e.id}`, "powerHp debe ser > 0");
-    if (e.displacementCc <= 0) add("error", `engine ${e.id}`, "displacementCc debe ser > 0");
+    // Los motores eléctricos no tienen cilindrada: displacementCc = 0 es válido para fuel "electrico".
+    if (e.fuel !== "electrico" && e.displacementCc <= 0)
+      add("error", `engine ${e.id}`, "displacementCc debe ser > 0");
   }
   for (const link of generationEngines) {
     if (!generationIds.has(link.generationId))

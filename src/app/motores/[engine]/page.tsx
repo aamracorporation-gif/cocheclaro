@@ -66,7 +66,10 @@ export default async function EnginePage({
 
       <section className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Metric label="Arquitectura" value={engine.architecture} />
-        <Metric label="Cilindrada" value={`${formatNumber(engine.displacementCc)} cc`} />
+        <Metric
+          label="Cilindrada"
+          value={engine.fuel === "electrico" ? "sin motor de combustión" : `${formatNumber(engine.displacementCc)} cc`}
+        />
         <Metric
           label="Potencia"
           value={`${engine.powerHp} CV${engine.powerKw ? ` (${engine.powerKw} kW)` : ""}`}

@@ -167,4 +167,152 @@ export const models: Model[] = [
   { id: "honda:jazz", brandId: "honda", slug: "jazz", name: "Jazz", bodyType: "Utilitario" },
   { id: "honda:hr-v", brandId: "honda", slug: "hr-v", name: "HR-V", bodyType: "SUV" },
   { id: "honda:cr-v", brandId: "honda", slug: "cr-v", name: "CR-V", bodyType: "SUV" },
+  { id: "honda:accord", brandId: "honda", slug: "accord", name: "Accord", bodyType: "Berlina" },
+
+  /* ═══ Segunda ampliación: más marcas y modelos ═══ */
+
+  // Alfa Romeo
+  { id: "alfa-romeo:giulietta", brandId: "alfa-romeo", slug: "giulietta", name: "Giulietta", bodyType: "Compacto" },
+  { id: "alfa-romeo:giulia", brandId: "alfa-romeo", slug: "giulia", name: "Giulia", bodyType: "Berlina" },
+  { id: "alfa-romeo:stelvio", brandId: "alfa-romeo", slug: "stelvio", name: "Stelvio", bodyType: "SUV" },
+  { id: "alfa-romeo:mito", brandId: "alfa-romeo", slug: "mito", name: "MiTo", bodyType: "Utilitario" },
+
+  // Jeep
+  { id: "jeep:renegade", brandId: "jeep", slug: "renegade", name: "Renegade", bodyType: "SUV" },
+  { id: "jeep:compass", brandId: "jeep", slug: "compass", name: "Compass", bodyType: "SUV" },
+  { id: "jeep:cherokee", brandId: "jeep", slug: "cherokee", name: "Cherokee", bodyType: "SUV" },
+
+  // Land Rover
+  { id: "land-rover:evoque", brandId: "land-rover", slug: "evoque", name: "Range Rover Evoque", bodyType: "SUV" },
+  { id: "land-rover:discovery-sport", brandId: "land-rover", slug: "discovery-sport", name: "Discovery Sport", bodyType: "SUV" },
+
+  // Lexus
+  { id: "lexus:ct", brandId: "lexus", slug: "ct", name: "CT", bodyType: "Compacto" },
+  { id: "lexus:nx", brandId: "lexus", slug: "nx", name: "NX", bodyType: "SUV" },
+  { id: "lexus:ux", brandId: "lexus", slug: "ux", name: "UX", bodyType: "SUV" },
+  { id: "lexus:rx", brandId: "lexus", slug: "rx", name: "RX", bodyType: "SUV" },
+
+  // DS Automobiles
+  { id: "ds:ds3-crossback", brandId: "ds", slug: "ds3-crossback", name: "DS 3 Crossback", bodyType: "SUV" },
+  { id: "ds:ds7-crossback", brandId: "ds", slug: "ds7-crossback", name: "DS 7 Crossback", bodyType: "SUV" },
+  { id: "ds:ds4", brandId: "ds", slug: "ds4", name: "DS 4", bodyType: "Compacto" },
+
+  // Suzuki
+  { id: "suzuki:swift", brandId: "suzuki", slug: "swift", name: "Swift", bodyType: "Utilitario" },
+  { id: "suzuki:vitara", brandId: "suzuki", slug: "vitara", name: "Vitara", bodyType: "SUV" },
+  { id: "suzuki:s-cross", brandId: "suzuki", slug: "s-cross", name: "S-Cross", bodyType: "SUV" },
+  { id: "suzuki:ignis", brandId: "suzuki", slug: "ignis", name: "Ignis", bodyType: "Urbano" },
+  { id: "suzuki:jimny", brandId: "suzuki", slug: "jimny", name: "Jimny", bodyType: "Todoterreno" },
+
+  // Mitsubishi
+  { id: "mitsubishi:asx", brandId: "mitsubishi", slug: "asx", name: "ASX", bodyType: "SUV" },
+  { id: "mitsubishi:outlander", brandId: "mitsubishi", slug: "outlander", name: "Outlander", bodyType: "SUV" },
+  { id: "mitsubishi:space-star", brandId: "mitsubishi", slug: "space-star", name: "Space Star", bodyType: "Urbano" },
+
+  // smart
+  { id: "smart:fortwo", brandId: "smart", slug: "fortwo", name: "ForTwo", bodyType: "Urbano 2 plazas" },
+  { id: "smart:forfour", brandId: "smart", slug: "forfour", name: "ForFour", bodyType: "Urbano" },
+
+  // Tesla
+  { id: "tesla:model-3", brandId: "tesla", slug: "model-3", name: "Model 3", bodyType: "Berlina eléctrica" },
+  { id: "tesla:model-y", brandId: "tesla", slug: "model-y", name: "Model Y", bodyType: "SUV eléctrico" },
+
+  // MG
+  { id: "mg:zs", brandId: "mg", slug: "zs", name: "ZS", bodyType: "SUV" },
+  { id: "mg:mg3", brandId: "mg", slug: "mg3", name: "MG3", bodyType: "Utilitario" },
+  { id: "mg:hs", brandId: "mg", slug: "hs", name: "HS", bodyType: "SUV" },
+  { id: "mg:mg4", brandId: "mg", slug: "mg4", name: "MG4", bodyType: "Compacto eléctrico" },
+
+  // BMW (2ª ampliación)
+  { id: "bmw:x5", brandId: "bmw", slug: "x5", name: "X5", bodyType: "SUV" },
+  { id: "bmw:serie-2-active-tourer", brandId: "bmw", slug: "serie-2-active-tourer", name: "Serie 2 Active Tourer", bodyType: "Monovolumen compacto" },
+  { id: "bmw:serie-7", brandId: "bmw", slug: "serie-7", name: "Serie 7", bodyType: "Berlina" },
+
+  // Audi (2ª ampliación)
+  { id: "audi:a6", brandId: "audi", slug: "a6", name: "A6", bodyType: "Berlina y Avant" },
+  { id: "audi:q7", brandId: "audi", slug: "q7", name: "Q7", bodyType: "SUV 7 plazas" },
+  { id: "audi:tt", brandId: "audi", slug: "tt", name: "TT", bodyType: "Coupé" },
+
+  // Mercedes-Benz (2ª ampliación)
+  { id: "mercedes-benz:clase-e", brandId: "mercedes-benz", slug: "clase-e", name: "Clase E", bodyType: "Berlina y Estate" },
+  { id: "mercedes-benz:gle", brandId: "mercedes-benz", slug: "gle", name: "GLE", bodyType: "SUV" },
+
+  // Volkswagen (2ª ampliación)
+  { id: "volkswagen:arteon", brandId: "volkswagen", slug: "arteon", name: "Arteon", bodyType: "Berlina liftback" },
+  { id: "volkswagen:t-cross", brandId: "volkswagen", slug: "t-cross", name: "T-Cross", bodyType: "SUV" },
+  { id: "volkswagen:caddy", brandId: "volkswagen", slug: "caddy", name: "Caddy", bodyType: "Furgoneta de pasajeros" },
+  { id: "volkswagen:id3", brandId: "volkswagen", slug: "id3", name: "ID.3", bodyType: "Compacto eléctrico" },
+  { id: "volkswagen:id4", brandId: "volkswagen", slug: "id4", name: "ID.4", bodyType: "SUV eléctrico" },
+
+  // Toyota (2ª ampliación)
+  { id: "toyota:prius", brandId: "toyota", slug: "prius", name: "Prius", bodyType: "Compacto híbrido" },
+  { id: "toyota:camry", brandId: "toyota", slug: "camry", name: "Camry", bodyType: "Berlina" },
+  { id: "toyota:land-cruiser", brandId: "toyota", slug: "land-cruiser", name: "Land Cruiser", bodyType: "Todoterreno" },
+
+  // Ford (2ª ampliación)
+  { id: "ford:s-max", brandId: "ford", slug: "s-max", name: "S-Max", bodyType: "Monovolumen" },
+  { id: "ford:ranger", brandId: "ford", slug: "ranger", name: "Ranger", bodyType: "Pick-up" },
+  { id: "ford:mustang", brandId: "ford", slug: "mustang", name: "Mustang", bodyType: "Coupé deportivo" },
+
+  // Renault (2ª ampliación)
+  { id: "renault:zoe", brandId: "renault", slug: "zoe", name: "Zoe", bodyType: "Utilitario eléctrico" },
+  { id: "renault:espace", brandId: "renault", slug: "espace", name: "Espace", bodyType: "Monovolumen / SUV" },
+  { id: "renault:talisman", brandId: "renault", slug: "talisman", name: "Talisman", bodyType: "Berlina" },
+
+  // Peugeot (2ª ampliación)
+  { id: "peugeot:108", brandId: "peugeot", slug: "108", name: "108", bodyType: "Urbano" },
+  { id: "peugeot:rifter", brandId: "peugeot", slug: "rifter", name: "Rifter", bodyType: "Furgoneta de pasajeros" },
+  { id: "peugeot:408", brandId: "peugeot", slug: "408", name: "408", bodyType: "Berlina fastback" },
+
+  // Opel (2ª ampliación)
+  { id: "opel:zafira", brandId: "opel", slug: "zafira", name: "Zafira Life", bodyType: "Furgoneta de pasajeros" },
+  { id: "opel:adam", brandId: "opel", slug: "adam", name: "Adam", bodyType: "Urbano" },
+
+  // SEAT / CUPRA (2ª ampliación)
+  { id: "seat:alhambra", brandId: "seat", slug: "alhambra", name: "Alhambra", bodyType: "Monovolumen" },
+  { id: "seat:mii", brandId: "seat", slug: "mii", name: "Mii", bodyType: "Urbano" },
+  { id: "cupra:born", brandId: "cupra", slug: "born", name: "Born", bodyType: "Compacto eléctrico" },
+
+  // Škoda (2ª ampliación)
+  { id: "skoda:enyaq", brandId: "skoda", slug: "enyaq", name: "Enyaq", bodyType: "SUV eléctrico" },
+  { id: "skoda:kodiaq", brandId: "skoda", slug: "kodiaq", name: "Kodiaq", bodyType: "SUV 7 plazas" },
+  { id: "skoda:yeti", brandId: "skoda", slug: "yeti", name: "Yeti", bodyType: "SUV" },
+
+  // Nissan (2ª ampliación)
+  { id: "nissan:leaf", brandId: "nissan", slug: "leaf", name: "Leaf", bodyType: "Compacto eléctrico" },
+  { id: "nissan:note", brandId: "nissan", slug: "note", name: "Note", bodyType: "Utilitario" },
+
+  // Mazda (2ª ampliación)
+  { id: "mazda:6", brandId: "mazda", slug: "6", name: "Mazda6", bodyType: "Berlina y Wagon" },
+  { id: "mazda:cx-3", brandId: "mazda", slug: "cx-3", name: "CX-3", bodyType: "SUV" },
+  { id: "mazda:mx-30", brandId: "mazda", slug: "mx-30", name: "MX-30", bodyType: "SUV eléctrico/híbrido" },
+
+  // Hyundai (2ª ampliación)
+  { id: "hyundai:i10", brandId: "hyundai", slug: "i10", name: "i10", bodyType: "Urbano" },
+  { id: "hyundai:santa-fe", brandId: "hyundai", slug: "santa-fe", name: "Santa Fe", bodyType: "SUV 7 plazas" },
+  { id: "hyundai:ioniq", brandId: "hyundai", slug: "ioniq", name: "Ioniq", bodyType: "Compacto híbrido/eléctrico" },
+  { id: "hyundai:ioniq-5", brandId: "hyundai", slug: "ioniq-5", name: "Ioniq 5", bodyType: "SUV eléctrico" },
+
+  // Kia (2ª ampliación)
+  { id: "kia:optima", brandId: "kia", slug: "optima", name: "Optima", bodyType: "Berlina" },
+  { id: "kia:xceed", brandId: "kia", slug: "xceed", name: "XCeed", bodyType: "SUV" },
+  { id: "kia:soul", brandId: "kia", slug: "soul", name: "Soul", bodyType: "SUV compacto" },
+  { id: "kia:ev6", brandId: "kia", slug: "ev6", name: "EV6", bodyType: "SUV eléctrico" },
+
+  // Fiat (2ª ampliación)
+  { id: "fiat:punto", brandId: "fiat", slug: "punto", name: "Punto", bodyType: "Utilitario" },
+  { id: "fiat:doblo", brandId: "fiat", slug: "doblo", name: "Doblò", bodyType: "Furgoneta de pasajeros" },
+  { id: "fiat:500l", brandId: "fiat", slug: "500l", name: "500L", bodyType: "Monovolumen compacto" },
+
+  // Citroën (2ª ampliación)
+  { id: "citroen:c1", brandId: "citroen", slug: "c1", name: "C1", bodyType: "Urbano" },
+  { id: "citroen:c4-picasso", brandId: "citroen", slug: "c4-picasso", name: "C4 Picasso / SpaceTourer", bodyType: "Monovolumen" },
+
+  // Volvo (2ª ampliación)
+  { id: "volvo:xc90", brandId: "volvo", slug: "xc90", name: "XC90", bodyType: "SUV 7 plazas" },
+  { id: "volvo:v60", brandId: "volvo", slug: "v60", name: "V60", bodyType: "Familiar" },
+  { id: "volvo:s60", brandId: "volvo", slug: "s60", name: "S60", bodyType: "Berlina" },
+
+  // MINI (2ª ampliación)
+  { id: "mini:clubman", brandId: "mini", slug: "clubman", name: "Clubman", bodyType: "Familiar" },
 ];

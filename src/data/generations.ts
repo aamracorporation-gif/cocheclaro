@@ -1899,5 +1899,1229 @@ const extraGenerations: Generation[] = [
   }),
 ];
 
-/** Todas las generaciones: base + fichas ampliadas. */
-export const generations: Generation[] = [...baseGenerations, ...extraGenerations];
+/* ═══════════════════════════════════════════════════════════════
+   SEGUNDA AMPLIACIÓN — nuevas marcas (Alfa Romeo, Jeep, Land Rover,
+   Lexus, DS, Suzuki, Mitsubishi, smart, Tesla, MG) y más modelos de
+   las marcas ya presentes. Mismo criterio: datos orientativos.
+   ═══════════════════════════════════════════════════════════════ */
+const extraGenerations2: Generation[] = [
+  /* ── Alfa Romeo ─────────────────────────────────────────── */
+  g({
+    id: "alfa-romeo:giulietta:940", modelId: "alfa-romeo:giulietta", code: "940", slug: "940",
+    startYear: 2010, endYear: 2020, bodyType: "Compacto 5 puertas", lengthMm: 4351, bootLitres: 350,
+    oneLiner: "Compacto italiano de carácter: dirección directa y buen chasis, con el 1.6/2.0 JTDm como motores de referencia.",
+    intro:
+      "La Giulietta apostó por el placer de conducir en el segmento compacto. Motores 1.4 TB Multiair gasolina y 1.6/2.0 JTDm diésel. El interior y algunos componentes eléctricos envejecen peor que la mecánica; a cambio, el chasis y la dirección están por encima de la media.",
+    verdict: "Compacto con alma para quien prioriza cómo se conduce. El 1.6 JTDm es la compra más razonable de ocasión.",
+    strengths: ["Dirección y chasis divertidos para el segmento", "Diseño que envejece bien", "1.6 JTDm sobrio"],
+    watchouts: ["Electrónica y sensores con más averías que la media alemana", "Depreciación rápida (a favor del comprador de ocasión)", "Red de talleres más reducida que las generalistas"],
+    faq: [
+      { q: "¿La Giulietta es fiable?", a: "La mecánica es razonablemente sólida; el punto débil suele ser la electrónica y algunos sensores, más que el motor o la caja." },
+      { q: "¿Qué diésel de la Giulietta comprar?", a: "El 1.6 JTDm para uso normal; el 2.0 JTDm si buscas más empuje y no te importa algo más de consumo." },
+    ],
+  }),
+  g({
+    id: "alfa-romeo:giulia:952", modelId: "alfa-romeo:giulia", code: "952", slug: "952",
+    startYear: 2016, bodyType: "Berlina", lengthMm: 4643, bootLitres: 480,
+    oneLiner: "Berlina de tracción trasera con ADN deportivo: la alternativa italiana al Serie 3, con el 2.0 diésel como opción racional.",
+    intro:
+      "La Giulia recuperó la tracción trasera para Alfa Romeo, con un chasis muy celebrado por la prensa especializada. Motores 2.0 Turbo gasolina, 2.0 JTDm diésel y la versión Quadrifoglio con V6 biturbo. Fiabilidad percibida por debajo de las alemanas, pero con un tacto de conducción distinto.",
+    verdict: "Para quien busca algo diferente a las berlinas alemanas. El 2.0 JTDm de 160 CV es la compra más sensata.",
+    strengths: ["Chasis y dirección de referencia en el segmento", "Diseño elegante y diferenciado", "Buen equilibrio de peso (motor trasero de la caja)"],
+    watchouts: ["Fiabilidad percibida inferior a rivales alemanes", "Red de talleres y recambios más limitada", "Depreciación rápida"],
+    faq: [
+      { q: "¿La Giulia es de tracción trasera?", a: "Sí, con tracción total Q4 opcional en varias versiones." },
+      { q: "¿Qué motor de la Giulia comprar de ocasión?", a: "El 2.0 JTDm diésel para uso normal; el 2.0 Turbo gasolina si haces pocos kilómetros." },
+    ],
+  }),
+  g({
+    id: "alfa-romeo:stelvio:949", modelId: "alfa-romeo:stelvio", code: "949", slug: "949",
+    startYear: 2017, bodyType: "SUV", lengthMm: 4687, bootLitres: 525,
+    oneLiner: "El SUV que mejor se conduce de su segmento: base de la Giulia, con tracción total Q4 y el 2.0 diésel como motor lógico.",
+    intro:
+      "El Stelvio comparte plataforma y filosofía con la Giulia. Motores 2.0 Turbo gasolina, 2.0 JTDm diésel y la versión Quadrifoglio con V6 biturbo. Chasis muy celebrado para un SUV; fiabilidad percibida algo por debajo de las alemanas.",
+    verdict: "SUV con carácter deportivo poco común en el segmento. El 2.0 JTDm Q4 es la compra más equilibrada.",
+    strengths: ["Comportamiento dinámico de referencia entre los SUV", "Diseño diferenciado", "Tracción total Q4 de serie en varias versiones"],
+    watchouts: ["Fiabilidad percibida inferior a rivales alemanes", "Red de talleres más limitada", "Consumo alto en las versiones más potentes"],
+    faq: [
+      { q: "¿El Stelvio tiene tracción total?", a: "Sí, el sistema Q4 está disponible (y es de serie en varias versiones), con reparto de par hacia el eje trasero por defecto." },
+      { q: "¿El Stelvio es fiable?", a: "Razonablemente, aunque la percepción general está por debajo de SUV alemanes equivalentes; revisar bien el historial de mantenimiento." },
+    ],
+  }),
+  g({
+    id: "alfa-romeo:mito:955", modelId: "alfa-romeo:mito", code: "955", slug: "955",
+    startYear: 2008, endYear: 2018, bodyType: "Utilitario 3 puertas", lengthMm: 4063, bootLitres: 270,
+    oneLiner: "Utilitario de diseño muy cuidado: se compra por estética y tacto, con el 1.3 JTDm como diésel más sobrio.",
+    intro:
+      "El MiTo comparte base con el Opel Corsa D/E de su época, con un chasis afinado por Alfa Romeo. Motores 0.9 TwinAir, 1.4 TB Multiair gasolina y 1.3/1.6 JTDm diésel. Compra emocional: diseño y tacto por encima de espacio y practicidad.",
+    verdict: "Utilitario de estilo. El 1.3 JTDm para consumo bajo; el 1.4 TB Multiair para algo más de brío.",
+    strengths: ["Diseño y acabado interior cuidados", "Buen tacto de dirección para el segmento", "1.3 JTDm muy sobrio"],
+    watchouts: ["Maletero y plazas traseras reducidos", "Electrónica y sensores más delicados que la media", "Recambios y mano de obra más caros que un utilitario generalista"],
+    faq: [
+      { q: "¿El MiTo comparte plataforma con el Opel Corsa?", a: "Sí, con la generación Corsa D/E, aunque con un chasis y una suspensión propios afinados por Alfa Romeo." },
+      { q: "¿Es práctico para el día a día?", a: "No es su punto fuerte: solo 3 puertas y maletero y plazas traseras justos. Se elige por estética y conducción." },
+    ],
+  }),
+
+  /* ── Jeep ───────────────────────────────────────────────── */
+  g({
+    id: "jeep:renegade:bu", modelId: "jeep:renegade", code: "BU", slug: "bu",
+    startYear: 2014, bodyType: "SUV", lengthMm: 4245, bootLitres: 351,
+    oneLiner: "SUV pequeño con look de todoterreno de verdad: comparte base con el Fiat 500X, con opción 4x4 Active Drive.",
+    intro:
+      "El Jeep Renegade comparte plataforma con el Fiat 500X. Motores 1.0/1.3 FireFly gasolina y 1.6/2.0 MultiJet diésel, con tracción total 4x4 en varias versiones. Estética robusta y buena capacidad todocamino para el segmento; comportamiento en asfalto más blando que un SUV convencional.",
+    verdict: "SUV pequeño con vocación aventurera. El 1.6 MultiJet para carretera; el 4x4 si de verdad pisas pista.",
+    strengths: ["Estética y detalles de diseño diferenciados", "Buena capacidad todocamino para el segmento con 4x4", "Base mecánica compartida con Fiat 500X, conocida"],
+    watchouts: ["Consumo real algo alto", "Comportamiento en carretera más blando que rivales convencionales", "Materiales interiores mejorables en acabados de acceso"],
+    faq: [
+      { q: "¿El Renegade es un todoterreno de verdad?", a: "Las versiones Trailhawk con 4x4 y reductora tienen capacidad real fuera de asfalto; las de tracción delantera son un SUV convencional con estética robusta." },
+      { q: "¿Qué motor del Renegade comprar?", a: "El 1.6 MultiJet diésel para uso normal; el 1.3 FireFly turbo gasolina si haces pocos kilómetros." },
+    ],
+  }),
+  g({
+    id: "jeep:compass:mp", modelId: "jeep:compass", code: "MP", slug: "mp",
+    startYear: 2017, bodyType: "SUV", lengthMm: 4404, bootLitres: 438,
+    oneLiner: "SUV compacto familiar con opción 4x4 real: comparte base con el Renegade, con más espacio y equipamiento.",
+    intro:
+      "El Compass MP comparte plataforma con el Renegade pero con más tamaño y equipamiento. Motores 1.3/1.6 FireFly gasolina y 1.6 MultiJet diésel, con 4x4 Active Drive opcional. Buena posición de conducción y capacidad todocamino para el segmento.",
+    verdict: "SUV familiar con carácter aventurero. El 1.6 MultiJet para kilómetros; el 4x4 si de verdad lo necesitas.",
+    strengths: ["Buen espacio y posición de conducción", "Capacidad todocamino real con 4x4", "Diseño robusto y diferenciado"],
+    watchouts: ["Consumo real algo alto", "Multimedia y asistencias básicas en acabados de acceso", "Depreciación algo más rápida que las referencias del segmento"],
+    faq: [
+      { q: "¿El Compass es un Renegade grande?", a: "Comparte plataforma y buena parte de los motores; es más largo, con más espacio interior y equipamiento." },
+      { q: "¿Necesito el 4x4 en el Compass?", a: "Solo si haces pista o vives en zona de nieve habitual; para uso normal la tracción delantera basta y consume menos." },
+    ],
+  }),
+
+  /* ── Land Rover ─────────────────────────────────────────── */
+  g({
+    id: "land-rover:evoque:l551", modelId: "land-rover:evoque", code: "L551 (2ª gen)", slug: "l551",
+    startYear: 2019, bodyType: "SUV", lengthMm: 4371, bootLitres: 591,
+    oneLiner: "SUV premium compacto de diseño: motores Ingenium propios, buen maletero y capacidad todocamino de sobra para el uso normal.",
+    intro:
+      "La segunda generación del Evoque mantiene el diseño de referencia del segmento. Motores Ingenium 2.0 diésel (D150/D180/D240) y gasolina (P200/P250), con mild-hybrid de 48 V en varias versiones y tracción total. Interior de calidad; mantenimiento notablemente más caro que un SUV generalista.",
+    verdict: "SUV premium de diseño. El D180 diésel con mantenimiento documentado es la opción más razonable de ocasión.",
+    strengths: ["Diseño de referencia en el segmento premium", "Buena capacidad todocamino para el uso real", "Interior de calidad"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Electrónica compleja y sensible", "Consumo real alto para su tamaño"],
+    faq: [
+      { q: "¿El Evoque es fiable?", a: "Ha mejorado respecto a generaciones anteriores, pero sigue teniendo un coste de mantenimiento y de reparaciones por encima de la media del segmento." },
+      { q: "¿Qué motor del Evoque comprar?", a: "El D180 diésel para uso mixto con kilómetros; el P200/P250 gasolina si haces pocos kilómetros al año." },
+    ],
+  }),
+  g({
+    id: "land-rover:discovery-sport:l550", modelId: "land-rover:discovery-sport", code: "L550", slug: "l550",
+    startYear: 2019, bodyType: "SUV 5/7 plazas", lengthMm: 4597, bootLitres: 897,
+    oneLiner: "SUV familiar premium con opción de 7 plazas: capacidad todocamino real y motores Ingenium compartidos con el Evoque.",
+    intro:
+      "El Discovery Sport comparte plataforma y motores Ingenium con el Evoque, con más espacio y una tercera fila opcional. Diésel D150/D180/D240 y gasolina P200/P250, con tracción total. Capacidad todocamino de referencia en el segmento premium.",
+    verdict: "SUV familiar premium con capacidad real. El D180 con historial documentado es la opción más sensata.",
+    strengths: ["Espacio y opción de 7 plazas poco común en SUV premium", "Capacidad todocamino de referencia", "Motores Ingenium compartidos con el Evoque"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Tercera fila muy justa para adultos", "Consumo real alto"],
+    faq: [
+      { q: "¿El Discovery Sport tiene 7 plazas de verdad?", a: "La tercera fila es opcional y sirve para niños o trayectos cortos, como en la mayoría de SUV de 7 plazas de este tamaño." },
+      { q: "¿Comparte motor con el Evoque?", a: "Sí, la gama Ingenium diésel y gasolina es la misma en ambos modelos." },
+    ],
+  }),
+
+  /* ── Lexus ──────────────────────────────────────────────── */
+  g({
+    id: "lexus:ct:default", modelId: "lexus:ct", code: "ZWA10", slug: "zwa10",
+    startYear: 2011, endYear: 2020, bodyType: "Compacto 5 puertas", lengthMm: 4360, bootLitres: 375,
+    oneLiner: "Compacto premium híbrido de fiabilidad japonesa: comparte mecánica con el Toyota Prius/Auris de su época.",
+    intro:
+      "El Lexus CT 200h fue el compacto de acceso a la marca. Híbrido 1.8 (compartido con Toyota) con la fiabilidad y el bajo mantenimiento marca de la casa. Prestaciones ajustadas si se exige, pero consumo urbano muy bajo y cero sustos mecánicos.",
+    verdict: "Compacto premium de tranquilidad total. Ideal para quien hace ciudad y quiere cero disgustos mecánicos.",
+    strengths: ["Fiabilidad mecánica sobresaliente", "Consumo urbano muy bajo", "Interior de calidad Lexus"],
+    watchouts: ["Prestaciones ajustadas al exigir el motor", "Maletero algo reducido por la batería", "Suspensión firme en las versiones F Sport"],
+    faq: [
+      { q: "¿El CT 200h comparte motor con el Prius?", a: "Sí, el conjunto híbrido 1.8 es esencialmente el mismo que el del Toyota Prius/Auris Hybrid de su época." },
+      { q: "¿Se enchufa?", a: "No, es un híbrido autorrecargable, sin versión enchufable." },
+    ],
+  }),
+  g({
+    id: "lexus:nx:az10", modelId: "lexus:nx", code: "AZ10", slug: "az10",
+    startYear: 2014, endYear: 2021, bodyType: "SUV", lengthMm: 4640, bootLitres: 475,
+    oneLiner: "SUV premium japonés con diseño rompedor: el NX 300h híbrido combina fiabilidad Toyota/Lexus con acabado de nivel superior.",
+    intro:
+      "El NX aportó un diseño muy angular a la gama SUV de Lexus. Motores 2.0 turbo gasolina (NX 200t/300) y el híbrido 2.5 (NX 300h). El híbrido, con tracción total E-Four opcional, hereda la fiabilidad habitual de la marca.",
+    verdict: "SUV premium con la fiabilidad de Lexus. El NX 300h híbrido es la compra más razonable de ocasión.",
+    strengths: ["Fiabilidad mecánica y bajo mantenimiento", "Diseño diferenciado", "Interior de calidad"],
+    watchouts: ["Maletero algo reducido en el híbrido", "Visibilidad trasera limitada por el diseño", "Precio de ocasión con prima sobre rivales generalistas"],
+    faq: [
+      { q: "¿El NX 300h tiene tracción total?", a: "Opcionalmente, con el sistema E-Four que añade un motor eléctrico en el eje trasero." },
+      { q: "¿Qué NX comprar de ocasión?", a: "El 300h híbrido para tranquilidad y consumo bajo; el 200t/300 turbo gasolina si buscas más prestaciones y haces menos kilómetros." },
+    ],
+  }),
+  g({
+    id: "lexus:ux:default", modelId: "lexus:ux", code: "MZAA10", slug: "mzaa10",
+    startYear: 2018, bodyType: "SUV", lengthMm: 4495, bootLitres: 320,
+    oneLiner: "SUV compacto premium solo con híbrido: el UX 250h combina consumo bajísimo con la fiabilidad de Lexus.",
+    intro:
+      "El UX es el SUV compacto de Lexus, con el híbrido 2.0 (UX 250h) como única mecánica de combustión, además de la versión eléctrica UX 300e. Maletero reducido para el segmento; a cambio, fiabilidad y consumo de referencia.",
+    verdict: "SUV compacto premium de bajo mantenimiento. El UX 250h es de lo más tranquilo que se puede comprar.",
+    strengths: ["Fiabilidad y bajo mantenimiento", "Consumo urbano muy bajo", "Interior de calidad"],
+    watchouts: ["Maletero reducido para el segmento", "Prestaciones ajustadas al exigir", "Visibilidad trasera limitada"],
+    faq: [
+      { q: "¿El UX 250h tiene tracción total?", a: "Sí, opcionalmente con el sistema E-Four de motor eléctrico trasero." },
+      { q: "¿Qué maletero tiene el UX?", a: "Unos 320 litros, por debajo de la media del segmento debido al paquete de baterías." },
+    ],
+  }),
+  g({
+    id: "lexus:rx:al20", modelId: "lexus:rx", code: "AL20 (4ª gen)", slug: "al20",
+    startYear: 2015, endYear: 2022, bodyType: "SUV", lengthMm: 4890, bootLitres: 539,
+    oneLiner: "SUV premium grande de referencia en fiabilidad: el RX 450h híbrido lleva décadas siendo una apuesta segura.",
+    intro:
+      "La cuarta generación del RX consolidó el diseño angular de Lexus. Híbrido 3.5 V6 (RX 450h) con tracción total E-Four, y gasolina turbo 2.0 (RX 200t/300) en menor medida. Fiabilidad de referencia en el segmento SUV premium.",
+    verdict: "SUV premium grande con la fiabilidad más probada del segmento. El RX 450h es una compra de mucha tranquilidad.",
+    strengths: ["Fiabilidad de referencia en SUV premium", "Confort de marcha notable", "Tracción total E-Four de serie en el híbrido"],
+    watchouts: ["Consumo alto fuera de ciudad pese a ser híbrido", "Maletero algo justo para el tamaño exterior", "Precio de ocasión con prima sobre rivales alemanes"],
+    faq: [
+      { q: "¿El RX 450h es fiable?", a: "Muy: es de los SUV premium con mejor reputación de fiabilidad y menor coste de mantenimiento del segmento." },
+      { q: "¿Cuánto consume el RX 450h fuera de ciudad?", a: "En autovía puede subir a 8-9 l/100 km reales; su punto fuerte es el consumo urbano y mixto." },
+    ],
+  }),
+
+  /* ── DS Automobiles ─────────────────────────────────────── */
+  g({
+    id: "ds:ds3-crossback:default", modelId: "ds:ds3-crossback", code: "1ª gen", slug: "1",
+    startYear: 2019, bodyType: "SUV", lengthMm: 4118, bootLitres: 350,
+    oneLiner: "B-SUV premium sobre base PSA: interior con acabados diferenciados y la opción eléctrica E-Tense.",
+    intro:
+      "El DS 3 Crossback comparte plataforma CMP con Peugeot 2008 y Opel Mokka, con un posicionamiento premium en acabados. Motores 1.2 PureTech, 1.5 BlueHDi y eléctrico E-Tense. Aplican las mismas cautelas del PureTech con la correa en series iniciales.",
+    verdict: "B-SUV premium de imagen. El E-Tense para ciudad; el 1.2 PureTech (verificando correa) o el BlueHDi para el resto.",
+    strengths: ["Acabados interiores diferenciados", "Base mecánica conocida del grupo Stellantis", "Opción eléctrica E-Tense"],
+    watchouts: ["Correa 'húmeda' del 1.2 PureTech en series iniciales", "Visibilidad y maletero algo justos", "Red de talleres DS más reducida"],
+    faq: [
+      { q: "¿El DS 3 Crossback es un Peugeot 2008 de lujo?", a: "Comparten plataforma y motores; DS apuesta por acabados y materiales interiores más cuidados y una imagen premium." },
+      { q: "¿Qué autonomía tiene el E-Tense?", a: "Homologa en torno a 320 km WLTP; en uso real, algo menos según climatización y velocidad." },
+    ],
+  }),
+  g({
+    id: "ds:ds7-crossback:default", modelId: "ds:ds7-crossback", code: "1ª gen", slug: "1",
+    startYear: 2018, bodyType: "SUV", lengthMm: 4573, bootLitres: 555,
+    oneLiner: "SUV premium francés con suspensión activa opcional: PureTech, BlueHDi e híbrido enchufable E-Tense 4x4.",
+    intro:
+      "El DS 7 Crossback es el buque insignia de la marca, con la suspensión activa 'DS Active Scan' opcional que lee la carretera con cámara. Motores 1.2/1.6 PureTech, 1.5/2.0 BlueHDi e híbrido enchufable E-Tense con tracción total.",
+    verdict: "SUV premium diferenciado. El BlueHDi para kilómetros; el E-Tense 4x4 solo si cargas a diario.",
+    strengths: ["Confort de suspensión (Active Scan en versiones que la equipan)", "Interior con materiales cuidados", "E-Tense con tracción total eléctrica"],
+    watchouts: ["Correa 'húmeda' del PureTech en series iniciales", "Electrónica compleja en las versiones con Active Scan", "Red de talleres DS más reducida"],
+    faq: [
+      { q: "¿Qué es la suspensión DS Active Scan?", a: "Un sistema opcional que usa una cámara para leer el estado de la carretera y anticipar la respuesta de la suspensión." },
+      { q: "¿El E-Tense 4x4 tiene tracción total?", a: "Sí, mediante un motor eléctrico en el eje trasero, además de la combustión y el eléctrico delanteros." },
+    ],
+  }),
+  g({
+    id: "ds:ds4:default", modelId: "ds:ds4", code: "2ª gen", slug: "2",
+    startYear: 2021, bodyType: "Compacto 5 puertas (crossover)", lengthMm: 4400, bootLitres: 430,
+    oneLiner: "Compacto premium con aire de crossover: PureTech, BlueHDi e híbrido enchufable, con acabados diferenciados.",
+    intro:
+      "La segunda generación del DS 4 (ya sin el 'Citroën' del nombre) comparte plataforma EMP2 con el Peugeot 308 y el Opel Astra L. Motores 1.2 PureTech, 1.5 BlueHDi e híbrido enchufable E-Tense 225/360.",
+    verdict: "Compacto premium diferenciado. El BlueHDi para kilómetros; el E-Tense solo si cargas a diario.",
+    strengths: ["Acabados y materiales interiores cuidados", "Base mecánica moderna de Stellantis", "Buen equipamiento de confort"],
+    watchouts: ["Modelo reciente: historial de fiabilidad todavía corto", "Visibilidad trasera limitada por el diseño", "Red de talleres DS más reducida"],
+    faq: [
+      { q: "¿El DS 4 es un Peugeot 308 de lujo?", a: "Comparte plataforma y buena parte de los motores; DS apuesta por un posicionamiento y unos acabados premium." },
+      { q: "¿Hay DS 4 Cross?", a: "Sí, una variante con protecciones y look ligeramente más de crossover, sin cambios mecánicos relevantes." },
+    ],
+  }),
+
+  /* ── Suzuki ─────────────────────────────────────────────── */
+  g({
+    id: "suzuki:swift:az", modelId: "suzuki:swift", code: "ZC/AZ", slug: "az",
+    startYear: 2017, bodyType: "Utilitario 5 puertas", lengthMm: 3840, bootLitres: 265,
+    oneLiner: "Utilitario ligero y ágil: de los más divertidos de conducir del segmento, con mecánica sencilla y muy fiable.",
+    intro:
+      "El Swift de esta generación bajó de peso respecto a la anterior, lo que se nota en el comportamiento. Motores 1.2 Dualjet mild-hybrid atmosférico y 1.4 Boosterjet turbo (Swift Sport), con opción de tracción total AllGrip.",
+    verdict: "Utilitario ágil y fiable. El 1.2 Dualjet para uso normal; el Swift Sport 1.4 Boosterjet si buscas diversión.",
+    strengths: ["Ligereza y agilidad de conducción", "Mecánica sencilla y muy fiable", "Opción de tracción total AllGrip poco común en el segmento"],
+    watchouts: ["Maletero pequeño para el segmento", "Insonorización básica", "Equipamiento de asistencias limitado en acabados de acceso"],
+    faq: [
+      { q: "¿El Swift es fiable?", a: "Mucho: mecánica sencilla, sin turbo en la versión de acceso y con la reputación de fiabilidad habitual de Suzuki." },
+      { q: "¿El Swift tiene tracción total?", a: "Opcionalmente, con el sistema AllGrip, poco habitual en un utilitario de este tamaño." },
+    ],
+  }),
+  g({
+    id: "suzuki:vitara:ly", modelId: "suzuki:vitara", code: "LY", slug: "ly",
+    startYear: 2015, bodyType: "SUV", lengthMm: 4175, bootLitres: 375,
+    oneLiner: "B-SUV con capacidad todocamino real disponible: 1.4 Boosterjet turbo y tracción total AllGrip opcional.",
+    intro:
+      "El Vitara LY recuperó el espíritu todocamino accesible de la saga Suzuki. Motores 1.0/1.4 Boosterjet turbo gasolina y 1.6 diésel (en su día), con tracción total AllGrip opcional y modos de conducción para pista.",
+    verdict: "B-SUV honesto con capacidad real. El 1.4 Boosterjet AllGrip es la versión más completa.",
+    strengths: ["Capacidad todocamino real con AllGrip", "Mecánica sencilla y fiable", "Buen precio de compra y mantenimiento"],
+    watchouts: ["Insonorización y materiales básicos", "Equipamiento tecnológico limitado frente a rivales generalistas", "Maletero algo justo"],
+    faq: [
+      { q: "¿El Vitara AllGrip es un 4x4 de verdad?", a: "Tiene tracción total con modos de conducción (nieve, barro, bloqueo) que le dan una capacidad real superior a la media de los B-SUV, sin ser un todoterreno puro." },
+      { q: "¿Hay Vitara híbrido?", a: "Las versiones más recientes incorporan mild-hybrid de 48 V sobre el motor Boosterjet." },
+    ],
+  }),
+  g({
+    id: "suzuki:jimny:jb74", modelId: "suzuki:jimny", code: "JB74", slug: "jb74",
+    startYear: 2018, bodyType: "Todoterreno", lengthMm: 3480, bootLitres: 85,
+    oneLiner: "El todoterreno pequeño de verdad: chasis en escalera, reductora y tracción total conectable. Poco práctico, mucha capacidad.",
+    intro:
+      "El Jimny JB74 es de los pocos todoterrenos auténticos que quedan a este tamaño: chasis en escalera, suspensión de eje rígido y caja reductora. Motor 1.5 atmosférico. Maletero y confort de carretera muy limitados a cambio de capacidad todocamino genuina.",
+    verdict: "Para quien de verdad necesita ir fuera de pista. Poco coche para el día a día familiar.",
+    strengths: ["Capacidad todocamino genuina (reductora, ejes rígidos)", "Mecánica sencilla y muy fiable", "Tamaño compacto para moverse por pistas estrechas"],
+    watchouts: ["Maletero y plazas traseras casi inexistentes", "Comportamiento en carretera y autovía incómodo", "Consumo alto para su tamaño"],
+    faq: [
+      { q: "¿El Jimny es un todoterreno de verdad?", a: "Sí, con chasis en escalera, ejes rígidos y reductora: capacidad genuina muy por encima de cualquier B-SUV con 'modo nieve'." },
+      { q: "¿Sirve como coche familiar?", a: "No es su terreno: maletero mínimo y solo 4 plazas muy justas. Es un coche especializado." },
+    ],
+  }),
+
+  /* ── Mitsubishi ─────────────────────────────────────────── */
+  g({
+    id: "mitsubishi:asx:ga", modelId: "mitsubishi:asx", code: "GA (restyling)", slug: "ga",
+    startYear: 2016, endYear: 2023, bodyType: "SUV", lengthMm: 4365, bootLitres: 393,
+    oneLiner: "SUV compacto sencillo y sin sobresaltos: mecánica atmosférica conocida y opción de tracción total 4WD.",
+    intro:
+      "El ASX es un SUV compacto de planteamiento conservador. Motor 1.6 MIVEC atmosférico gasolina y, en su día, 1.6/2.2 diésel, con tracción total 4WD opcional. Mecánica sencilla, sin turbo ni correa bañada en aceite.",
+    verdict: "SUV sin sorpresas. El 1.6 MIVEC para uso urbano-mixto sin prisas.",
+    strengths: ["Mecánica sencilla y fiable", "Buena garantía de fábrica en su día", "Precio de ocasión contenido"],
+    watchouts: ["1.6 atmosférico justo de fuerza con carga", "Diseño y tecnología algo desfasados frente a rivales recientes", "Insonorización básica"],
+    faq: [
+      { q: "¿El ASX es fiable?", a: "Sí, es una mecánica sencilla y muy probada, sin turbo en la versión de acceso ni correa bañada en aceite." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, con el sistema 4WD en varias versiones." },
+    ],
+  }),
+  g({
+    id: "mitsubishi:outlander:phev3", modelId: "mitsubishi:outlander", code: "III PHEV", slug: "iii-phev",
+    startYear: 2013, endYear: 2021, bodyType: "SUV 5/7 plazas", lengthMm: 4695, bootLitres: 463,
+    oneLiner: "El SUV híbrido enchufable pionero: años de recorrido en el mercado, tracción total 100% eléctrica y mecánica muy probada.",
+    intro:
+      "El Outlander PHEV fue de los primeros híbridos enchufables masivos, con tracción total mediante dos motores eléctricos (uno por eje) y un 2.4 de gasolina como generador/apoyo. Años de historial en flotas y particulares avalan su fiabilidad; conviene revisar el estado de la batería en unidades de más recorrido.",
+    verdict: "Híbrido enchufable de fiabilidad probada por el tiempo. Ideal si puedes cargarlo a diario y aprovechas la tracción total eléctrica.",
+    strengths: ["Tecnología PHEV muy probada por los años en el mercado", "Tracción total sin transmisión mecánica", "Espacio y maletero de SUV familiar"],
+    watchouts: ["Consumo alto en autovía si la batería está descargada", "Revisar salud de la batería de tracción en unidades de muchos km", "Maletero algo reducido por el paquete de baterías"],
+    faq: [
+      { q: "¿Cuánta autonomía eléctrica tiene el Outlander PHEV?", a: "Según año y versión, entre 30 y 45 km WLTP aproximadamente; en uso real, algo menos con climatización." },
+      { q: "¿Cómo funciona la tracción total del Outlander PHEV?", a: "Cada eje lleva su propio motor eléctrico; no hay eje de transmisión mecánico entre ambos." },
+    ],
+  }),
+  g({
+    id: "mitsubishi:space-star:default", modelId: "mitsubishi:space-star", code: "3ª gen", slug: "3",
+    startYear: 2013, bodyType: "Urbano 5 puertas", lengthMm: 3845, bootLitres: 235,
+    oneLiner: "Urbano económico con buen maletero para su clase: mecánica atmosférica sencilla y garantía de fábrica larga.",
+    intro:
+      "El Space Star es un urbano de planteamiento económico, con motor 1.0/1.2 atmosférico. Maletero y habitabilidad correctos para el segmento; materiales e insonorización básicos, compensados por un precio de compra y mantenimiento bajos.",
+    verdict: "Urbano de bajo coste con mecánica fiable. Correcto para ciudad, justo en autovía.",
+    strengths: ["Precio de compra y mantenimiento bajos", "Buen maletero para el segmento", "Mecánica atmosférica sencilla"],
+    watchouts: ["Insonorización y materiales básicos", "Motor justo de fuerza en autovía", "Equipamiento de seguridad limitado en acabados de acceso"],
+    faq: [
+      { q: "¿El Space Star es fiable?", a: "Sí, mecánica sencilla y atmosférica sin complicaciones; el punto flojo son los acabados, no el motor." },
+      { q: "¿Qué maletero tiene?", a: "En torno a 235 litros, por encima de la media de los urbanos de su tamaño." },
+    ],
+  }),
+
+  /* ── smart ──────────────────────────────────────────────── */
+  g({
+    id: "smart:fortwo:453", modelId: "smart:fortwo", code: "453", slug: "453",
+    startYear: 2014, endYear: 2023, bodyType: "Urbano 2 plazas", lengthMm: 2695, bootLitres: 260,
+    oneLiner: "El urbano más corto del mercado: aparca donde nadie más puede, con motor trasero y giro cortísimo. También en eléctrico.",
+    intro:
+      "El smart ForTwo (453), desarrollado junto a Renault (base compartida con el Twingo III), lleva el motor detrás. Versión de gasolina 1.0 (atmosférico o turbo) y la eléctrica EQ ForTwo. Pensado en exclusiva para ciudad: dos plazas y maletero mínimo.",
+    verdict: "El urbano definitivo para aparcar sin esfuerzo. Nada de espacio ni de autovía; solo ciudad.",
+    strengths: ["Facilidad de aparcamiento y giro incomparables", "Versión eléctrica EQ con buena autonomía urbana", "Mecánica sencilla"],
+    watchouts: ["Solo 2 plazas y maletero mínimo", "Incómodo y ruidoso en autovía", "Precio de ocasión no siempre bajo pese al tamaño"],
+    faq: [
+      { q: "¿El smart ForTwo 453 comparte base con el Twingo?", a: "Sí, se desarrolló junto a Renault y comparte plataforma con el Twingo III, con el motor también en posición trasera." },
+      { q: "¿Cuánta autonomía tiene el smart eléctrico?", a: "Homologa en torno a 130-160 km WLTP según año; en ciudad, suficiente para el uso típico de un urbano." },
+    ],
+  }),
+  g({
+    id: "smart:forfour:453", modelId: "smart:forfour", code: "453", slug: "453",
+    startYear: 2014, endYear: 2022, bodyType: "Urbano 5 puertas", lengthMm: 3495, bootLitres: 185,
+    oneLiner: "El smart con cuatro plazas de verdad: mismo giro cortísimo que el ForTwo, con algo más de espacio y maletero.",
+    intro:
+      "El ForFour comparte plataforma y motor trasero con el ForTwo y el Twingo III. Motor 1.0 (atmosférico o turbo) y versión eléctrica EQ. Gana practicidad frente al ForTwo sin perder demasiada agilidad urbana.",
+    verdict: "La opción práctica de la gama smart. Sigue siendo pequeño, pero con cuatro plazas usables.",
+    strengths: ["Giro y agilidad urbana heredados del ForTwo", "Cuatro plazas reales", "Mecánica sencilla"],
+    watchouts: ["Maletero todavía reducido", "Justo en autovía y con el coche cargado", "Insonorización básica"],
+    faq: [
+      { q: "¿El ForFour es un Twingo con emblema smart?", a: "Comparten plataforma y motor trasero; cambian diseño, acabados y algún detalle de equipamiento." },
+      { q: "¿Merece la pena frente al ForTwo?", a: "Si necesitas llevar pasajeros atrás con cierta regularidad, sí; si vas a ir casi siempre solo o en pareja, el ForTwo gira aún mejor." },
+    ],
+  }),
+
+  /* ── Tesla ──────────────────────────────────────────────── */
+  g({
+    id: "tesla:model-3:default", modelId: "tesla:model-3", code: "1ª gen", slug: "1",
+    startYear: 2019, bodyType: "Berlina eléctrica", lengthMm: 4694, bootLitres: 425,
+    oneLiner: "La berlina eléctrica que popularizó Tesla: autonomía alta, carga rápida en su red de Supercargadores y actualizaciones por software.",
+    intro:
+      "El Model 3 fue el primer Tesla realmente masivo. Versiones de tracción trasera (Standard/Long Range) y total (Dual Motor/Performance). Sin motor de combustión: mantenimiento mínimo. El acceso a la red de Supercargadores y las actualizaciones de software (OTA) son parte central de la propuesta.",
+    verdict: "Eléctrico de referencia por autonomía y red de carga. Revisar el estado de la batería y del sistema de asistencia a la conducción de la unidad concreta.",
+    strengths: ["Autonomía real alta para su clase", "Acceso a la red de Supercargadores", "Actualizaciones de software (OTA) constantes"],
+    watchouts: ["Ajustes de carrocería y calidad de acabado variables según año de fabricación", "Reparaciones de carrocería caras y con talleres limitados", "Neumáticos de desgaste algo más rápido por el peso"],
+    faq: [
+      { q: "¿Cuánta autonomía tiene el Model 3?", a: "Según versión y año, entre unos 400 y más de 600 km WLTP; en uso real e invierno, entre un 15-25% menos." },
+      { q: "¿Hay que hacer mantenimiento a un Tesla?", a: "Mucho menos que a un coche de combustión: sin aceite de motor ni distribución. Sí hay que atender frenos, neumáticos, filtro de habitáculo y el líquido refrigerante de la batería." },
+    ],
+  }),
+  g({
+    id: "tesla:model-y:default", modelId: "tesla:model-y", code: "1ª gen", slug: "1",
+    startYear: 2021, bodyType: "SUV eléctrico", lengthMm: 4751, bootLitres: 854,
+    oneLiner: "El SUV eléctrico más vendido del mundo: base del Model 3 con más altura y maletero, y la misma filosofía de actualizaciones OTA.",
+    intro:
+      "El Model Y comparte plataforma con el Model 3, con carrocería de SUV y más maletero (incluido el hueco delantero). Versiones de tracción total Dual Motor y Performance. Misma mecánica sin apenas mantenimiento mecánico y acceso a Supercargadores.",
+    verdict: "SUV eléctrico con mucho espacio y autonomía. Revisar historial de batería y de reparaciones de carrocería.",
+    strengths: ["Maletero muy amplio (incluido el frontal)", "Autonomía real alta", "Acceso a la red de Supercargadores"],
+    watchouts: ["Reparaciones de carrocería caras y con talleres limitados", "Consumo real algo mayor que el Model 3 por el peso y la aerodinámica", "Ajustes de acabado variables según año"],
+    faq: [
+      { q: "¿El Model Y es un Model 3 más alto?", a: "Comparte plataforma y motores; añade carrocería SUV, más altura y un maletero considerablemente mayor." },
+      { q: "¿Qué autonomía real tiene el Model Y?", a: "Entre 350 y 500 km reales según versión, clima y velocidad, con cifras WLTP homologadas más altas." },
+    ],
+  }),
+
+  /* ── MG ─────────────────────────────────────────────────── */
+  g({
+    id: "mg:zs:default", modelId: "mg:zs", code: "1ª gen (restyling)", slug: "1",
+    startYear: 2021, bodyType: "SUV", lengthMm: 4400, bootLitres: 448,
+    oneLiner: "B-SUV de mucho equipamiento por poco dinero: gasolina 1.5 atmosférico y turbo, y la versión eléctrica ZS EV con buena relación precio/autonomía.",
+    intro:
+      "El MG ZS apuesta por equipamiento y garantía amplia (7 años en muchos mercados) a precio de entrada. Motor 1.5 VTi-Tech atmosférico, 1.5 T-GDI turbo y la versión eléctrica ZS EV. Historial de fiabilidad todavía corto en Europa, pero con buena acogida inicial.",
+    verdict: "B-SUV de mucho contenido por el precio. El eléctrico ZS EV es de los más asequibles del mercado.",
+    strengths: ["Mucho equipamiento de serie para su precio", "Garantía de fábrica amplia", "ZS EV con buena relación precio/autonomía"],
+    watchouts: ["Historial de fiabilidad todavía corto en el mercado europeo", "Red de talleres más reducida que las marcas establecidas", "Retención de valor por confirmar a largo plazo"],
+    faq: [
+      { q: "¿El MG ZS es fiable?", a: "Es pronto para tener un historial largo en Europa; la garantía de fábrica amplia compensa parte de esa incertidumbre." },
+      { q: "¿Qué autonomía tiene el ZS EV?", a: "En torno a 320-440 km WLTP según batería y año; de las opciones eléctricas más económicas del mercado." },
+    ],
+  }),
+  g({
+    id: "mg:mg4:default", modelId: "mg:mg4", code: "1ª gen", slug: "1",
+    startYear: 2022, bodyType: "Compacto eléctrico", lengthMm: 4287, bootLitres: 363,
+    oneLiner: "Compacto eléctrico de plataforma dedicada: buen comportamiento, precio competitivo y carga rápida de serie.",
+    intro:
+      "El MG4 es el eléctrico compacto de la marca sobre una plataforma pensada desde cero para baterías, con tracción trasera en varias versiones. Buen comportamiento dinámico para un eléctrico de su precio, con carga rápida de serie en la mayoría de acabados.",
+    verdict: "Eléctrico compacto de buena relación precio/prestaciones. Historial de fiabilidad todavía corto pero acogida inicial positiva.",
+    strengths: ["Precio competitivo para un eléctrico de plataforma dedicada", "Buen comportamiento dinámico (tracción trasera)", "Carga rápida de serie en la mayoría de versiones"],
+    watchouts: ["Historial de fiabilidad todavía corto", "Red de talleres más reducida", "Retención de valor por confirmar a largo plazo"],
+    faq: [
+      { q: "¿El MG4 tiene tracción trasera?", a: "Sí, en la mayoría de versiones, algo poco habitual en eléctricos compactos de este precio." },
+      { q: "¿Qué autonomía tiene el MG4?", a: "Según batería, entre unos 350 y 520 km WLTP." },
+    ],
+  }),
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   TERCERA AMPLIACIÓN — más modelos de las marcas ya presentes:
+   grandes berlinas/SUV, eléctricos y monovolúmenes.
+   ═══════════════════════════════════════════════════════════════ */
+const extraGenerations3: Generation[] = [
+  /* ── BMW ────────────────────────────────────────────────── */
+  g({
+    id: "bmw:x5:g05", modelId: "bmw:x5", code: "G05", slug: "g05",
+    startYear: 2018, bodyType: "SUV", lengthMm: 4922, bootLitres: 650,
+    oneLiner: "SUV grande premium de referencia: el xDrive30d combina empuje, confort y consumo razonable para su tamaño.",
+    intro:
+      "La cuarta generación del X5 sobre plataforma CLAR. Motores B47/B57 diésel (25d/30d/40d) y B58 gasolina (40i), además del híbrido enchufable 45e. Confort y dinámica de referencia en el segmento; mantenimiento y neumáticos caros.",
+    verdict: "SUV grande muy completo. El xDrive30d con mantenimiento documentado es la compra más razonable.",
+    strengths: ["Confort de marcha y tecnología de vanguardia", "Motores B57/B58 refinados y potentes", "Buen comportamiento para su tamaño y peso"],
+    watchouts: ["Coste de mantenimiento, neumáticos y frenos elevado", "Suspensión neumática (coste si falla)", "Reparaciones de electrónica caras fuera de garantía"],
+    faq: [
+      { q: "¿Qué motor del X5 G05 es más recomendable?", a: "El xDrive30d con el diésel de 6 cilindros ofrece el mejor equilibrio entre prestaciones, refinamiento y consumo." },
+      { q: "¿El X5 45e híbrido enchufable compensa?", a: "Solo si cargas a diario y haces trayectos cortos con frecuencia; si no, el sobrepeso y el precio no se amortizan." },
+    ],
+  }),
+  g({
+    id: "bmw:serie-2-active-tourer:f45", modelId: "bmw:serie-2-active-tourer", code: "F45/U06", slug: "f45",
+    startYear: 2014, bodyType: "Monovolumen compacto", lengthMm: 4374, bootLitres: 468,
+    oneLiner: "El BMW con tracción delantera y forma de monovolumen: espacio familiar con motores B38/B47 conocidos.",
+    intro:
+      "El Serie 2 Active Tourer fue el primer BMW de tracción delantera con carrocería de monovolumen compacto, sobre la plataforma UKL compartida con MINI. Motores B38/B48 gasolina y B37/B47 diésel. Buen espacio interior; comportamiento más práctico que deportivo.",
+    verdict: "Monovolumen premium práctico. El 218d con B47 y mantenimiento al día es la opción más razonable.",
+    strengths: ["Espacio y practicidad poco habituales en un BMW", "Motores B38/B47 conocidos", "Buena habitabilidad para el tamaño exterior"],
+    watchouts: ["Cadena y EGR de los diésel B47", "Comportamiento menos deportivo que el resto de la gama BMW", "Neumáticos runflat caros"],
+    faq: [
+      { q: "¿Por qué el Active Tourer es de tracción delantera?", a: "Usa la plataforma UKL compartida con MINI, orientada a maximizar espacio interior en vez de dinámica trasera." },
+      { q: "¿Tiene versión de 7 plazas?", a: "Sí, la variante Gran Tourer (alargada) ofrece una tercera fila opcional." },
+    ],
+  }),
+  g({
+    id: "bmw:serie-7:g11", modelId: "bmw:serie-7", code: "G11/G12", slug: "g11",
+    startYear: 2015, endYear: 2022, bodyType: "Berlina de representación", lengthMm: 5098, bootLitres: 515,
+    oneLiner: "La berlina insignia de BMW: confort, tecnología y motores refinados, con un coste de mantenimiento acorde a su categoría.",
+    intro:
+      "La sexta generación del Serie 7 aportó chasis de aluminio y fibra de carbono para reducir peso. Motores B57 diésel (730d/740d), B58 gasolina (740i) y V8/híbrido enchufable en las versiones altas. Tecnología y confort de referencia; mantenimiento y reparaciones muy caros fuera de garantía.",
+    verdict: "Berlina de representación con mucho contenido tecnológico. El 730d es la compra más razonable si asumes el coste de mantenimiento.",
+    strengths: ["Confort y aislamiento de referencia", "Tecnología y equipamiento de vanguardia en su época", "Motores B57/B58 muy refinados"],
+    watchouts: ["Coste de mantenimiento y reparaciones muy elevado", "Suspensión neumática e electrónica compleja", "Depreciación rápida (a favor del comprador de ocasión con presupuesto de mantenimiento)"],
+    faq: [
+      { q: "¿El Serie 7 G11 es fiable?", a: "Mecánicamente sólido, pero la enorme cantidad de electrónica y sistemas de confort eleva el riesgo y coste de averías fuera de garantía." },
+      { q: "¿Qué motor del Serie 7 G11 elegir?", a: "El 730d ofrece el mejor equilibrio; los V8 y el híbrido enchufable son para quien no mira el coste de mantenimiento." },
+    ],
+  }),
+
+  /* ── Audi ───────────────────────────────────────────────── */
+  g({
+    id: "audi:a6:c8", modelId: "audi:a6", code: "C8", slug: "c8",
+    startYear: 2018, bodyType: "Berlina y Avant", lengthMm: 4939, bootLitres: 530,
+    oneLiner: "Berlina grande premium con mucha tecnología: el 40 TDI es el motor de kilómetros, con mild-hybrid de 48 V en toda la gama.",
+    intro:
+      "La octava generación del A6 estrena mild-hybrid de 48 V en toda la gama. Motores 40/45/50 TDI diésel y 40/45/55 TFSI gasolina, con tracción quattro en las versiones altas. Interior muy digital (doble pantalla táctil). Mantenimiento y neumáticos caros.",
+    verdict: "Berlina grande muy completa. El 40 TDI con historial documentado es la compra más razonable.",
+    strengths: ["Confort y aislamiento de nivel alto", "Interior muy tecnológico", "Motores TDI sobrios en autovía"],
+    watchouts: ["EGR y sistema AdBlue en los TDI", "Coste de mantenimiento y neumáticos elevado", "Pantallas táctiles: reparación cara si fallan"],
+    faq: [
+      { q: "¿Qué significa el mild-hybrid de 48 V en el A6 C8?", a: "Un pequeño motor eléctrico ayuda al motor térmico en arranques y aceleraciones suaves, reduciendo algo el consumo y suavizando el Start&Stop." },
+      { q: "¿A6 Avant o berlina?", a: "El Avant (familiar) añade un maletero notablemente mayor con la misma mecánica; la berlina prioriza la estética." },
+    ],
+  }),
+  g({
+    id: "audi:q7:4m", modelId: "audi:q7", code: "4M", slug: "4m",
+    startYear: 2015, bodyType: "SUV 7 plazas", lengthMm: 5063, bootLitres: 770,
+    oneLiner: "SUV grande premium de 7 plazas: el 50 TDI ofrece mucho par y confort para viajar en familia con equipaje.",
+    intro:
+      "La segunda generación del Q7 bajó notablemente de peso respecto a la anterior. Motores 45/50 TDI diésel y 55 TFSI gasolina, con quattro de serie y tercera fila. Confort de referencia; mantenimiento y neumáticos muy caros.",
+    verdict: "SUV grande de 7 plazas muy capaz. El 45/50 TDI con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Espacio real de 7 plazas y maletero enorme", "Confort de marcha de referencia", "Tracción quattro de serie"],
+    watchouts: ["Coste de mantenimiento, neumáticos y frenos muy elevado", "Suspensión neumática (coste si falla)", "Consumo real alto"],
+    faq: [
+      { q: "¿El Q7 tiene 7 plazas de verdad?", a: "Sí, con una tercera fila más usable para adultos que en SUV más pequeños, gracias a su gran tamaño." },
+      { q: "¿Qué motor del Q7 es más recomendable?", a: "El 50 TDI para quien hace muchos kilómetros con carga; el 45 TDI para un uso algo más comedido." },
+    ],
+  }),
+  g({
+    id: "audi:tt:fv", modelId: "audi:tt", code: "FV (3ª gen)", slug: "fv",
+    startYear: 2014, endYear: 2023, bodyType: "Coupé y Roadster", lengthMm: 4191, bootLitres: 305,
+    oneLiner: "Coupé compacto de diseño icónico: el 2.0 TFSI ofrece buenas prestaciones con la fiabilidad de las mecánicas del Grupo VW.",
+    intro:
+      "La tercera generación del TT comparte plataforma MQB con el Golf/A3. Motores 1.8/2.0 TFSI gasolina y 2.0 TDI (en su día), con tracción quattro opcional en las versiones más potentes (TTS/TT RS con 5 cilindros). Maletero y plazas traseras simbólicos.",
+    verdict: "Coupé de imagen con mecánica conocida. El 2.0 TFSI 230 CV es la compra más equilibrada.",
+    strengths: ["Diseño icónico y buena calidad de construcción", "Mecánicas MQB conocidas y fiables", "Comportamiento ágil"],
+    watchouts: ["Maletero y plazas traseras casi inexistentes", "Poco práctico como único coche", "Precio de ocasión con prima sobre mecánicas equivalentes de Golf/A3"],
+    faq: [
+      { q: "¿El TT FV comparte mecánica con el Golf?", a: "Sí, plataforma MQB y motores TFSI/TDI del Grupo VW, con un chasis y una puesta a punto propios más deportivos." },
+      { q: "¿El TT tiene plazas traseras usables?", a: "Son simbólicas, solo para trayectos muy cortos o para bolsos; no es un coche de 4 plazas reales." },
+    ],
+  }),
+
+  /* ── Mercedes-Benz ──────────────────────────────────────── */
+  g({
+    id: "mercedes-benz:clase-e:w213", modelId: "mercedes-benz:clase-e", code: "W213", slug: "w213",
+    startYear: 2016, endYear: 2023, bodyType: "Berlina y Estate", lengthMm: 4923, bootLitres: 540,
+    oneLiner: "Berlina grande premium de kilómetros: el E 220 d combina confort, tecnología y consumo bajo para su tamaño.",
+    intro:
+      "La quinta generación de la Clase E introdujo un salto tecnológico notable (doble pantalla, asistentes de conducción avanzados). Diésel OM654 (220 d) y OM656 de 6 cilindros (300 d), gasolina M264, e híbrido enchufable. Confort y tecnología de referencia.",
+    verdict: "Berlina grande muy completa. El E 220 d con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Confort de marcha y tecnología de asistencia avanzada", "OM654/OM656 diésel silenciosos y sobrios", "Estate con maletero de referencia"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Suspensión neumática AIRMATIC (coste si falla)", "Sistemas de asistencia complejos y caros de reparar/calibrar"],
+    faq: [
+      { q: "¿Qué diésel de la Clase E W213 elegir?", a: "El OM654 (220 d) para uso normal; el OM656 de 6 cilindros (300 d) si buscas más refinamiento y no te importa el coste añadido." },
+      { q: "¿La Clase E Estate tiene buen maletero?", a: "Sí, en torno a 640 litros, de los mejores de su categoría." },
+    ],
+  }),
+  g({
+    id: "mercedes-benz:gle:w167", modelId: "mercedes-benz:gle", code: "W167", slug: "w167",
+    startYear: 2019, bodyType: "SUV 5/7 plazas", lengthMm: 4924, bootLitres: 630,
+    oneLiner: "SUV grande premium con opción de 7 plazas: suspensión E-Active Body Control opcional y motores OM656/M256 refinados.",
+    intro:
+      "La cuarta generación del GLE ofrece suspensión neumática con control activo por eje (E-Active Body Control) opcional, además de motores diésel OM656 (300 d/350 d) y gasolina de 6 cilindros con mild-hybrid. Tercera fila opcional. Mantenimiento y reparaciones muy caros.",
+    verdict: "SUV grande muy tecnológico. El 300 d con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Confort de marcha excepcional (con E-Active Body Control)", "Motores de 6 cilindros refinados", "Espacio y opción de 7 plazas"],
+    watchouts: ["Coste de mantenimiento y reparaciones muy elevado", "Suspensión neumática compleja (coste si falla)", "Consumo real alto"],
+    faq: [
+      { q: "¿Qué es el E-Active Body Control?", a: "Un sistema de suspensión activa que ajusta cada rueda de forma independiente, incluso puede inclinar el coche en curva; es opcional y caro de reparar si falla." },
+      { q: "¿El GLE tiene 7 plazas de verdad?", a: "La tercera fila opcional es más usable que en SUV más pequeños, gracias al tamaño del coche." },
+    ],
+  }),
+
+  /* ── Volkswagen ─────────────────────────────────────────── */
+  g({
+    id: "volkswagen:arteon:3h", modelId: "volkswagen:arteon", code: "3H", slug: "3h",
+    startYear: 2017, bodyType: "Berlina liftback y Shooting Brake", lengthMm: 4862, bootLitres: 563,
+    oneLiner: "El Passat con imagen de coupé: liftback elegante con mecánicas del Grupo VW conocidas y buen maletero.",
+    intro:
+      "El Arteon comparte plataforma MQB con el Passat B8, con una carrocería liftback más estilizada. Motores 1.5/2.0 TSI y 2.0 TDI, con opción 4Motion. El Shooting Brake añade practicidad de familiar. Revisar DSG y EGR/AdBlue de los diésel.",
+    verdict: "Berlina de imagen con mecánica de bajo riesgo. El 2.0 TDI 150/190 es la compra más razonable.",
+    strengths: ["Diseño elegante con maletero práctico", "Mecánicas MQB conocidas", "Shooting Brake con buen espacio de carga"],
+    watchouts: ["Mecatrónica DSG en uso urbano", "EGR/AdBlue en los diésel", "Visibilidad trasera reducida por el diseño"],
+    faq: [
+      { q: "¿El Arteon es un Passat con otra carrocería?", a: "Comparte plataforma y motores con el Passat B8; el Arteon apuesta por una línea de liftback más deportiva." },
+      { q: "¿Qué maletero tiene el Arteon Shooting Brake?", a: "En torno a 590 litros, superior al de la variante liftback." },
+    ],
+  }),
+  g({
+    id: "volkswagen:t-cross:c1", modelId: "volkswagen:t-cross", code: "C1", slug: "c1",
+    startYear: 2019, bodyType: "SUV", lengthMm: 4127, bootLitres: 385,
+    oneLiner: "B-SUV sobre plataforma de Polo: buen maletero para el segmento y mecánicas 1.0/1.5 TSI muy conocidas.",
+    intro:
+      "El T-Cross comparte plataforma MQB A0 con el Polo. Motores 1.0 TSI y 1.5 TSI, con banqueta trasera deslizante en varias versiones. B-SUV racional con buen equilibrio espacio/precio.",
+    verdict: "B-SUV de bajo riesgo. El 1.0 TSI 110 con caja manual es la compra más equilibrada.",
+    strengths: ["Buen maletero y modularidad (banqueta deslizante)", "Mecánicas TSI conocidas y fiables", "Precio de ocasión contenido"],
+    watchouts: ["Carbonilla en admisión del TSI en uso solo urbano", "Sin versión diésel en la mayoría de mercados", "Plásticos duros en acabados de acceso"],
+    faq: [
+      { q: "¿El T-Cross es un Polo más alto?", a: "Comparte plataforma y motores con el Polo; añade carrocería SUV, más altura libre y una banqueta trasera deslizante." },
+      { q: "¿Hay T-Cross diésel?", a: "En España se comercializó sobre todo en gasolina TSI; el diésel fue anecdótico en la gama." },
+    ],
+  }),
+  g({
+    id: "volkswagen:caddy:5", modelId: "volkswagen:caddy", code: "5 (SB)", slug: "5",
+    startYear: 2020, bodyType: "Furgoneta de pasajeros 5/7 plazas", lengthMm: 4501, bootLitres: 1213,
+    oneLiner: "La furgoneta de pasajeros premium: acabado de turismo, maletero descomunal y mecánicas del Grupo VW.",
+    intro:
+      "La quinta generación del Caddy pasó a la plataforma MQB, ganando dinámica y tecnología de turismo. Motores 1.5 TSI gasolina y 2.0 TDI diésel, con opción de 7 plazas y tracción 4Motion. Espacio y maletero muy por encima de un SUV convencional.",
+    verdict: "Máximo espacio con acabado de turismo. El 2.0 TDI para kilómetros es la opción más racional.",
+    strengths: ["Espacio interior y maletero descomunales", "Acabado y tecnología de turismo, no de furgón", "Opción de 7 plazas"],
+    watchouts: ["Comportamiento y aislamiento de furgoneta", "Consumo alto con el coche cargado", "Mecatrónica DSG en uso urbano"],
+    faq: [
+      { q: "¿El Caddy 5 se conduce como un coche?", a: "Mucho mejor que generaciones anteriores gracias a la plataforma MQB, aunque sigue notándose que es una furgoneta adaptada." },
+      { q: "¿Cuánto maletero tiene con 5 plazas?", a: "Más de 1.200 litros, muy por encima de cualquier SUV o monovolumen convencional." },
+    ],
+  }),
+  g({
+    id: "volkswagen:id3:default", modelId: "volkswagen:id3", code: "1ª gen", slug: "1",
+    startYear: 2020, bodyType: "Compacto eléctrico", lengthMm: 4261, bootLitres: 385,
+    oneLiner: "El primer eléctrico de plataforma dedicada de VW: tracción trasera, buen espacio interior y varias capacidades de batería.",
+    intro:
+      "El ID.3 estrena la plataforma MEB, pensada desde cero para eléctricos, con motor en el eje trasero. Varias capacidades de batería (Pro, Pro S) con distinta autonomía. Interior muy digital; software con fallos notables en las primeras unidades, corregidos por actualizaciones.",
+    verdict: "Eléctrico compacto con buen espacio interior. Revisar que el software esté actualizado en unidades de primeras series.",
+    strengths: ["Buen espacio interior gracias al suelo plano de la plataforma MEB", "Tracción trasera y buen comportamiento", "Varias capacidades de batería según necesidad"],
+    watchouts: ["Software con fallos en las primeras unidades (2020-2021)", "Autonomía real inferior a la homologada, sobre todo en invierno", "Acabados interiores con materiales duros"],
+    faq: [
+      { q: "¿El ID.3 tuvo problemas de software?", a: "Las primeras unidades (2020) tuvieron fallos de infoentretenimiento y funciones que llegaron por actualización; conviene comprobar que el software esté al día." },
+      { q: "¿Qué autonomía real tiene el ID.3?", a: "Según batería, entre 300 y 450 km WLTP homologados; en uso real e invierno, un 20-30% menos." },
+    ],
+  }),
+  g({
+    id: "volkswagen:id4:default", modelId: "volkswagen:id4", code: "1ª gen", slug: "1",
+    startYear: 2021, bodyType: "SUV eléctrico", lengthMm: 4584, bootLitres: 543,
+    oneLiner: "El SUV eléctrico de VW sobre plataforma MEB: buen maletero, tracción trasera o total y varias capacidades de batería.",
+    intro:
+      "El ID.4 comparte plataforma MEB con el ID.3, en carrocería SUV. Versiones de tracción trasera y total (GTX). Buen espacio y maletero; mismas cautelas de software que el ID.3 en las primeras unidades.",
+    verdict: "SUV eléctrico racional. Revisar autonomía real de la unidad y que el software esté actualizado.",
+    strengths: ["Buen maletero y espacio interior", "Varias capacidades de batería y tracción total en el GTX", "Comportamiento equilibrado"],
+    watchouts: ["Software con fallos en unidades de primeras series", "Autonomía real inferior a la homologada en invierno", "Precio de ocasión aún alto frente a rivales de combustión"],
+    faq: [
+      { q: "¿El ID.4 GTX tiene tracción total?", a: "Sí, con un motor eléctrico adicional en el eje delantero además del trasero." },
+      { q: "¿Qué autonomía real tiene el ID.4?", a: "Entre 300 y 400 km reales según batería, clima y velocidad, con cifras WLTP algo más altas." },
+    ],
+  }),
+
+  /* ── Toyota ─────────────────────────────────────────────── */
+  g({
+    id: "toyota:prius:xw50", modelId: "toyota:prius", code: "XW50", slug: "xw50",
+    startYear: 2016, endYear: 2022, bodyType: "Compacto híbrido", lengthMm: 4540, bootLitres: 502,
+    oneLiner: "El híbrido que lo empezó todo: consumo bajísimo y la fiabilidad más probada del mercado, con versión enchufable.",
+    intro:
+      "La cuarta generación del Prius (XW50) sobre plataforma TNGA mejoró notablemente el comportamiento respecto a generaciones anteriores. Híbrido 1.8 (compartido con Corolla) y la versión enchufable Prius Plug-in con mayor autonomía eléctrica. Fiabilidad de referencia.",
+    verdict: "El híbrido de más confianza del mercado. Consumo urbano excepcional y mantenimiento barato.",
+    strengths: ["Fiabilidad mecánica de referencia", "Consumo muy bajo en cualquier uso", "Maletero amplio para un compacto híbrido"],
+    watchouts: ["Diseño exterior que no gusta a todos", "Visibilidad trasera limitada por el diseño", "Plug-in: autonomía eléctrica modesta frente a rivales más recientes"],
+    faq: [
+      { q: "¿El Prius sigue siendo el híbrido más fiable?", a: "Es de los históricos con mejor reputación: la tecnología lleva más de dos décadas en el mercado con muy pocos sustos mecánicos." },
+      { q: "¿Cuánta autonomía eléctrica tiene el Prius Plug-in?", a: "En torno a 50 km WLTP; en uso real, algo menos con climatización." },
+    ],
+  }),
+  g({
+    id: "toyota:camry:xv70", modelId: "toyota:camry", code: "XV70", slug: "xv70",
+    startYear: 2019, bodyType: "Berlina", lengthMm: 4885, bootLitres: 524,
+    oneLiner: "Berlina grande solo híbrida en Europa: consumo bajo para su tamaño y la fiabilidad marca de la casa.",
+    intro:
+      "El Camry volvió al mercado europeo únicamente en versión híbrida 2.5 (218 CV de sistema). Espacio y confort de berlina grande con consumo de compacto híbrido en ciudad. Mecánica sin turbo ni embrague convencional.",
+    verdict: "Berlina grande de tranquilidad total. Consumo muy contenido para su tamaño y fiabilidad de referencia.",
+    strengths: ["Fiabilidad mecánica sobresaliente", "Consumo bajo para una berlina de su tamaño", "Confort y espacio interior notables"],
+    watchouts: ["El cambio e-CVT 'estira' de vueltas al exigir el motor", "Maletero algo justo por la batería", "Diseño y dinámica más conservadores que rivales premium"],
+    faq: [
+      { q: "¿El Camry se vende con motor de gasolina puro en España?", a: "No, en el mercado europeo solo se ofrece en versión híbrida." },
+      { q: "¿Cuánto consume el Camry Hybrid?", a: "En uso mixto puede moverse en torno a 5-5,5 l/100 km reales, una cifra baja para una berlina de su tamaño." },
+    ],
+  }),
+  g({
+    id: "toyota:land-cruiser:j150", modelId: "toyota:land-cruiser", code: "J150", slug: "j150",
+    startYear: 2009, endYear: 2021, bodyType: "Todoterreno 5/7 plazas", lengthMm: 4825, bootLitres: 621,
+    oneLiner: "El todoterreno de referencia por fiabilidad y capacidad real: chasis independiente, reductora y el 2.8 D-4D como motor de la última etapa.",
+    intro:
+      "El Land Cruiser J150 mantiene el planteamiento de todoterreno auténtico: chasis independiente, reductora y tracción total permanente o conectable según versión. Motor 2.8 D-4D diésel (en la última etapa) y anteriormente 3.0 D-4D. Reputación de fiabilidad y durabilidad extrema.",
+    verdict: "El todoterreno para quien de verdad necesita capacidad off-road duradera. Mantenimiento caro pero mecánica extremadamente fiable.",
+    strengths: ["Capacidad todocamino y durabilidad de referencia", "Fiabilidad mecánica extrema con mantenimiento correcto", "Buena retención de valor"],
+    watchouts: ["Consumo alto para su tamaño y peso", "Precio de compra y mantenimiento elevados", "Comportamiento en carretera propio de un todoterreno, no de un SUV de carretera"],
+    faq: [
+      { q: "¿El Land Cruiser J150 es fiable?", a: "Es de los todoterrenos con mejor reputación de durabilidad del mercado, muy usado en flotas exigentes y ONG por esa razón." },
+      { q: "¿Tiene reductora?", a: "Sí, con chasis independiente y reductora real, muy por encima de la capacidad de cualquier SUV de carretera con tracción total." },
+    ],
+  }),
+
+  /* ── Ford ───────────────────────────────────────────────── */
+  g({
+    id: "ford:s-max:mk2", modelId: "ford:s-max", code: "Mk2", slug: "mk2",
+    startYear: 2015, bodyType: "Monovolumen 7 plazas", lengthMm: 4796, bootLitres: 700,
+    oneLiner: "Monovolumen grande que se conduce como una berlina: 7 plazas reales y el 2.0 EcoBlue como motor de kilómetros.",
+    intro:
+      "El S-Max Mk2 destaca por un comportamiento dinámico poco habitual en un monovolumen de su tamaño. Motores 1.5/2.0 EcoBoost gasolina y 2.0 EcoBlue diésel, con caja automática Powershift en varias versiones. Siete plazas con buen espacio en la tercera fila.",
+    verdict: "Monovolumen de 7 plazas muy racional. El 2.0 EcoBlue con historial es la compra más recomendable.",
+    strengths: ["Comportamiento dinámico por encima de la media del segmento", "Buen espacio en las 7 plazas", "2.0 EcoBlue sobrio"],
+    watchouts: ["Caja Powershift de doble embrague (tirones, revisar historial)", "Consumo alto en las versiones de gasolina", "Precio de ocasión de las versiones altas todavía elevado"],
+    faq: [
+      { q: "¿El S-Max tiene 7 plazas de verdad?", a: "Sí, es de los monovolúmenes con mejor espacio en la tercera fila, usable por adultos en trayectos moderados." },
+      { q: "¿La caja Powershift del S-Max es fiable?", a: "Puede dar tirones y desgaste en uso urbano intensivo; revisa el historial de mantenimiento y si ha recibido actualizaciones." },
+    ],
+  }),
+  g({
+    id: "ford:ranger:p703", modelId: "ford:ranger", code: "P703 (3ª gen)", slug: "p703",
+    startYear: 2022, bodyType: "Pick-up", lengthMm: 5370, bootLitres: 0,
+    oneLiner: "Pick-up de trabajo y ocio con buena dinámica de conducción: el 2.0 EcoBlue biturbo como motor de referencia.",
+    intro:
+      "La tercera generación del Ranger comparte base con la nueva Volkswagen Amarok. Motores 2.0 EcoBlue mono y biturbo diésel, con tracción total conectable o permanente según versión. Capacidad de carga y remolque de referencia en el segmento.",
+    verdict: "Pick-up muy completo para trabajo y uso mixto. El 2.0 EcoBlue biturbo es la opción con más empuje.",
+    strengths: ["Capacidad de carga y remolque de referencia", "Buena dinámica de conducción para un pick-up", "Tracción total con reductora en varias versiones"],
+    watchouts: ["Consumo alto con el vehículo cargado", "Tamaño exterior grande para uso urbano", "Precio de mantenimiento superior a un turismo"],
+    faq: [
+      { q: "¿El Ranger P703 comparte plataforma con el VW Amarok?", a: "Sí, la nueva generación de ambos pick-ups se desarrolló conjuntamente entre Ford y Volkswagen." },
+      { q: "¿Cuánto puede remolcar el Ranger?", a: "Hasta 3.500 kg en las versiones con mayor capacidad, cifra de referencia en el segmento." },
+    ],
+  }),
+  g({
+    id: "ford:mustang:s550", modelId: "ford:mustang", code: "S550", slug: "s550",
+    startYear: 2015, endYear: 2023, bodyType: "Coupé deportivo y Cabrio", lengthMm: 4784, bootLitres: 408,
+    oneLiner: "El deportivo americano accesible en Europa: V8 5.0 atmosférico con sonido de referencia, también en versión 2.3 EcoBoost turbo.",
+    intro:
+      "El Mustang S550 fue el primero vendido oficialmente en Europa con volante a la izquierda de serie y suspensión trasera independiente (mejora notable sobre generaciones anteriores). Motor V8 5.0 atmosférico (GT) y 2.3 EcoBoost turbo de 4 cilindros. Compra emocional por excelencia.",
+    verdict: "Deportivo de imagen y sonido. El V8 GT para la experiencia completa; el EcoBoost para algo más de sobriedad.",
+    strengths: ["Sonido y carácter del V8 atmosférico", "Suspensión trasera independiente (mejora notable sobre modelos anteriores)", "Precio de ocasión relativamente accesible para un V8"],
+    watchouts: ["Consumo alto, sobre todo en el V8", "Coste de seguro elevado por su categoría", "Mantenimiento y recambios de un V8 americano en Europa"],
+    faq: [
+      { q: "¿El Mustang S550 tiene suspensión trasera independiente?", a: "Sí, a diferencia de generaciones anteriores con eje rígido; mejora mucho el comportamiento en curva y el confort." },
+      { q: "¿V8 o EcoBoost en el Mustang?", a: "El V8 GT da la experiencia sonora y de prestaciones completa; el 2.3 EcoBoost es más sobrio y ligero de manejar en el día a día." },
+    ],
+  }),
+
+  /* ── Renault ────────────────────────────────────────────── */
+  g({
+    id: "renault:zoe:bf", modelId: "renault:zoe", code: "BF (restyling)", slug: "bf",
+    startYear: 2019, endYear: 2024, bodyType: "Utilitario eléctrico", lengthMm: 4087, bootLitres: 338,
+    oneLiner: "El eléctrico urbano pionero de Renault: buena autonomía real para su clase y motor propio sin depender de licencias.",
+    intro:
+      "El Zoe en su versión con batería de 52 kWh (ZE50) mejoró notablemente la autonomía respecto a generaciones anteriores. Motor eléctrico R135/R110 propio de Renault. Uno de los eléctricos con más recorrido comercial en Europa, con buen historial de fiabilidad de la batería.",
+    verdict: "Eléctrico urbano de referencia por autonomía y precio de ocasión. Revisar el estado de la batería (algunas se alquilaban aparte en unidades antiguas).",
+    strengths: ["Buena autonomía real para un eléctrico urbano", "Amplio historial de uso que avala la fiabilidad de la batería", "Precio de ocasión ya accesible"],
+    watchouts: ["Algunas unidades antiguas tenían la batería en alquiler (verificar la propiedad al comprar)", "Carga rápida limitada en versiones con cargador monofásico Caméléon", "Maletero algo justo para el segmento"],
+    faq: [
+      { q: "¿Todas las Zoe tienen la batería en propiedad?", a: "No siempre: durante años Renault ofreció la opción de alquilar la batería aparte. Al comprar de segunda mano, verifica si la unidad incluye la batería en propiedad." },
+      { q: "¿Qué autonomía real tiene la Zoe ZE50?", a: "Entre 250 y 300 km reales según climatización y velocidad, con una cifra WLTP homologada algo más alta." },
+    ],
+  }),
+  g({
+    id: "renault:espace:v", modelId: "renault:espace", code: "V (RFE)", slug: "v",
+    startYear: 2015, bodyType: "SUV / Monovolumen 7 plazas", lengthMm: 4855, bootLitres: 680,
+    oneLiner: "El monovolumen histórico reconvertido en SUV grande: 7 plazas, buen confort y el 1.6/2.0 dCi como motores de referencia.",
+    intro:
+      "La quinta generación del Espace abandonó la carrocería de monovolumen puro por una imagen más de SUV/crossover grande. Motores 1.3/1.8 TCe gasolina y 1.6/2.0 dCi diésel. Tercera fila plegable en el suelo; confort de marcha por encima de la media.",
+    verdict: "SUV/monovolumen familiar racional. El 1.6/2.0 dCi con historial es la opción más recomendable.",
+    strengths: ["Buen espacio y confort de marcha", "Tercera fila que se pliega totalmente en el suelo", "Diseño más moderno que generaciones anteriores"],
+    watchouts: ["Caja automática EDC de doble embrague (tirones)", "Consumo alto en gasolina TCe", "Electrónica y sensores con averías ocasionales"],
+    faq: [
+      { q: "¿El Espace V sigue siendo un monovolumen?", a: "Su carrocería se acerca más a un SUV/crossover grande, aunque mantiene la vocación de 7 plazas del Espace clásico." },
+      { q: "¿Qué maletero tiene con 5 plazas?", a: "En torno a 680 litros, muy amplio gracias a que la tercera fila se pliega a ras de suelo." },
+    ],
+  }),
+  g({
+    id: "renault:talisman:default", modelId: "renault:talisman", code: "1ª gen", slug: "1",
+    startYear: 2015, endYear: 2022, bodyType: "Berlina y Estate", lengthMm: 4849, bootLitres: 572,
+    oneLiner: "Berlina grande de ocasión muy barata: buen confort y maletero, con el 1.6/1.7/2.0 dCi como motores de referencia.",
+    intro:
+      "El Talisman fue el buque insignia de Renault en berlinas, con suspensión trasera multibrazo y opción de amortiguación pilotada. Motores 1.3/1.6/2.0 TCe gasolina y 1.6/1.7/2.0 dCi diésel. Precio de ocasión muy competitivo frente a berlinas alemanas equivalentes.",
+    verdict: "Mucha berlina por poco dinero. El 1.6/1.7 dCi con historial es la opción más razonable.",
+    strengths: ["Confort de marcha (amortiguación pilotada opcional)", "Espacio y maletero de categoría superior", "Precio de ocasión muy competitivo"],
+    watchouts: ["EGR y turbo del dCi con muchos kilómetros", "Caja automática EDC en uso urbano", "Electrónica y sensores con averías ocasionales"],
+    faq: [
+      { q: "¿Qué es la amortiguación pilotada del Talisman?", a: "Un sistema opcional que ajusta la dureza de la suspensión según el modo de conducción y el estado de la carretera." },
+      { q: "¿Qué maletero tiene el Talisman Estate?", a: "En torno a 572-608 litros según año, de los mayores de su categoría." },
+    ],
+  }),
+
+  /* ── Peugeot ────────────────────────────────────────────── */
+  g({
+    id: "peugeot:108:default", modelId: "peugeot:108", code: "1ª gen", slug: "1",
+    startYear: 2014, endYear: 2022, bodyType: "Urbano 3 y 5 puertas", lengthMm: 3475, bootLitres: 196,
+    oneLiner: "Urbano gemelo del Toyota Aygo: mecánica atmosférica muy fiable y mantenimiento mínimo.",
+    intro:
+      "El 108 se desarrolló junto a Toyota (Aygo) y Citroën (C1) sobre la misma plataforma y con el mismo motor 1.0 VVT-i atmosférico. Coche pensado en exclusiva para ciudad: maletero mínimo y poco aislamiento, mecánica muy fiable y barata.",
+    verdict: "Urbano puro de mantenimiento mínimo. Igual de recomendable que su gemelo Toyota Aygo.",
+    strengths: ["Fiabilidad y mantenimiento muy baratos (motor Toyota)", "Fácil de aparcar y manejar en ciudad", "Precio de ocasión bajo"],
+    watchouts: ["Maletero y plazas traseras mínimos", "Poca insonorización en autovía", "Equipamiento básico en acabados de acceso"],
+    faq: [
+      { q: "¿El 108 es lo mismo que el Toyota Aygo?", a: "Sí, junto con el Citroën C1 comparten plataforma, motor 1.0 VVT-i y carrocería, con cambios estéticos y de equipamiento." },
+      { q: "¿Hay 108 descapotable?", a: "Sí, la versión Top! con techo de lona retráctil." },
+    ],
+  }),
+  g({
+    id: "peugeot:rifter:default", modelId: "peugeot:rifter", code: "K9", slug: "k9",
+    startYear: 2018, bodyType: "Furgoneta de pasajeros 5/7 plazas", lengthMm: 4403, bootLitres: 775,
+    oneLiner: "La furgoneta de pasajeros de Peugeot: gemela del Citroën Berlingo, con espacio y maletero descomunales.",
+    intro:
+      "El Rifter comparte plataforma EMP2 con el Citroën Berlingo y el Opel Combo Life. Motores 1.2 PureTech y 1.5 BlueHDi, además del eléctrico e-Rifter. Dos longitudes y hasta 7 plazas. Practicidad máxima a cambio de comportamiento de furgoneta.",
+    verdict: "Imbatible en espacio por el dinero. El 1.5 BlueHDi para kilómetros; el e-Rifter para reparto urbano y familias que cargan a diario.",
+    strengths: ["Espacio interior y maletero descomunales", "Puertas laterales correderas", "Opción de 7 plazas (versión Long)"],
+    watchouts: ["Correa 'húmeda' del 1.2 PureTech en series iniciales", "Comportamiento y aislamiento de furgoneta", "Consumo alto en la versión de gasolina"],
+    faq: [
+      { q: "¿El Rifter es lo mismo que el Citroën Berlingo?", a: "Sí, junto con el Opel Combo Life comparten plataforma, motores y carrocería, con diferencias de diseño y equipamiento." },
+      { q: "¿Cuántas plazas tiene?", a: "5 de serie; la versión Long (más larga) ofrece una tercera fila para 7 plazas." },
+    ],
+  }),
+  g({
+    id: "peugeot:408:default", modelId: "peugeot:408", code: "1ª gen (Fastback)", slug: "1",
+    startYear: 2022, bodyType: "Berlina fastback", lengthMm: 4690, bootLitres: 536,
+    oneLiner: "Fastback entre compacto y SUV: diseño muy personal, gama PureTech, BlueHDi e híbrido enchufable.",
+    intro:
+      "El 408 propone una carrocería a medio camino entre berlina y SUV, sobre plataforma EMP2 compartida con el 308. Motores 1.2 PureTech, 1.5 BlueHDi e híbrido enchufable Hybrid 180/225. Diseño muy distintivo; comportamiento y consumo similares al 308.",
+    verdict: "Berlina fastback de imagen fuerte. El BlueHDi para kilómetros; el Hybrid solo si cargas a diario.",
+    strengths: ["Diseño muy diferenciado", "Base mecánica conocida (comparte con el 308)", "Buen equipamiento tecnológico"],
+    watchouts: ["Correa 'húmeda' del PureTech en series iniciales", "Visibilidad trasera limitada por el diseño", "Modelo reciente: historial de fiabilidad todavía corto"],
+    faq: [
+      { q: "¿El 408 es un SUV o una berlina?", a: "Peugeot lo define como fastback: carrocería elevada como un SUV pero con silueta y comportamiento más de berlina." },
+      { q: "¿Comparte plataforma con el 308?", a: "Sí, plataforma EMP2 y buena parte de la gama de motores." },
+    ],
+  }),
+
+  /* ── Opel ───────────────────────────────────────────────── */
+  g({
+    id: "opel:zafira:life", modelId: "opel:zafira", code: "Life (K9)", slug: "life",
+    startYear: 2019, bodyType: "Furgoneta de pasajeros 7/8/9 plazas", lengthMm: 4959, bootLitres: 1063,
+    oneLiner: "Furgoneta de pasajeros grande: hasta 9 plazas y maletero descomunal, sobre plataforma EMP2 de Stellantis.",
+    intro:
+      "El Zafira Life comparte plataforma con el Citroën SpaceTourer y el Peugeot Traveller. Motor 2.0 BlueHDi diésel en varias potencias, con hasta 9 plazas configurables. Pensado para familias muy numerosas o uso profesional de pasajeros.",
+    verdict: "La opción de más plazas y espacio del mercado. El 2.0 BlueHDi 150/180 es la compra más razonable.",
+    strengths: ["Hasta 9 plazas configurables", "Maletero y espacio de carga descomunales", "Motor 2.0 BlueHDi sobrio para el tamaño del vehículo"],
+    watchouts: ["Comportamiento y aislamiento de furgoneta grande", "Consumo alto con el vehículo cargado", "Tamaño exterior poco práctico para aparcar en ciudad"],
+    faq: [
+      { q: "¿El Zafira Life es una furgoneta o un monovolumen?", a: "Mecánicamente es una furgoneta de pasajeros adaptada, con acabado e insonorización mejorados respecto a un furgón de reparto." },
+      { q: "¿Cuántas plazas puede llevar?", a: "Hasta 9 según configuración y longitud de carrocería." },
+    ],
+  }),
+  g({
+    id: "opel:adam:default", modelId: "opel:adam", code: "1ª gen", slug: "1",
+    startYear: 2013, endYear: 2019, bodyType: "Urbano 3 puertas", lengthMm: 3698, bootLitres: 170,
+    oneLiner: "Urbano de diseño muy personalizable: se compra por estética, con motores 1.0/1.4 atmosféricos y turbo sencillos.",
+    intro:
+      "El Opel Adam apostó por la personalización extrema (colores, techos, detalles interiores) en el segmento urbano. Motores 1.0 turbo (Ecotec) y 1.2/1.4 atmosféricos. Mecánica sencilla del grupo GM/Opel de su época; maletero y plazas traseras mínimos.",
+    verdict: "Urbano de estilo. El 1.0 turbo para algo de brío; el 1.4 atmosférico para sencillez máxima.",
+    strengths: ["Personalización de diseño muy amplia", "Mecánica sencilla y conocida", "Buen tacto de conducción para el segmento"],
+    watchouts: ["Maletero y plazas traseras mínimos", "Consumo real del 1.0 turbo por encima del homologado en algunas unidades", "Descatalogado: recambios de carrocería específicos más limitados"],
+    faq: [
+      { q: "¿El Adam es práctico?", a: "No es su fuerte: solo 3 puertas y maletero muy pequeño. Se elige sobre todo por diseño y personalización." },
+      { q: "¿Qué motor del Adam es más recomendable?", a: "El 1.4 atmosférico por sencillez; el 1.0 turbo si buscas algo más de empuje." },
+    ],
+  }),
+
+  /* ── SEAT / CUPRA ───────────────────────────────────────── */
+  g({
+    id: "seat:alhambra:7n", modelId: "seat:alhambra", code: "7N", slug: "7n",
+    startYear: 2010, bodyType: "Monovolumen 7 plazas", lengthMm: 4854, bootLitres: 267,
+    oneLiner: "El monovolumen grande de SEAT: puertas correderas, 7 plazas reales y mecánica del Grupo VW compartida con el Sharan.",
+    intro:
+      "El Alhambra 7N comparte plataforma y motores con el Volkswagen Sharan. Motores 1.4 TSI, 2.0 TSI gasolina y 2.0 TDI diésel, con puertas correderas traseras de serie. Espacio y practicidad de referencia en monovolúmenes grandes.",
+    verdict: "Monovolumen de 7 plazas muy racional. El 2.0 TDI 150 con historial es la compra más recomendable.",
+    strengths: ["Puertas correderas y acceso muy cómodo a las plazas traseras", "7 plazas realmente usables por adultos", "Mecánicas del Grupo VW conocidas"],
+    watchouts: ["Mecatrónica DSG en uso urbano", "EGR/AdBlue en los TDI", "Consumo alto por el tamaño y peso del vehículo"],
+    faq: [
+      { q: "¿El Alhambra es un Sharan con otro nombre?", a: "Comparten plataforma, motores y carrocería casi por completo; cambian detalles de diseño y equipamiento." },
+      { q: "¿La tercera fila del Alhambra sirve para adultos?", a: "Sí, es de los monovolúmenes con mejor espacio en la tercera fila para trayectos largos." },
+    ],
+  }),
+  g({
+    id: "seat:mii:default", modelId: "seat:mii", code: "1ª gen", slug: "1",
+    startYear: 2012, endYear: 2019, bodyType: "Urbano 3/5 puertas", lengthMm: 3557, bootLitres: 251,
+    oneLiner: "Urbano gemelo del VW up!: interior aprovechado y mecánica 1.0 muy fiable, también en versión eléctrica Mii Electric.",
+    intro:
+      "El SEAT Mii comparte plataforma y motores con el Volkswagen up! y el Škoda Citigo. Motor 1.0 atmosférico y la versión eléctrica Mii Electric al final de su vida comercial. Interior bien aprovechado para el tamaño exterior.",
+    verdict: "Urbano de calidad superior a la media del segmento. El 1.0 atmosférico basta para ciudad.",
+    strengths: ["Interior bien aprovechado y bien acabado para el segmento", "Mecánica 1.0 muy fiable y barata", "Precio de ocasión bajo"],
+    watchouts: ["Motor atmosférico justo en autovía y cargado", "Equipamiento básico en acabados de acceso", "Mii Electric: autonomía real modesta"],
+    faq: [
+      { q: "¿El Mii es lo mismo que el VW up!?", a: "Sí, junto con el Škoda Citigo son el mismo coche con distinto emblema y pequeños detalles de equipamiento y precio." },
+      { q: "¿Qué autonomía tiene el Mii Electric?", a: "En torno a 260 km WLTP homologados; en uso real, bastante menos." },
+    ],
+  }),
+  g({
+    id: "cupra:born:default", modelId: "cupra:born", code: "1ª gen", slug: "1",
+    startYear: 2021, bodyType: "Compacto eléctrico", lengthMm: 4322, bootLitres: 385,
+    oneLiner: "El eléctrico deportivo de CUPRA sobre plataforma MEB: comparte base con el VW ID.3, con un ajuste más dinámico.",
+    intro:
+      "El Born es el primer eléctrico de CUPRA, sobre la plataforma MEB compartida con el VW ID.3. Motor eléctrico trasero con varias capacidades de batería, incluida la versión e-Boost de mayor potencia. Ajuste de suspensión y dirección más deportivo que sus hermanos del grupo.",
+    verdict: "Eléctrico compacto con más carácter deportivo que el ID.3. Revisar autonomía real y actualizaciones de software.",
+    strengths: ["Comportamiento más dinámico que el ID.3 equivalente", "Buen espacio interior gracias a la plataforma MEB", "Varias capacidades de batería según necesidad"],
+    watchouts: ["Software con fallos en unidades de primeras series (heredado del ID.3)", "Autonomía real inferior a la homologada en invierno", "Precio de ocasión aún alto"],
+    faq: [
+      { q: "¿El Born es un ID.3 de CUPRA?", a: "Comparte plataforma MEB y motor con el VW ID.3; CUPRA ajusta suspensión, dirección y estética con un enfoque más deportivo." },
+      { q: "¿Qué autonomía real tiene el Born?", a: "Entre 300 y 400 km reales según batería, clima y velocidad." },
+    ],
+  }),
+
+  /* ── Škoda ──────────────────────────────────────────────── */
+  g({
+    id: "skoda:enyaq:default", modelId: "skoda:enyaq", code: "1ª gen", slug: "1",
+    startYear: 2021, bodyType: "SUV eléctrico", lengthMm: 4649, bootLitres: 585,
+    oneLiner: "El SUV eléctrico más espacioso del grupo MEB: maletero enorme y detalles prácticos 'Simply Clever' aplicados a un eléctrico.",
+    intro:
+      "El Enyaq comparte plataforma MEB con ID.4 y Born, en la carrocería SUV más espaciosa del trío. Tracción trasera o total (RS), con varias capacidades de batería. Detalles prácticos típicos de Škoda incluso en un eléctrico (paraguas, rascador integrado).",
+    verdict: "SUV eléctrico muy racional por espacio y maletero. Revisar autonomía real y actualizaciones de software.",
+    strengths: ["Maletero y espacio interior de referencia entre los eléctricos MEB", "Detalles prácticos 'Simply Clever'", "Varias capacidades de batería"],
+    watchouts: ["Software con fallos en unidades de primeras series (heredado de la plataforma MEB)", "Autonomía real inferior a la homologada en invierno", "Precio de ocasión aún alto"],
+    faq: [
+      { q: "¿El Enyaq es un ID.4 de Škoda?", a: "Comparte plataforma MEB y motores con el VW ID.4; Škoda ofrece más espacio y detalles prácticos propios." },
+      { q: "¿Qué autonomía real tiene el Enyaq?", a: "Entre 300 y 400 km reales según batería, clima y velocidad." },
+    ],
+  }),
+  g({
+    id: "skoda:kodiaq:ns7", modelId: "skoda:kodiaq", code: "NS7", slug: "ns7",
+    startYear: 2016, bodyType: "SUV 7 plazas", lengthMm: 4697, bootLitres: 720,
+    oneLiner: "SUV familiar grande con 7 plazas y maletero enorme: mecánicas del Grupo VW conocidas y precio de ocasión razonable.",
+    intro:
+      "El Kodiaq comparte plataforma MQB con Tiguan Allspace y SEAT Tarraco. Motores 1.5/2.0 TSI y 2.0 TDI, con tracción 4x4 opcional y tercera fila. Buen equilibrio entre espacio, precio y mecánica conocida.",
+    verdict: "SUV familiar de 7 plazas muy racional. El 2.0 TDI 150 con historial es la compra más recomendable.",
+    strengths: ["Espacio y maletero de referencia entre los SUV de 7 plazas", "Mecánicas MQB conocidas", "Buena relación precio/producto"],
+    watchouts: ["Mecatrónica DSG en uso urbano", "Haldex en versiones 4x4 (mantenimiento)", "Tercera fila justa para adultos en viaje largo"],
+    faq: [
+      { q: "¿El Kodiaq es un Tiguan Allspace de Škoda?", a: "Comparten plataforma y motores; el Kodiaq ofrece algo más de espacio y un precio de ocasión generalmente inferior." },
+      { q: "¿Qué maletero tiene el Kodiaq con 5 plazas?", a: "En torno a 720 litros, de los mayores de su categoría." },
+    ],
+  }),
+  g({
+    id: "skoda:yeti:5l", modelId: "skoda:yeti", code: "5L", slug: "5l",
+    startYear: 2009, endYear: 2017, bodyType: "SUV", lengthMm: 4222, bootLitres: 405,
+    oneLiner: "SUV compacto muy querido por su practicidad: visibilidad excelente, buen maletero y mecánicas VAG muy conocidas.",
+    intro:
+      "El Yeti se ganó fama por su diseño funcional y su excelente visibilidad, poco habitual en SUV posteriores. Motores 1.2/1.4/1.8 TSI gasolina y 1.6/2.0 TDI diésel, con tracción 4x4 opcional. Descatalogado, pero muy apreciado en el mercado de ocasión.",
+    verdict: "SUV compacto muy práctico y de bajo riesgo. El 2.0 TDI 4x4 con historial es la compra más recomendable.",
+    strengths: ["Visibilidad y ergonomía de referencia", "Buen maletero y habitabilidad para su tamaño", "Mecánicas VAG muy conocidas"],
+    watchouts: ["Descatalogado: verificar disponibilidad de algunas piezas de carrocería", "Haldex en versiones 4x4 (mantenimiento)", "EGR y turbo del TDI con muchos kilómetros"],
+    faq: [
+      { q: "¿Por qué el Yeti es tan apreciado de segunda mano?", a: "Por su diseño funcional, su excelente visibilidad y una mecánica VAG muy conocida y fiable, en un tamaño muy manejable." },
+      { q: "¿El Yeti sigue teniendo buena disponibilidad de recambios?", a: "Al estar descatalogado desde 2017, algunas piezas específicas de carrocería pueden tardar más, aunque la mecánica comparte piezas con Golf/Octavia de su época." },
+    ],
+  }),
+
+  /* ── Nissan ─────────────────────────────────────────────── */
+  g({
+    id: "nissan:leaf:ze1", modelId: "nissan:leaf", code: "ZE1 (2ª gen)", slug: "ze1",
+    startYear: 2017, bodyType: "Compacto eléctrico", lengthMm: 4490, bootLitres: 435,
+    oneLiner: "Uno de los eléctricos con más recorrido comercial del mundo: mecánica muy probada y buen maletero para el segmento.",
+    intro:
+      "La segunda generación del Leaf mejoró diseño, autonomía y prestaciones respecto al primer Leaf. Motor eléctrico propio de Nissan, con baterías de 40 o 62 kWh (e+). Sin refrigeración líquida de la batería en la mayoría de versiones, a diferencia de otros rivales.",
+    verdict: "Eléctrico compacto de mecánica muy probada. Revisar el estado de salud de la batería (barras de capacidad) antes de comprar.",
+    strengths: ["Mecánica eléctrica muy probada por los años en el mercado", "Buen maletero para un eléctrico compacto", "Precio de ocasión ya accesible"],
+    watchouts: ["Batería sin refrigeración líquida en la mayoría de versiones: más sensible a la carga rápida frecuente", "Revisar el estado de salud (SOH) de la batería antes de comprar", "Autonomía real inferior a la homologada en invierno"],
+    faq: [
+      { q: "¿Cómo sé el estado de la batería de un Leaf de segunda mano?", a: "El propio salpicadero muestra unas 'barras' de capacidad de la batería (SOH); menos de 12 barras sobre 12 indica ya cierta degradación a revisar." },
+      { q: "¿Qué autonomía real tiene el Leaf e+ (62 kWh)?", a: "En torno a 300-350 km reales según clima y velocidad, con una cifra WLTP homologada más alta." },
+    ],
+  }),
+  g({
+    id: "nissan:note:e12", modelId: "nissan:note", code: "E12", slug: "e12",
+    startYear: 2013, endYear: 2020, bodyType: "Utilitario 5 puertas", lengthMm: 4100, bootLitres: 411,
+    oneLiner: "Utilitario con maletero de familiar: buen espacio para su tamaño, con motores sencillos y sobrios.",
+    intro:
+      "El Note E12 destacó por su maletero, muy por encima de la media de los utilitarios de su tamaño. Motores 1.2 atmosférico, 0.9/1.2 turbo (DIG-T/IG-T) y 1.5 dCi diésel. Mecánica sencilla y sin grandes sorpresas.",
+    verdict: "Utilitario muy práctico por espacio. El 1.5 dCi para kilómetros; el 1.2 atmosférico para ciudad.",
+    strengths: ["Maletero muy por encima de la media del segmento", "Mecánica sencilla y fiable", "Buena visibilidad y ergonomía"],
+    watchouts: ["1.2 atmosférico justo de fuerza con carga", "Insonorización básica", "Equipamiento tecnológico limitado frente a rivales más recientes"],
+    faq: [
+      { q: "¿Qué maletero tiene el Note E12?", a: "En torno a 411 litros, muy por encima de la media de los utilitarios de su tamaño." },
+      { q: "¿Hay Note híbrido?", a: "Sí, en Japón se vendió con el sistema e-Power; en Europa la mayoría de unidades son de combustión convencional." },
+    ],
+  }),
+
+  /* ── Mazda ──────────────────────────────────────────────── */
+  g({
+    id: "mazda:6:gj", modelId: "mazda:6", code: "GJ (restyling)", slug: "gj",
+    startYear: 2018, endYear: 2023, bodyType: "Berlina y Wagon", lengthMm: 4865, bootLitres: 506,
+    oneLiner: "Berlina/familiar grande que se conduce con soltura: mecánica Skyactiv atmosférica, sin turbo ni sobresaltos.",
+    intro:
+      "El Mazda6 de su última etapa (restyling GJ) ofrece motores Skyactiv-G 2.0/2.5 gasolina y Skyactiv-D 2.2 diésel. Chasis noble y buen tacto de conducción para una berlina grande; interior de calidad creciente en las últimas series.",
+    verdict: "Berlina/familiar grande de mecánica fiable. El Skyactiv-D 2.2 para kilómetros; el 2.0 gasolina para uso sin prisas.",
+    strengths: ["Comportamiento y tacto de conducción por encima de la media", "Mecánica Skyactiv fiable sin sobrealimentación agresiva", "Wagon con buen maletero"],
+    watchouts: ["Skyactiv-D 2.2: carbonilla y dilución de aceite si es uso solo urbano", "Consumo del 2.5 gasolina algo alto", "Multimedia sin pantalla táctil en marcha"],
+    faq: [
+      { q: "¿El Mazda6 Wagon tiene buen maletero?", a: "Sí, en torno a 506 litros, competitivo frente a berlinas y familiares generalistas de tamaño similar." },
+      { q: "¿El diésel 2.2 del Mazda6 da problemas?", a: "En uso mayoritariamente urbano puede acumular carbonilla y diluir aceite; con recorridos largos es un motor sólido y sobrio." },
+    ],
+  }),
+  g({
+    id: "mazda:cx-3:dk", modelId: "mazda:cx-3", code: "DK", slug: "dk",
+    startYear: 2015, endYear: 2021, bodyType: "SUV", lengthMm: 4275, bootLitres: 350,
+    oneLiner: "B-SUV con tacto de conducción por encima de la media: mecánica Skyactiv atmosférica, sin turbo.",
+    intro:
+      "El CX-3 comparte base con el Mazda2 de su época. Motores Skyactiv-G 2.0 gasolina y Skyactiv-D 1.5 diésel, con tracción total opcional (i-Activ AWD). Interior de calidad superior a la media del segmento; maletero algo justo.",
+    verdict: "B-SUV noble y fiable. El Skyactiv-G 2.0 para uso normal; el Skyactiv-D 1.5 si haces más kilómetros.",
+    strengths: ["Tacto de conducción por encima de la media del segmento", "Calidad interior superior a la media", "Mecánica Skyactiv fiable"],
+    watchouts: ["Maletero algo justo para el segmento", "Consumo urbano del gasolina atmosférico", "Plazas traseras algo reducidas"],
+    faq: [
+      { q: "¿El CX-3 es un Mazda2 más alto?", a: "Comparte plataforma y motores con el Mazda2 de su época; añade carrocería SUV y algo más de altura libre." },
+      { q: "¿Tiene tracción total?", a: "Opcionalmente, con el sistema i-Activ AWD en varias versiones." },
+    ],
+  }),
+  g({
+    id: "mazda:mx-30:default", modelId: "mazda:mx-30", code: "1ª gen", slug: "1",
+    startYear: 2020, bodyType: "SUV eléctrico/híbrido", lengthMm: 4395, bootLitres: 366,
+    oneLiner: "El eléctrico de Mazda con puertas traseras 'de suicidio': autonomía modesta pero comportamiento noble, también en híbrido ligero.",
+    intro:
+      "El MX-30 combina un diseño particular (puertas traseras sin pilar central, abisagradas al revés) con una batería relativamente pequeña priorizando el comportamiento sobre la autonomía máxima. También existe una versión mild-hybrid de gasolina (Skyactiv-X/G).",
+    verdict: "Eléctrico de diseño y comportamiento cuidados, con autonomía limitada. Pensado para uso urbano y trayectos cortos.",
+    strengths: ["Comportamiento dinámico noble para un eléctrico", "Diseño interior con materiales reciclados y detalles cuidados", "Puertas traseras que facilitan el acceso"],
+    watchouts: ["Autonomía real modesta frente a rivales eléctricos", "Maletero y plazas traseras reducidos por el diseño", "Las puertas traseras necesitan la delantera abierta para usarse"],
+    faq: [
+      { q: "¿Qué autonomía real tiene el MX-30 eléctrico?", a: "En torno a 180-200 km reales, notablemente inferior a otros eléctricos de tamaño similar: Mazda priorizó peso y comportamiento sobre autonomía máxima." },
+      { q: "¿Las puertas traseras se pueden abrir de forma independiente?", a: "No, hay que abrir primero la puerta delantera del mismo lado; es un diseño más estético que funcional." },
+    ],
+  }),
+
+  /* ── Hyundai ────────────────────────────────────────────── */
+  g({
+    id: "hyundai:i10:ac3", modelId: "hyundai:i10", code: "AC3", slug: "ac3",
+    startYear: 2019, bodyType: "Urbano 5 puertas", lengthMm: 3670, bootLitres: 252,
+    oneLiner: "Urbano con maletero y equipamiento por encima de la media: 1.0/1.2 atmosférico y la garantía de 5 años de Hyundai.",
+    intro:
+      "La tercera generación del i10 creció ligeramente para ganar espacio interior y maletero. Motores 1.0 y 1.2 atmosféricos, sin turbo. Buen equipamiento de serie para el segmento y garantía de fábrica de 5 años.",
+    verdict: "Urbano racional con buen respaldo de garantía. El 1.2 atmosférico para algo más de holgura en autovía.",
+    strengths: ["Garantía de fábrica de 5 años", "Buen maletero y equipamiento para el segmento", "Mecánica atmosférica sencilla y fiable"],
+    watchouts: ["1.0 atmosférico justo de fuerza con carga", "Insonorización básica en autovía", "Equipamiento de asistencias limitado en acabados de acceso"],
+    faq: [
+      { q: "¿El i10 AC3 mantiene la garantía si lo compro usado?", a: "Sí, la garantía de 5 años de Hyundai es de fábrica y se transfiere mientras esté vigente y con las revisiones al día." },
+      { q: "¿1.0 o 1.2 en el i10?", a: "El 1.2 va más holgado en autovía y con el coche cargado; el 1.0 basta para uso urbano puro." },
+    ],
+  }),
+  g({
+    id: "hyundai:santa-fe:tm", modelId: "hyundai:santa-fe", code: "TM", slug: "tm",
+    startYear: 2018, bodyType: "SUV 7 plazas", lengthMm: 4785, bootLitres: 634,
+    oneLiner: "SUV familiar grande con 7 plazas y garantía de 5 años: el 2.2 CRDi es el motor de kilómetros, con híbrido en las últimas series.",
+    intro:
+      "La cuarta generación del Santa Fe creció en tamaño respecto a la anterior. Motores 2.2 CRDi diésel, 2.5/1.6 T-GDi gasolina e híbrido/híbrido enchufable en el restyling. Tracción total HTRAC opcional y tercera fila. Buen respaldo de garantía.",
+    verdict: "SUV familiar de 7 plazas muy completo. El 2.2 CRDi con historial es la compra más razonable.",
+    strengths: ["Espacio y maletero de referencia entre SUV de 7 plazas", "Garantía de fábrica de 5 años", "Buen equipamiento de serie"],
+    watchouts: ["Caja automática de doble embrague en versiones que la montan", "Consumo alto en las versiones de gasolina", "Tercera fila justa para adultos en viaje largo"],
+    faq: [
+      { q: "¿El Santa Fe TM tiene 7 plazas de serie?", a: "Depende del mercado y acabado; en muchas configuraciones la tercera fila es opcional." },
+      { q: "¿Qué motor del Santa Fe es más recomendable?", a: "El 2.2 CRDi para quien hace muchos kilómetros; el híbrido del restyling para uso más urbano." },
+    ],
+  }),
+  g({
+    id: "hyundai:ioniq:ae", modelId: "hyundai:ioniq", code: "AE", slug: "ae",
+    startYear: 2016, endYear: 2022, bodyType: "Compacto híbrido/eléctrico", lengthMm: 4470, bootLitres: 443,
+    oneLiner: "El único modelo vendido en híbrido, híbrido enchufable y 100% eléctrico con la misma carrocería: fiabilidad y consumo muy competitivos.",
+    intro:
+      "El Ioniq se ofreció con tres mecánicas sobre la misma base: híbrido 1.6 GDi, híbrido enchufable y eléctrico puro. Buen maletero para un compacto electrificado y garantía de fábrica de 5 años (8 años en la batería del eléctrico).",
+    verdict: "Compacto electrificado muy racional. El híbrido para tranquilidad total; el eléctrico si la autonomía te cuadra.",
+    strengths: ["Tres mecánicas electrificadas sobre la misma carrocería", "Garantía de batería de 8 años en el eléctrico", "Buen maletero para un compacto electrificado"],
+    watchouts: ["Diseño exterior conservador", "Autonomía del eléctrico modesta frente a rivales más recientes", "Caja automática de doble embrague en el híbrido (no e-CVT)"],
+    faq: [
+      { q: "¿Qué autonomía tiene el Ioniq Electric?", a: "Según año y batería, entre 280 y 311 km WLTP homologados; en uso real, algo menos." },
+      { q: "¿El Ioniq híbrido usa e-CVT como Toyota?", a: "No, usa una caja automática de doble embrague de 6 velocidades, con cambios de marcha perceptibles a diferencia del e-CVT." },
+    ],
+  }),
+  g({
+    id: "hyundai:ioniq-5:default", modelId: "hyundai:ioniq-5", code: "NE", slug: "ne",
+    startYear: 2021, bodyType: "SUV eléctrico", lengthMm: 4635, bootLitres: 527,
+    oneLiner: "Eléctrico de plataforma dedicada (E-GMP) con carga ultrarrápida de serie: de los más avanzados técnicamente de su generación.",
+    intro:
+      "El Ioniq 5 estrena la plataforma E-GMP de 800 V, que permite cargar del 10 al 80% en unos 18 minutos en cargadores rápidos. Diseño retro-futurista con habitáculo muy espacioso gracias al suelo plano. Tracción trasera o total según versión.",
+    verdict: "Eléctrico técnicamente muy avanzado. La carga ultrarrápida de serie es una ventaja real frente a la mayoría de rivales de su época.",
+    strengths: ["Carga ultrarrápida (800 V) de serie", "Habitáculo muy espacioso gracias al suelo plano", "Garantía de batería de 8 años"],
+    watchouts: ["Precio de ocasión todavía alto", "Visibilidad trasera limitada por el diseño", "Maletero delantero (frunk) pequeño en las versiones de tracción total"],
+    faq: [
+      { q: "¿Qué significa la carga a 800 V del Ioniq 5?", a: "Permite recargar del 10 al 80% en unos 18 minutos en un cargador ultrarrápido compatible, muy por debajo del tiempo habitual en eléctricos de 400 V." },
+      { q: "¿Qué autonomía real tiene el Ioniq 5?", a: "Entre 350 y 450 km reales según batería, tracción, clima y velocidad." },
+    ],
+  }),
+
+  /* ── Kia ────────────────────────────────────────────────── */
+  g({
+    id: "kia:optima:jf", modelId: "kia:optima", code: "JF", slug: "jf",
+    startYear: 2015, endYear: 2020, bodyType: "Berlina y Sportswagon", lengthMm: 4855, bootLitres: 510,
+    oneLiner: "Berlina grande de ocasión muy barata: buen equipamiento, 7 años de garantía y el 1.7 CRDi como motor de kilómetros.",
+    intro:
+      "El Kia Optima JF ofreció mucho equipamiento por el precio, con la garantía de 7 años de la marca como respaldo. Motores 1.7 CRDi diésel, 1.6/2.0 T-GDi gasolina e híbrido/híbrido enchufable en algunas versiones. El Sportswagon familiar tiene buen maletero.",
+    verdict: "Berlina grande muy completa por poco dinero. El 1.7 CRDi con historial es la compra más recomendable.",
+    strengths: ["Mucho equipamiento de serie para su precio", "Garantía de fábrica de 7 años", "Sportswagon con buen maletero"],
+    watchouts: ["Caja automática de doble embrague en versiones que la montan", "Consumo alto en las versiones de gasolina turbo grandes", "Depreciación rápida (a favor del comprador de ocasión)"],
+    faq: [
+      { q: "¿La garantía de 7 años del Optima se transfiere al comprar usado?", a: "Sí, es de fábrica y se transfiere mientras esté vigente y con las revisiones al día." },
+      { q: "¿Qué maletero tiene el Optima Sportswagon?", a: "En torno a 552 litros, muy competitivo frente a familiares generalistas de tamaño similar." },
+    ],
+  }),
+  g({
+    id: "kia:xceed:cd", modelId: "kia:xceed", code: "CD", slug: "cd",
+    startYear: 2019, bodyType: "SUV crossover", lengthMm: 4395, bootLitres: 426,
+    oneLiner: "El Ceed con aire de SUV: más altura y protecciones, con las mismas mecánicas y la garantía de 7 años de Kia.",
+    intro:
+      "El XCeed comparte plataforma y motores con el Ceed, con una carrocería crossover de techo más inclinado. Motores 1.0/1.5 T-GDi gasolina, 1.6 CRDi diésel e híbrido enchufable. Buen equilibrio entre imagen de SUV y comportamiento de compacto.",
+    verdict: "Crossover racional con la garantía más larga del segmento. El 1.5 T-GDi mHEV o el 1.6 CRDi son las compras más equilibradas.",
+    strengths: ["Garantía de fábrica de 7 años", "Comportamiento más ágil que un SUV convencional", "Mecánicas compartidas con el Ceed, conocidas"],
+    watchouts: ["Carbonilla en admisión de los T-GDi con uso solo urbano", "Maletero algo justo para su tamaño exterior", "PHEV solo rentable si se carga a diario"],
+    faq: [
+      { q: "¿El XCeed es un SUV de verdad?", a: "Es más bien un crossover: más altura y protecciones que el Ceed, pero sin capacidad todocamino ni tracción total." },
+      { q: "¿Comparte mecánica con el Ceed?", a: "Sí, plataforma y motores son los mismos que los del Kia Ceed de su generación." },
+    ],
+  }),
+  g({
+    id: "kia:soul:sk3", modelId: "kia:soul", code: "SK3", slug: "sk3",
+    startYear: 2019, bodyType: "SUV compacto", lengthMm: 4195, bootLitres: 315,
+    oneLiner: "SUV compacto de diseño muy personal: buen espacio interior y garantía de 7 años, con motor 1.6 atmosférico.",
+    intro:
+      "El Soul SK3 mantiene el diseño cuadrado y personal que caracteriza al modelo desde su origen. Motor 1.6 atmosférico gasolina en la mayoría de mercados europeos, con versión eléctrica (Soul EV) en varios países. Buen espacio interior gracias a la forma de la carrocería.",
+    verdict: "SUV compacto de diseño diferenciado y garantía larga. El 1.6 atmosférico para uso normal sin prisas.",
+    strengths: ["Diseño muy personal y buen espacio interior", "Garantía de fábrica de 7 años", "Buena visibilidad gracias a la carrocería cuadrada"],
+    watchouts: ["1.6 atmosférico justo de fuerza en autovía cargado", "Oferta y disponibilidad limitadas en algunos mercados europeos", "Consumo real algo alto para su tamaño"],
+    faq: [
+      { q: "¿El Soul se vende con motor diésel?", a: "En Europa la gama se centró en gasolina atmosférico y, en algunos mercados, en la versión 100% eléctrica." },
+      { q: "¿Qué espacio interior ofrece?", a: "Gracias a su carrocería cuadrada, el espacio para la cabeza y la sensación de amplitud están por encima de la media de su segmento." },
+    ],
+  }),
+  g({
+    id: "kia:ev6:default", modelId: "kia:ev6", code: "CV", slug: "cv",
+    startYear: 2021, bodyType: "SUV eléctrico", lengthMm: 4680, bootLitres: 480,
+    oneLiner: "El eléctrico deportivo de Kia sobre la misma plataforma E-GMP que el Ioniq 5: carga ultrarrápida y comportamiento más dinámico.",
+    intro:
+      "El EV6 comparte plataforma E-GMP de 800 V con el Hyundai Ioniq 5, con un diseño y un ajuste de suspensión más deportivos. Versiones de tracción trasera y total (GT-Line/GT), con carga ultrarrápida de serie. Garantía de batería de 7 años.",
+    verdict: "Eléctrico técnicamente muy avanzado con más carácter deportivo que el Ioniq 5. Carga ultrarrápida como ventaja real.",
+    strengths: ["Carga ultrarrápida (800 V) de serie", "Comportamiento más dinámico que el Ioniq 5 equivalente", "Garantía de batería de 7 años"],
+    watchouts: ["Precio de ocasión todavía alto", "Visibilidad trasera limitada por el diseño", "Maletero algo menor que el del Ioniq 5"],
+    faq: [
+      { q: "¿El EV6 es un Ioniq 5 de Kia?", a: "Comparte plataforma E-GMP y mecánica con el Hyundai Ioniq 5; Kia ajusta diseño, suspensión y dirección con un enfoque más deportivo." },
+      { q: "¿Qué autonomía real tiene el EV6?", a: "Entre 350 y 450 km reales según batería, tracción, clima y velocidad." },
+    ],
+  }),
+
+  /* ── Fiat ───────────────────────────────────────────────── */
+  g({
+    id: "fiat:punto:199", modelId: "fiat:punto", code: "199 (Grande Punto / Punto Evo)", slug: "199",
+    startYear: 2005, endYear: 2018, bodyType: "Utilitario 3/5 puertas", lengthMm: 4030, bootLitres: 275,
+    oneLiner: "Uno de los utilitarios de ocasión más baratos de comprar: motores 1.2/1.4 gasolina y 1.3 MultiJet diésel muy conocidos.",
+    intro:
+      "El Grande Punto y su evolución Punto Evo/Punto tuvieron una vida comercial muy larga, lo que se traduce en precios de ocasión muy bajos. Motores 1.2/1.4 gasolina atmosférico y turbo, y 1.3/1.6 MultiJet diésel. Mecánica sencilla y muy conocida en talleres.",
+    verdict: "Coste de compra mínimo. El 1.3 MultiJet para consumo bajo; el 1.2 atmosférico para sencillez máxima.",
+    strengths: ["Precio de compra y mantenimiento muy bajos", "Mecánica sencilla y muy conocida en cualquier taller", "Oferta muy amplia en el mercado de ocasión"],
+    watchouts: ["Antigüedad de diseño y equipamiento de seguridad limitado en versiones más viejas", "Insonorización básica", "Óxido en bajos en unidades mal cuidadas"],
+    faq: [
+      { q: "¿Qué diferencia hay entre Grande Punto y Punto Evo?", a: "El Punto Evo (2009) es un restyling del Grande Punto con retoques estéticos, mejoras de motor y de equipamiento." },
+      { q: "¿Es fiable el 1.3 MultiJet?", a: "Sí, es un diésel muy extendido y probado en el grupo Fiat/PSA; conviene revisar el estado del DPF y la EGR en uso muy urbano." },
+    ],
+  }),
+  g({
+    id: "fiat:doblo:263", modelId: "fiat:doblo", code: "263 (2ª gen)", slug: "263",
+    startYear: 2010, endYear: 2022, bodyType: "Furgoneta de pasajeros 5/7 plazas", lengthMm: 4400, bootLitres: 790,
+    oneLiner: "Furgoneta de pasajeros muy práctica y barata: espacio enorme para el precio, con motores 1.3/1.6/2.0 MultiJet diésel.",
+    intro:
+      "El Doblò en su versión de pasajeros ofrece un espacio interior y de carga muy por encima de su precio. Motores 1.4/1.6 gasolina y 1.3/1.6/2.0 MultiJet diésel, con puertas correderas traseras. Comportamiento y aislamiento de furgoneta.",
+    verdict: "Espacio máximo al precio mínimo. El 1.6 MultiJet para kilómetros es la compra más razonable.",
+    strengths: ["Espacio interior y de carga muy por encima de su precio", "Puertas correderas traseras", "Precio de compra y mantenimiento bajos"],
+    watchouts: ["Comportamiento y aislamiento de furgoneta", "Materiales interiores básicos", "Consumo alto con el vehículo cargado"],
+    faq: [
+      { q: "¿El Doblò es cómodo para viajar?", a: "Prioriza espacio sobre confort: va bien para trayectos cortos y medios, con aislamiento acústico inferior a un monovolumen de turismo." },
+      { q: "¿Cuántas plazas puede llevar?", a: "Hasta 7 en la versión larga con tercera fila." },
+    ],
+  }),
+  g({
+    id: "fiat:500l:default", modelId: "fiat:500l", code: "1ª gen", slug: "1",
+    startYear: 2012, endYear: 2023, bodyType: "Monovolumen compacto", lengthMm: 4147, bootLitres: 400,
+    oneLiner: "El Fiat 500 convertido en monovolumen compacto: hereda el diseño pero gana espacio y maletero.",
+    intro:
+      "El 500L toma el lenguaje de diseño del 500 y lo aplica a una carrocería de monovolumen compacto con más espacio y maletero. Motores 0.9 TwinAir, 1.4 atmosférico gasolina y 1.3/1.6 MultiJet diésel. Comportamiento más de monovolumen que de urbano ágil.",
+    verdict: "Alternativa práctica al 500 clásico. El 1.6 MultiJet para kilómetros; el 1.4 para uso urbano-mixto.",
+    strengths: ["Espacio y maletero muy superiores al 500 clásico", "Diseño reconocible de la familia 500", "Buena posición de conducción elevada"],
+    watchouts: ["Consumo real del TwinAir por encima del homologado", "Comportamiento menos ágil que el 500 original", "Insonorización mejorable en autovía"],
+    faq: [
+      { q: "¿El 500L es un monovolumen o un SUV?", a: "Es un monovolumen compacto: más alto y espacioso que un utilitario, sin pretensiones todocamino." },
+      { q: "¿Comparte motor con el 500 clásico?", a: "Sí, la gama de motores (TwinAir, atmosférico, MultiJet) es esencialmente la misma." },
+    ],
+  }),
+
+  /* ── Citroën ────────────────────────────────────────────── */
+  g({
+    id: "citroen:c1:b4", modelId: "citroen:c1", code: "B4 (2ª gen)", slug: "b4",
+    startYear: 2014, endYear: 2022, bodyType: "Urbano 3/5 puertas", lengthMm: 3465, bootLitres: 196,
+    oneLiner: "Urbano gemelo del Toyota Aygo y el Peugeot 108: mecánica 1.0 VVT-i atmosférica, muy fiable y barata.",
+    intro:
+      "El C1 se desarrolló junto a Toyota (Aygo) y Peugeot (108) sobre la misma plataforma y con el mismo motor. Coche pensado en exclusiva para ciudad: maletero mínimo, mecánica muy fiable y mantenimiento barato.",
+    verdict: "Urbano puro de mantenimiento mínimo. Igual de recomendable que sus gemelos Aygo y 108.",
+    strengths: ["Fiabilidad y mantenimiento muy baratos (motor Toyota)", "Fácil de aparcar y manejar en ciudad", "Precio de ocasión bajo"],
+    watchouts: ["Maletero y plazas traseras mínimos", "Poca insonorización en autovía", "Equipamiento básico en acabados de acceso"],
+    faq: [
+      { q: "¿El C1 es lo mismo que el Toyota Aygo?", a: "Sí, junto con el Peugeot 108 comparten plataforma, motor 1.0 VVT-i y carrocería, con cambios estéticos y de equipamiento." },
+      { q: "¿Hay C1 descapotable?", a: "Sí, la versión Airscape con techo de lona retráctil." },
+    ],
+  }),
+  g({
+    id: "citroen:c4-picasso:b78", modelId: "citroen:c4-picasso", code: "B78 / SpaceTourer", slug: "b78",
+    startYear: 2013, endYear: 2022, bodyType: "Monovolumen 5/7 plazas", lengthMm: 4428, bootLitres: 537,
+    oneLiner: "Monovolumen con parabrisas panorámico característico: buen espacio y confort, con motores PureTech y BlueHDi.",
+    intro:
+      "El C4 Picasso (rebautizado C4 SpaceTourer en el restyling) destaca por su parabrisas panorámico y su luminosidad interior. Motores 1.2/1.6 PureTech gasolina y 1.6/2.0 BlueHDi diésel, con opción de 7 plazas en el Grand C4 Picasso. Confort de marcha por encima de la media.",
+    verdict: "Monovolumen cómodo y luminoso. El 1.6 BlueHDi con historial es la compra más recomendable.",
+    strengths: ["Luminosidad y parabrisas panorámico característicos", "Confort de suspensión por encima de la media", "Grand C4 Picasso con 7 plazas"],
+    watchouts: ["Correa 'húmeda' del PureTech en series iniciales", "Sistema AdBlue en los diésel más recientes", "Electrónica y sensores con averías ocasionales"],
+    faq: [
+      { q: "¿Qué diferencia hay entre C4 Picasso y Grand C4 Picasso?", a: "El Grand C4 Picasso es la versión alargada con tercera fila para 7 plazas; el C4 Picasso normal tiene 5 plazas." },
+      { q: "¿El C4 Picasso es lo mismo que el C4 SpaceTourer?", a: "Sí, SpaceTourer es el nombre que recibió el modelo tras el restyling, sin cambios mecánicos relevantes." },
+    ],
+  }),
+
+  /* ── Volvo ──────────────────────────────────────────────── */
+  g({
+    id: "volvo:xc90:256", modelId: "volvo:xc90", code: "256 (2ª gen)", slug: "256",
+    startYear: 2015, bodyType: "SUV 7 plazas", lengthMm: 4953, bootLitres: 721,
+    oneLiner: "SUV grande premium de 7 plazas centrado en seguridad y confort: el D5 diésel y el B5 mild-hybrid son los motores de referencia.",
+    intro:
+      "La segunda generación del XC90 relanzó la gama grande de Volvo con un diseño escandinavo muy celebrado. Motores 2.0 D5 diésel (con tracción total de serie), B5/B6 mild-hybrid gasolina y el híbrido enchufable T8 Recharge. Equipamiento de seguridad de referencia y tercera fila usable.",
+    verdict: "SUV grande premium muy completo. El D5 con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Equipamiento de seguridad y confort de referencia", "Tercera fila más usable que en SUV más pequeños", "Diseño e interior de gran calidad"],
+    watchouts: ["Coste de mantenimiento y reparaciones elevado", "Admisión y EGR del D5 con kilómetros", "Mantenimiento de la caja automática Aisin"],
+    faq: [
+      { q: "¿El XC90 D5 tiene tracción total de serie?", a: "Sí, todas las versiones diésel D5 llevan tracción total AWD de serie." },
+      { q: "¿Qué autonomía tiene el XC90 T8 Recharge?", a: "Según año y batería, entre 40 y 77 km WLTP eléctricos; en uso real, algo menos." },
+    ],
+  }),
+  g({
+    id: "volvo:v60:225", modelId: "volvo:v60", code: "225 (2ª gen)", slug: "225",
+    startYear: 2018, bodyType: "Familiar", lengthMm: 4761, bootLitres: 529,
+    oneLiner: "Familiar premium de diseño muy cuidado: el D4 diésel Drive-E combina consumo bajo con un maletero muy competente.",
+    intro:
+      "La segunda generación del V60 comparte plataforma SPA con el XC60 y el S90. Motores 2.0 D3/D4 diésel, gasolina T4/T5 y mild-hybrid B4/B5, además del híbrido enchufable T6/T8. Diseño y calidad interior de referencia en el segmento familiar premium.",
+    verdict: "Familiar premium muy completo. El D4 con mantenimiento documentado es la opción más razonable.",
+    strengths: ["Diseño y calidad interior de referencia", "Buen maletero y practicidad para el segmento", "Consumo contenido en los diésel Drive-E"],
+    watchouts: ["Admisión y EGR de los diésel con kilómetros", "Mantenimiento de la caja automática Aisin", "Coste de mantenimiento superior a un familiar generalista"],
+    faq: [
+      { q: "¿Qué maletero tiene el V60?", a: "En torno a 529 litros, competitivo frente a familiares premium de tamaño similar." },
+      { q: "¿D3 o D4 en el V60?", a: "El D4 ofrece más empuje para viaje y carga; el D3 es suficiente para un uso más tranquilo y algo más económico." },
+    ],
+  }),
+  g({
+    id: "volvo:s60:224", modelId: "volvo:s60", code: "224 (3ª gen)", slug: "224",
+    startYear: 2018, bodyType: "Berlina", lengthMm: 4761, bootLitres: 442,
+    oneLiner: "Berlina premium hermana del V60: mismo interior y mecánica, sin versión diésel en las últimas series (todo gasolina/híbrido).",
+    intro:
+      "La tercera generación del S60 comparte plataforma y motores con el V60, aunque en mercados como el estadounidense se dejó de ofrecer diésel; en Europa convivieron ambas gamas según año. Mild-hybrid B4/B5 gasolina e híbrido enchufable T6/T8 Recharge.",
+    verdict: "Berlina premium con el mismo contenido que el V60. Elige según prioricéis maletero (V60) o estética de berlina (S60).",
+    strengths: ["Diseño y calidad interior de referencia", "Mecánicas compartidas con el V60, bien conocidas", "Buen equipamiento de seguridad"],
+    watchouts: ["Maletero inferior al del V60 familiar", "Coste de mantenimiento superior a un generalista", "Disponibilidad de diésel limitada en las últimas series"],
+    faq: [
+      { q: "¿El S60 tiene versión diésel?", a: "Depende del año y mercado: las últimas series se centraron en gasolina mild-hybrid e híbrido enchufable." },
+      { q: "¿S60 o V60?", a: "Mecánicamente son iguales; el V60 ofrece mucho más maletero, el S60 prioriza la estética de berlina." },
+    ],
+  }),
+
+  /* ── MINI ───────────────────────────────────────────────── */
+  g({
+    id: "mini:clubman:f54", modelId: "mini:clubman", code: "F54", slug: "f54",
+    startYear: 2015, bodyType: "Familiar", lengthMm: 4253, bootLitres: 360,
+    oneLiner: "El MINI más práctico con puertas traseras partidas: mismos motores B38/B48/B47 que el resto de la gama.",
+    intro:
+      "El Clubman F54 es el MINI más largo y práctico, con sus características puertas traseras partidas ('barn doors') y opción de tracción total ALL4. Motores B38/B48 gasolina y B37/B47 diésel, compartidos con el resto de la gama MINI/BMW UKL.",
+    verdict: "El MINI para quien necesita algo más de espacio sin renunciar al carácter de la marca. El Cooper D es la compra más razonable.",
+    strengths: ["Más espacio y maletero que el resto de la gama MINI", "Mecánicas BMW conocidas", "Opción de tracción total ALL4"],
+    watchouts: ["Cadena y EGR de los diésel B47", "Recambios y neumáticos caros", "Visibilidad trasera reducida por las puertas partidas"],
+    faq: [
+      { q: "¿Qué son las puertas 'barn doors' del Clubman?", a: "Un portón trasero dividido en dos hojas que se abren hacia los lados, un guiño de diseño heredado de generaciones anteriores del modelo." },
+      { q: "¿El Clubman comparte motor con el Countryman?", a: "Sí, ambos usan la gama de motores BMW B38/B48/B47 sobre la plataforma UKL." },
+    ],
+  }),
+];
+
+/** Todas las generaciones: base + tres ampliaciones. */
+export const generations: Generation[] = [
+  ...baseGenerations,
+  ...extraGenerations,
+  ...extraGenerations2,
+  ...extraGenerations3,
+];

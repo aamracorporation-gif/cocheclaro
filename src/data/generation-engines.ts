@@ -449,4 +449,177 @@ export const generationEngines: GenerationEngine[] = [
   // Honda CR-V RW
   ge("honda:cr-v:rw", "honda-1-5-vtec-turbo", "1.5 VTEC Turbo 173/193", 2018, { endYear: 2023, consumption: 6.3 }),
   ge("honda:cr-v:rw", "honda-e-hev-2-0", "2.0 i-MMD Hybrid 184", 2019, { transmission: "automatico", endYear: 2023, consumption: 5.5 }),
+
+  /* ══ Segunda ampliación: nuevas marcas ══ */
+  // Alfa Romeo
+  ge("alfa-romeo:giulietta:940", "alfa-1-4-tb", "1.4 TB 120/150", 2010, { consumption: 6.3 }),
+  ge("alfa-romeo:giulietta:940", "alfa-1-6-jtdm", "1.6 JTDm 120", 2010, { consumption: 4.2 }),
+  ge("alfa-romeo:giulietta:940", "alfa-2-0-jtdm", "2.0 JTDm 150/170", 2010, { consumption: 4.7 }),
+  ge("alfa-romeo:giulia:952", "alfa-2-0-gme", "2.0 Turbo 200/280", 2016, { transmission: "automatico", consumption: 7.2 }),
+  ge("alfa-romeo:giulia:952", "alfa-2-0-jtdm", "2.0 JTDm 160/190", 2016, { transmission: "automatico", consumption: 4.6 }),
+  ge("alfa-romeo:stelvio:949", "alfa-2-0-gme", "2.0 Turbo Q4 200/280", 2017, { transmission: "automatico", drivetrain: "total", consumption: 8.0 }),
+  ge("alfa-romeo:stelvio:949", "alfa-2-0-jtdm", "2.0 JTDm Q4 160/190", 2017, { transmission: "automatico", drivetrain: "total", consumption: 5.2 }),
+  ge("alfa-romeo:mito:955", "alfa-1-4-tb", "1.4 TB 120/135", 2008, { endYear: 2018, consumption: 6.0 }),
+  ge("alfa-romeo:mito:955", "alfa-1-6-jtdm", "1.6 JTDm 120", 2008, { endYear: 2018, consumption: 4.0 }),
+  // Jeep
+  ge("jeep:renegade:bu", "firefly-1-0", "1.3 GSE T4 150", 2014, { consumption: 6.4 }),
+  ge("jeep:renegade:bu", "jeep-1-6-multijet", "1.6 MultiJet II 120", 2014, { consumption: 4.6 }),
+  ge("jeep:compass:mp", "firefly-1-0", "1.3 GSE T4 130/150", 2017, { consumption: 6.5 }),
+  ge("jeep:compass:mp", "jeep-1-6-multijet", "1.6 MultiJet II 120", 2017, { consumption: 4.8 }),
+  ge("jeep:compass:mp", "alfa-2-0-gme", "2.0 GME 4xe (híbrido enchufable)", 2020, { transmission: "automatico", drivetrain: "total", consumption: 1.9 }),
+  // Land Rover
+  ge("land-rover:evoque:l551", "landrover-2-0-ingenium-d", "D150 / D180 / D240", 2019, { transmission: "automatico", drivetrain: "total", consumption: 5.8 }),
+  ge("land-rover:evoque:l551", "landrover-2-0-ingenium-p", "P200 / P250", 2019, { transmission: "automatico", drivetrain: "total", consumption: 8.2 }),
+  ge("land-rover:discovery-sport:l550", "landrover-2-0-ingenium-d", "D150 / D180 / D240", 2019, { transmission: "automatico", drivetrain: "total", consumption: 6.2 }),
+  ge("land-rover:discovery-sport:l550", "landrover-2-0-ingenium-p", "P200 / P250", 2019, { transmission: "automatico", drivetrain: "total", consumption: 8.6 }),
+  // Lexus
+  ge("lexus:ct:default", "lexus-1-8-hybrid", "200h", 2011, { endYear: 2020, transmission: "automatico", consumption: 3.9 }),
+  ge("lexus:nx:az10", "toyota-2-5-hybrid", "300h", 2014, { endYear: 2021, transmission: "automatico", consumption: 5.3 }),
+  ge("lexus:ux:default", "lexus-2-0-hybrid", "250h", 2018, { transmission: "automatico", consumption: 4.5 }),
+  ge("lexus:rx:al20", "toyota-2-5-hybrid", "450h", 2015, { endYear: 2022, transmission: "automatico", drivetrain: "total", consumption: 6.0 }),
+  // DS
+  ge("ds:ds3-crossback:default", "puretech-1-2-ds", "PureTech 130/155", 2019, { consumption: 5.6 }),
+  ge("ds:ds3-crossback:default", "bluehdi-1-5", "BlueHDi 100/130", 2019, { consumption: 4.0 }),
+  ge("ds:ds7-crossback:default", "puretech-1-2-ds", "PureTech 130/225", 2018, { consumption: 6.4 }),
+  ge("ds:ds7-crossback:default", "bluehdi-1-5", "BlueHDi 130", 2018, { transmission: "automatico", consumption: 4.5 }),
+  ge("ds:ds7-crossback:default", "bluehdi-2-0", "BlueHDi 180", 2018, { transmission: "automatico", consumption: 5.0 }),
+  ge("ds:ds4:default", "puretech-1-2-ds", "PureTech 130/180", 2021, { consumption: 5.9 }),
+  ge("ds:ds4:default", "bluehdi-1-5", "BlueHDi 130", 2021, { transmission: "automatico", consumption: 4.4 }),
+  // Suzuki
+  ge("suzuki:swift:az", "suzuki-1-2-dualjet", "1.2 Dualjet Hybrid 83", 2017, { consumption: 4.4 }),
+  ge("suzuki:swift:az", "suzuki-1-4-boosterjet", "Sport 1.4 Boosterjet 140", 2017, { consumption: 5.8 }),
+  ge("suzuki:vitara:ly", "suzuki-1-2-dualjet", "1.2 Dualjet Hybrid 83", 2015, { consumption: 5.2 }),
+  ge("suzuki:vitara:ly", "suzuki-1-4-boosterjet", "1.4 Boosterjet AllGrip 129", 2015, { drivetrain: "total", consumption: 6.0 }),
+  ge("suzuki:jimny:jb74", "suzuki-1-2-dualjet", "1.5 VVT 102", 2018, { drivetrain: "total", consumption: 6.9 }),
+  // Mitsubishi
+  ge("mitsubishi:asx:ga", "mitsubishi-1-6-mivec", "1.6 MIVEC 117", 2016, { endYear: 2023, consumption: 6.5 }),
+  ge("mitsubishi:outlander:phev3", "mitsubishi-phev-2-4", "PHEV 4WD 224", 2013, { transmission: "automatico", drivetrain: "total", endYear: 2021, consumption: 1.9 }),
+  ge("mitsubishi:space-star:default", "kappa-1-25-mpi", "1.2 MIVEC 80", 2013, { consumption: 5.1 }),
+  // smart
+  ge("smart:fortwo:453", "smart-1-0-na", "1.0 52/71", 2014, { endYear: 2023, drivetrain: "trasera", consumption: 4.5 }),
+  ge("smart:forfour:453", "smart-1-0-na", "1.0 52/71", 2014, { endYear: 2022, drivetrain: "trasera", consumption: 4.7 }),
+  // Tesla
+  ge("tesla:model-3:default", "tesla-electric-sr", "Propulsion (tracción trasera)", 2019, { transmission: "automatico", consumption: 14.9 }),
+  ge("tesla:model-3:default", "tesla-electric-awd", "Long Range / Performance AWD", 2019, { transmission: "automatico", drivetrain: "total", consumption: 15.8 }),
+  ge("tesla:model-y:default", "tesla-electric-sr", "Propulsion (tracción trasera)", 2021, { transmission: "automatico", consumption: 16.9 }),
+  ge("tesla:model-y:default", "tesla-electric-awd", "Long Range / Performance AWD", 2021, { transmission: "automatico", drivetrain: "total", consumption: 17.5 }),
+  // MG
+  ge("mg:zs:default", "mg-1-5-vti", "1.5 VTi-Tech 114", 2021, { consumption: 6.5 }),
+  ge("mg:zs:default", "mg-1-5-turbo", "1.5 T-GDI 162", 2021, { transmission: "automatico", consumption: 7.0 }),
+  ge("mg:zs:default", "mg-electric", "ZS EV", 2021, { transmission: "automatico", consumption: 16.5 }),
+  ge("mg:mg4:default", "mg-electric", "MG4 Electric", 2022, { transmission: "automatico", consumption: 16.0 }),
+
+  /* ══ Tercera ampliación: más modelos de marcas ya presentes ══ */
+  // BMW
+  ge("bmw:x5:g05", "b57d30", "xDrive30d / xDrive40d", 2018, { transmission: "automatico", drivetrain: "total", consumption: 6.8 }),
+  ge("bmw:x5:g05", "bmw-b58-3-0", "xDrive40i", 2018, { transmission: "automatico", drivetrain: "total", consumption: 8.9 }),
+  ge("bmw:serie-2-active-tourer:f45", "b38", "218i", 2014, { consumption: 5.8 }),
+  ge("bmw:serie-2-active-tourer:f45", "b47d20", "216d / 218d", 2014, { transmission: "automatico", consumption: 4.4 }),
+  ge("bmw:serie-7:g11", "bmw-n57-3-0d", "730d / 740d", 2015, { endYear: 2022, transmission: "automatico", drivetrain: "trasera", consumption: 5.8 }),
+  ge("bmw:serie-7:g11", "bmw-b58-3-0", "740i", 2015, { endYear: 2022, transmission: "automatico", drivetrain: "trasera", consumption: 8.2 }),
+  // Audi
+  ge("audi:a6:c8", "ea288-2-0-tdi", "40 TDI", 2018, { transmission: "automatico", consumption: 5.2 }),
+  ge("audi:a6:c8", "audi-3-0-tdi", "45/50 TDI quattro", 2018, { transmission: "automatico", drivetrain: "total", consumption: 6.1 }),
+  ge("audi:a6:c8", "ea888-2-0-tsi", "40/45 TFSI", 2018, { transmission: "automatico", consumption: 7.0 }),
+  ge("audi:q7:4m", "audi-3-0-tdi", "45/50 TDI quattro", 2015, { transmission: "automatico", drivetrain: "total", consumption: 6.8 }),
+  ge("audi:q7:4m", "ea888-2-0-tsi", "55 TFSI quattro", 2015, { transmission: "automatico", drivetrain: "total", consumption: 9.0 }),
+  ge("audi:tt:fv", "ea888-2-0-tsi", "40/45 TFSI / TTS", 2014, { endYear: 2023, transmission: "automatico", consumption: 6.8 }),
+  // Mercedes
+  ge("mercedes-benz:clase-e:w213", "om654", "E 200 d / E 220 d", 2016, { endYear: 2023, transmission: "automatico", drivetrain: "trasera", consumption: 4.8 }),
+  ge("mercedes-benz:clase-e:w213", "mercedes-om656", "E 300 d", 2018, { endYear: 2023, transmission: "automatico", drivetrain: "trasera", consumption: 5.5 }),
+  ge("mercedes-benz:clase-e:w213", "mercedes-m264-e", "E 200", 2016, { endYear: 2023, transmission: "automatico", drivetrain: "trasera", consumption: 7.0 }),
+  ge("mercedes-benz:gle:w167", "mercedes-om656", "GLE 300 d / 350 d 4MATIC", 2019, { transmission: "automatico", drivetrain: "total", consumption: 6.4 }),
+  ge("mercedes-benz:gle:w167", "m264", "GLE 350 4MATIC", 2019, { transmission: "automatico", drivetrain: "total", consumption: 8.6 }),
+  // VW
+  ge("volkswagen:arteon:3h", "ea211-1-5-tsi", "1.5 TSI 150", 2017, { consumption: 5.8 }),
+  ge("volkswagen:arteon:3h", "ea288-2-0-tdi", "2.0 TDI 150/190 4Motion", 2017, { transmission: "automatico", consumption: 4.9 }),
+  ge("volkswagen:t-cross:c1", "ea211-1-0-tsi", "1.0 TSI 95/110", 2019, { consumption: 5.4 }),
+  ge("volkswagen:t-cross:c1", "ea211-1-5-tsi", "1.5 TSI 150", 2019, { consumption: 5.8 }),
+  ge("volkswagen:caddy:5", "ea211-1-5-tsi", "1.5 TSI 114", 2020, { consumption: 6.4 }),
+  ge("volkswagen:caddy:5", "ea288-2-0-tdi", "2.0 TDI 75/122/2.0 4Motion", 2020, { consumption: 5.2 }),
+  ge("volkswagen:id3:default", "vw-meb-rwd", "Pro / Pro S", 2020, { transmission: "automatico", drivetrain: "trasera", consumption: 15.4 }),
+  ge("volkswagen:id4:default", "vw-meb-rwd", "Pro / Pro Performance", 2021, { transmission: "automatico", drivetrain: "trasera", consumption: 16.3 }),
+  ge("volkswagen:id4:default", "vw-meb-awd", "GTX (tracción total)", 2021, { transmission: "automatico", drivetrain: "total", consumption: 17.8 }),
+  // Toyota
+  ge("toyota:prius:xw50", "toyota-hsd-1-8", "122", 2016, { endYear: 2022, transmission: "automatico", consumption: 3.7 }),
+  ge("toyota:camry:xv70", "toyota-2-5-hybrid", "218", 2019, { transmission: "automatico", consumption: 5.0 }),
+  ge("toyota:land-cruiser:j150", "toyota-1gd-diesel", "2.8 D-4D", 2015, { endYear: 2021, transmission: "automatico", drivetrain: "total", consumption: 8.1 }),
+  // Ford
+  ge("ford:s-max:mk2", "ecoboost-1-0", "1.5/2.0 EcoBoost 160/240", 2015, { consumption: 7.4 }),
+  ge("ford:s-max:mk2", "ecoblue-1-5", "2.0 EcoBlue/TDCi 150/190", 2015, { transmission: "automatico", consumption: 5.3 }),
+  ge("ford:ranger:p703", "ecoblue-1-5", "2.0 EcoBlue bi-turbo 205", 2022, { transmission: "automatico", drivetrain: "total", consumption: 8.4 }),
+  ge("ford:mustang:s550", "ford-v8-5-0", "GT V8", 2015, { endYear: 2023, transmission: "automatico", drivetrain: "trasera", consumption: 12.8 }),
+  ge("ford:mustang:s550", "ford-2-3-ecoboost", "EcoBoost", 2015, { endYear: 2023, drivetrain: "trasera", consumption: 8.9 }),
+  // Renault
+  ge("renault:zoe:bf", "renault-electric-zoe", "ZE50 R135/R110", 2019, { transmission: "automatico", endYear: 2024, consumption: 17.2 }),
+  ge("renault:espace:v", "tce-1-3", "1.3/1.8 TCe 160/225", 2015, { consumption: 6.8 }),
+  ge("renault:espace:v", "dci-1-5-blue", "1.6/2.0 dCi 130/160", 2015, { transmission: "automatico", consumption: 5.0 }),
+  ge("renault:talisman:default", "tce-1-3", "1.3/1.6/2.0 TCe 150/200", 2015, { endYear: 2022, consumption: 6.8 }),
+  ge("renault:talisman:default", "dci-1-5-blue", "1.6/1.7/2.0 dCi 130/160", 2015, { endYear: 2022, consumption: 4.6 }),
+  // Peugeot
+  ge("peugeot:108:default", "toyota-1-0-vvti", "VTi 72", 2014, { endYear: 2022, consumption: 4.1 }),
+  ge("peugeot:rifter:default", "puretech-1-2", "PureTech 110/130", 2018, { consumption: 6.1 }),
+  ge("peugeot:rifter:default", "bluehdi-1-5", "BlueHDi 100/130", 2018, { consumption: 4.4 }),
+  ge("peugeot:408:default", "puretech-1-2", "PureTech 130", 2022, { consumption: 5.7 }),
+  ge("peugeot:408:default", "bluehdi-1-5", "BlueHDi 130", 2022, { transmission: "automatico", consumption: 4.3 }),
+  // Opel
+  ge("opel:zafira:life", "bluehdi-2-0", "2.0 Diesel 150/180", 2019, { consumption: 6.9 }),
+  ge("opel:adam:default", "opel-1-4-turbo", "1.0 Turbo / 1.4 90/115", 2013, { endYear: 2019, consumption: 5.4 }),
+  // SEAT / CUPRA
+  ge("seat:alhambra:7n", "ea211-1-5-tsi", "1.4 TSI 150", 2010, { consumption: 7.2 }),
+  ge("seat:alhambra:7n", "ea288-2-0-tdi", "2.0 TDI 150/184", 2010, { transmission: "automatico", consumption: 5.6 }),
+  ge("seat:mii:default", "ea211-1-0-tsi", "1.0 60/75", 2012, { endYear: 2019, consumption: 4.6 }),
+  ge("cupra:born:default", "vw-meb-rwd", "e-Boost 150/170/204", 2021, { transmission: "automatico", drivetrain: "trasera", consumption: 15.8 }),
+  // Škoda
+  ge("skoda:enyaq:default", "vw-meb-rwd", "60 / 80", 2021, { transmission: "automatico", drivetrain: "trasera", consumption: 16.1 }),
+  ge("skoda:enyaq:default", "vw-meb-awd", "80x / RS", 2021, { transmission: "automatico", drivetrain: "total", consumption: 17.4 }),
+  ge("skoda:kodiaq:ns7", "ea211-1-5-tsi", "1.5 TSI 150", 2016, { consumption: 7.0 }),
+  ge("skoda:kodiaq:ns7", "ea288-2-0-tdi", "2.0 TDI 150/190 4x4", 2016, { transmission: "automatico", drivetrain: "total", consumption: 5.5 }),
+  ge("skoda:yeti:5l", "ea111-1-4-tsi", "1.4 TSI 122", 2009, { endYear: 2017, consumption: 6.8 }),
+  ge("skoda:yeti:5l", "ea189-2-0-tdi", "2.0 TDI 110/140 4x4", 2009, { endYear: 2017, consumption: 5.4 }),
+  // Nissan
+  ge("nissan:leaf:ze1", "nissan-leaf-electric", "40 kWh / e+ 62 kWh", 2017, { transmission: "automatico", consumption: 15.9 }),
+  ge("nissan:note:e12", "tce-1-0", "1.2 DIG-S / IG-T 98", 2013, { endYear: 2020, consumption: 5.0 }),
+  ge("nissan:note:e12", "dci-1-5-blue", "1.5 dCi 90", 2013, { endYear: 2017, consumption: 3.6 }),
+  // Mazda
+  ge("mazda:6:gj", "skyactiv-g-2-0", "2.0/2.5 Skyactiv-G 145/194", 2018, { endYear: 2023, consumption: 6.8 }),
+  ge("mazda:6:gj", "skyactiv-d-2-2", "2.2 Skyactiv-D 150/184", 2018, { endYear: 2023, transmission: "automatico", consumption: 5.0 }),
+  ge("mazda:cx-3:dk", "skyactiv-g-2-0", "2.0 Skyactiv-G 121/150", 2015, { endYear: 2021, consumption: 6.0 }),
+  ge("mazda:cx-3:dk", "skyactiv-d-1-8", "1.5 Skyactiv-D 105", 2015, { endYear: 2018, consumption: 4.1 }),
+  ge("mazda:mx-30:default", "mazda-mx30-ev", "e-Skyactiv EV", 2020, { transmission: "automatico", consumption: 17.9 }),
+  // Hyundai
+  ge("hyundai:i10:ac3", "kappa-1-25-mpi", "1.0 / 1.2 67/84", 2019, { consumption: 4.9 }),
+  ge("hyundai:santa-fe:tm", "hyundai-2-2-crdi", "2.2 CRDi 200", 2018, { transmission: "automatico", drivetrain: "total", consumption: 6.4 }),
+  ge("hyundai:santa-fe:tm", "hyundai-kia-1-6-hev", "1.6 T-GDi Hybrid 230", 2020, { transmission: "automatico", drivetrain: "total", consumption: 6.0 }),
+  ge("hyundai:ioniq:ae", "toyota-hsd-1-8", "1.6 GDi Hybrid 141", 2016, { endYear: 2022, transmission: "automatico", consumption: 3.9 }),
+  ge("hyundai:ioniq-5:default", "nissan-leaf-electric", "58 / 72,6 kWh", 2021, { transmission: "automatico", consumption: 16.7 }),
+  // Kia
+  ge("kia:optima:jf", "smartstream-1-6-crdi", "1.7 CRDi 141", 2015, { endYear: 2020, consumption: 4.3 }),
+  ge("kia:optima:jf", "smartstream-1-6-tgdi", "1.6/2.0 T-GDi 178/245", 2015, { endYear: 2020, transmission: "automatico", consumption: 7.0 }),
+  ge("kia:xceed:cd", "kappa-1-0-tgdi", "1.0 T-GDi 120", 2019, { consumption: 5.6 }),
+  ge("kia:xceed:cd", "smartstream-1-6-tgdi", "1.5 T-GDi mHEV 160", 2019, { consumption: 6.3 }),
+  ge("kia:xceed:cd", "smartstream-1-6-crdi", "1.6 CRDi 136", 2019, { consumption: 4.7 }),
+  ge("kia:soul:sk3", "smartstream-1-6-tgdi", "1.6 GDi 123", 2019, { consumption: 6.6 }),
+  ge("kia:ev6:default", "nissan-leaf-electric", "58 / 77,4 kWh RWD/AWD", 2021, { transmission: "automatico", consumption: 16.5 }),
+  // Fiat
+  ge("fiat:punto:199", "firefly-1-0", "1.2 8v / 1.4 16v 65/95", 2005, { endYear: 2018, consumption: 5.5 }),
+  ge("fiat:punto:199", "fiat-1-6-multijet", "1.3 MultiJet 75/95", 2005, { endYear: 2018, consumption: 3.9 }),
+  ge("fiat:doblo:263", "fiat-1-6-multijet", "1.6 MultiJet 105/120", 2010, { endYear: 2022, consumption: 5.0 }),
+  ge("fiat:500l:default", "twinair-0-9", "0.9 TwinAir 105", 2012, { endYear: 2023, consumption: 5.2 }),
+  ge("fiat:500l:default", "fiat-1-6-multijet", "1.3/1.6 MultiJet 95/120", 2012, { endYear: 2023, consumption: 4.4 }),
+  // Citroën
+  ge("citroen:c1:b4", "toyota-1-0-vvti", "VTi 72", 2014, { endYear: 2022, consumption: 4.1 }),
+  ge("citroen:c4-picasso:b78", "puretech-1-2", "PureTech 110/130", 2013, { endYear: 2022, consumption: 5.9 }),
+  ge("citroen:c4-picasso:b78", "bluehdi-1-5", "BlueHDi 100/130", 2013, { endYear: 2022, consumption: 4.4 }),
+  // Volvo
+  ge("volvo:xc90:256", "volvo-t3-t4", "T5 / T6 / B5 / B6 AWD", 2015, { transmission: "automatico", drivetrain: "total", consumption: 8.6 }),
+  ge("volvo:xc90:256", "volvo-d3-d4", "D5 AWD", 2015, { transmission: "automatico", drivetrain: "total", consumption: 6.0 }),
+  ge("volvo:v60:225", "volvo-t3-t4", "T4 / T5 / B4 / B5", 2018, { consumption: 6.6 }),
+  ge("volvo:v60:225", "volvo-d3-d4", "D3 / D4", 2018, { consumption: 4.4 }),
+  ge("volvo:s60:224", "volvo-t3-t4", "T4 / T5 / B4 / B5", 2018, { consumption: 6.6 }),
+  ge("volvo:s60:224", "volvo-d3-d4", "D3 / D4", 2018, { endYear: 2021, consumption: 4.4 }),
+  // MINI
+  ge("mini:clubman:f54", "b38", "One / Cooper 1.5", 2015, { consumption: 5.8 }),
+  ge("mini:clubman:f54", "b48", "Cooper S 2.0 ALL4", 2015, { transmission: "automatico", drivetrain: "total", consumption: 6.7 }),
+  ge("mini:clubman:f54", "b47d20", "Cooper D 2.0", 2015, { transmission: "automatico", consumption: 4.6 }),
 ];

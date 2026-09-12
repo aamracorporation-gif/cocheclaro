@@ -143,4 +143,64 @@ export const comparisons: Comparison[] = [
     ],
     status: "published", reviewedAt: REVIEWED,
   },
+  {
+    id: "cmp-giulia-vs-serie3",
+    slug: "alfa-romeo-giulia-vs-bmw-serie-3-g20",
+    leftGenerationId: "alfa-romeo:giulia:952",
+    rightGenerationId: "bmw:serie-3:g20",
+    editorialSummary:
+      "Dos berlinas de tracción trasera con vocación deportiva. La Giulia aporta un chasis muy celebrado y una imagen diferente a lo habitual; el Serie 3 G20 ofrece mayor madurez mecánica, más red de talleres y mejor retención de valor.",
+    takeaways: [
+      "Chasis: ambas están entre lo mejor del segmento; la Giulia tiene un punto más de ligereza en la dirección.",
+      "Fiabilidad percibida: mejor reputación para el BMW; la Alfa Romeo exige revisar bien el historial de mantenimiento.",
+      "Red de talleres y recambios: mucho más amplia para el Serie 3.",
+      "Recomendación: Serie 3 si priorizas tranquilidad y reventa; Giulia si buscas algo diferente y asumes el riesgo.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
+  {
+    id: "cmp-model3-vs-serie3",
+    slug: "tesla-model-3-vs-bmw-serie-3-g20",
+    leftGenerationId: "tesla:model-3:default",
+    rightGenerationId: "bmw:serie-3:g20",
+    editorialSummary:
+      "Eléctrico contra diésel en la berlina media. El Model 3 gana en coste por kilómetro si cargas en casa y en tecnología de a bordo; el 320d ofrece autonomía sin depender de cargadores y una red de talleres mucho más amplia y conocida.",
+    takeaways: [
+      "Coste de uso: mejor para el Model 3 si cargas en casa a tarifa valle; el 320d es más previsible si no tienes dónde cargar.",
+      "Autonomía y viajes largos: ventaja clara para el diésel fuera de la red de carga rápida.",
+      "Mantenimiento: mínimo en el Model 3 (sin distribución ni aceite de motor); el 320d tiene un plan de mantenimiento convencional bien conocido.",
+      "Recomendación: Model 3 si tienes dónde cargar a diario y haces trayectos moderados; 320d si haces muchos kilómetros de carretera sin planificar cargas.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
+  {
+    id: "cmp-evoque-vs-q3",
+    slug: "land-rover-evoque-vs-audi-q3",
+    leftGenerationId: "land-rover:evoque:l551",
+    rightGenerationId: "audi:q3:f3",
+    editorialSummary:
+      "Dos SUV premium compactos con enfoques distintos. El Evoque prioriza diseño y una capacidad todocamino superior a la media premium; el Q3 ofrece mecánicas del Grupo VW más conocidas y un coste de mantenimiento más contenido.",
+    takeaways: [
+      "Diseño: el Evoque tiene una propuesta más arriesgada y reconocible.",
+      "Mecánica y mantenimiento: el Q3 usa motores del Grupo VW muy extendidos; el Evoque tiene un coste de reparación superior a la media.",
+      "Capacidad todocamino: mejor para el Evoque, aunque pocos compradores la exploten a fondo.",
+      "Recomendación: Q3 si priorizas coste de mantenimiento y mecánica conocida; Evoque si el diseño pesa más en tu decisión.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
+  {
+    id: "cmp-xc90-vs-x5",
+    slug: "volvo-xc90-vs-bmw-x5-g05",
+    leftGenerationId: "volvo:xc90:256",
+    rightGenerationId: "bmw:x5:g05",
+    editorialSummary:
+      "Dos SUV grandes premium de 7 y 5 plazas respectivamente. El XC90 destaca por seguridad, confort y una tercera fila real; el X5 G05 ofrece un punto más de dinamismo y una gama de motores más amplia.",
+    takeaways: [
+      "Plazas: el XC90 ofrece una tercera fila más usable; el X5 se queda en 5 plazas.",
+      "Confort y seguridad: el XC90 es de los SUV con mejor reputación en ambos aspectos.",
+      "Dinámica de conducción: ligera ventaja para el X5, sobre todo con motores B57/B58.",
+      "Recomendación: XC90 si necesitas 7 plazas y priorizas confort; X5 si buscas más dinamismo y no necesitas la tercera fila.",
+    ],
+    status: "published", reviewedAt: REVIEWED,
+  },
 ];
