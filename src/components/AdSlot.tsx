@@ -1,4 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Script from "next/script";
 import { ads } from "@/lib/site";
+import { getConsent, subscribeConsent, type ConsentChoice } from "@/lib/consent";
 
 interface Props {
   /** Identificador de la posición, p. ej. "generacion-tras-resumen". */
@@ -8,18 +13,30 @@ interface Props {
   className?: string;
 }
 
+const configured = ads.enabled && ads.client.length > 0;
+
 /**
  * Hueco de anuncio. Reserva SIEMPRE sus dimensiones para no provocar layout
- * shift. Los scripts de AdSense solo se cargan si:
+ * shift. El `<ins class="adsbygoogle">` real y el script de AdSense solo se
+ * cargan cuando se cumplen las tres condiciones:
  *   1) NEXT_PUBLIC_ADS_ENABLED === "true"
- *   2) hay un client id configurado
- *   3) (en producción real) la CMP ha registrado consentimiento — pendiente de integrar.
+ *   2) hay un client id configurado (NEXT_PUBLIC_ADSENSE_CLIENT)
+ *   3) el usuario ha aceptado cookies no necesarias en `<ConsentBanner>`
+ *      (sustituir por la señal de una CMP certificada antes de producción
+ *      real en el EEE, ver `lib/consent.ts`).
  *
- * Con los anuncios desactivados el componente ocupa el mismo espacio pero
- * no pinta nada visible ni carga red.
+ * Con cualquiera de las tres condiciones sin cumplir, el componente ocupa el
+ * mismo espacio pero no pinta nada visible ni carga red.
  */
 export function AdSlot({ slot, minHeight = 280, className = "" }: Props) {
-  const active = ads.enabled && ads.client.length > 0;
+  const [consent, setConsentState] = useState<ConsentChoice>(null);
+
+  useEffect(() => {
+    setConsentState(getConsent());
+    return subscribeConsent(setConsentState);
+  }, []);
+
+  const active = configured && consent === "accepted";
 
   return (
     <aside
@@ -29,10 +46,34 @@ export function AdSlot({ slot, minHeight = 280, className = "" }: Props) {
       style={{ minHeight }}
     >
       {active ? (
-        // Placeholder de integración: aquí iría <ins class="adsbygoogle" …/> tras
-        // cargar el script y confirmar consentimiento. Se deja explícito para no
-        // activar red sin CMP.
-        <span data-ad-state="ready">Publicidad</span>
+        <>
+          <Script
+            id="adsbygoogle-loader"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ads.client}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block", width: "100%", minHeight }}
+            data-ad-client={ads.client}
+            data-ad-slot={slot}
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+            ref={(el) => {
+              if (!el || el.dataset.pushed) return;
+              el.dataset.pushed = "true";
+              try {
+                (window as unknown as { adsbygoogle?: unknown[] }).adsbygoogle =
+                  (window as unknown as { adsbygoogle?: unknown[] }).adsbygoogle || [];
+                (window as unknown as { adsbygoogle: unknown[] }).adsbygoogle.push({});
+              } catch {
+                /* el script aún no ha cargado; adsbygoogle.js procesará los <ins> pendientes */
+              }
+            }}
+          />
+        </>
       ) : (
         <span data-ad-state="disabled">Espacio reservado para publicidad</span>
       )}

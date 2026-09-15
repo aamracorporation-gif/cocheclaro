@@ -46,6 +46,16 @@ export async function getModelsByBrandId(brandId: string): Promise<Model[]> {
     .sort((a, b) => a.name.localeCompare(b.name, "es"));
 }
 
+/** Todos los modelos, sin filtrar por marca. Usado por el índice de búsqueda. */
+export async function getAllModels(): Promise<Model[]> {
+  return [...models];
+}
+
+/** Todos los enlaces generación↔motor. Usado por el índice de búsqueda. */
+export async function getAllGenerationEngineLinks() {
+  return [...generationEngines];
+}
+
 export async function getModelBySlug(
   brandSlug: string,
   modelSlug: string,

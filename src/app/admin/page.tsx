@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { buildMetadata } from "@/lib/seo";
 import { validateDataset, datasetStats } from "@/lib/validate-data";
 
-// El panel NO se indexa (§11). En este MVP es una consola editorial de solo
-// lectura: estado del dataset, validaciones y entidades pendientes de revisión.
-// El CRUD protegido y la importación CSV son el siguiente paso (ver README).
+// El panel NO se indexa (§11) y está protegido por contraseña (middleware.ts
+// + ADMIN_PASSWORD). Con DATA_PROVIDER=local esta página es de solo lectura
+// (src/data/*.ts es código, no una base de datos). Con DATA_PROVIDER=supabase
+// se habilitan las secciones de edición (generaciones, averías, fuentes,
+// comparativas) e importación CSV.
 export const metadata: Metadata = buildMetadata({
   title: "Consola editorial",
   description: "Estado del dataset y validaciones.",
@@ -14,6 +17,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function AdminPage() {
+  const isSupabase = process.env.DATA_PROVIDER === "supabase";
   const issues = validateDataset();
   const errors = issues.filter((i) => i.level === "error");
   const warnings = issues.filter((i) => i.level === "warn");
@@ -21,12 +25,46 @@ export default function AdminPage() {
 
   return (
     <Container>
-      <h1 className="h1">Consola editorial</h1>
-      <p className="prose-block mt-2">
-        Vista de solo lectura del estado del contenido. El CRUD protegido, los estados
-        borrador/revisión/publicado con escritura y la importación CSV con validación Zod son la
-        siguiente fase.
+      <div className="flex items-start justify-between gap-4">
+        <h1 className="h1">Consola editorial</h1>
+        <form action="/api/admin/logout" method="post">
+          <button type="submit" className="btn-outline px-3 py-1.5 text-sm">
+            Cerrar sesión
+          </button>
+        </form>
+      </div>
+
+      <p className="prose-block mt-2 text-sm">
+        Proveedor de datos activo: <strong>{isSupabase ? "supabase" : "local"}</strong>.{" "}
+        {isSupabase
+          ? "Edición habilitada."
+          : "Solo lectura — src/data/*.ts es código fuente, no una base de datos (ver README para activar Supabase)."}
       </p>
+
+      <nav className="mt-4 flex flex-wrap gap-2">
+        <Link href="/admin/generaciones" className="btn-outline px-3 py-1.5 text-sm">
+          Generaciones
+        </Link>
+        <Link href="/admin/averias" className="btn-outline px-3 py-1.5 text-sm">
+          Averías
+        </Link>
+        <Link href="/admin/fuentes" className="btn-outline px-3 py-1.5 text-sm">
+          Fuentes
+        </Link>
+        <Link href="/admin/comparativas" className="btn-outline px-3 py-1.5 text-sm">
+          Comparativas
+        </Link>
+        <Link href="/admin/importar" className="btn-outline px-3 py-1.5 text-sm">
+          Importar CSV
+        </Link>
+      </nav>
+
+      {!isSupabase && (
+        <p className="prose-block mt-8">
+          Vista de solo lectura del estado del contenido de demostración. Las secciones de arriba
+          se activan con <code>DATA_PROVIDER=supabase</code> (ver README).
+        </p>
+      )}
 
       <section className="mt-8">
         <h2 className="h2">Resumen del dataset</h2>

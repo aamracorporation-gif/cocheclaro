@@ -1,36 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const STORAGE_KEY = "cocheclaro.consent.v1";
-
-type Choice = "accepted" | "rejected" | null;
+import { getConsent, setConsent, type ConsentChoice } from "@/lib/consent";
 
 /**
  * Primera capa de consentimiento (§14). Aceptar y Rechazar tienen el mismo
- * peso visual. Este componente NO carga cookies ni scripts: solo guarda la
- * elección para que una CMP certificada (Google CMP / TCF de IAB) se integre
- * encima antes de activar anuncios personalizados en el EEE.
+ * peso visual. Este componente NO carga cookies ni scripts de terceros por sí
+ * mismo: guarda la elección (ver `lib/consent.ts`) y es lo único que consulta
+ * `<AdSlot>` antes de cargar el script de AdSense. Antes de activar anuncios
+ * personalizados en el EEE, sustituye este banner por una CMP certificada
+ * (Google CMP / TCF de IAB) que exponga la misma señal.
  */
 export function ConsentBanner() {
-  const [choice, setChoice] = useState<Choice>(null);
+  const [choice, setChoice] = useState<ConsentChoice>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    try {
-      setChoice((localStorage.getItem(STORAGE_KEY) as Choice) ?? null);
-    } catch {
-      /* almacenamiento no disponible: se mostrará el banner */
-    }
+    setChoice(getConsent());
     setReady(true);
   }, []);
 
-  function decide(value: Exclude<Choice, null>) {
-    try {
-      localStorage.setItem(STORAGE_KEY, value);
-    } catch {
-      /* sin persistencia: se volverá a preguntar */
-    }
+  function decide(value: Exclude<ConsentChoice, null>) {
+    setConsent(value);
     setChoice(value);
   }
 

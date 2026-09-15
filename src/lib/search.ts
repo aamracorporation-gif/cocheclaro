@@ -4,16 +4,17 @@
  * usuario escriba "bmw 320d 2018" o "qué motor lleva un 518d" y aterrice en
  * la ficha correcta.
  *
+ * El índice se construye a través de `@/lib/db` (no importa `@/data/*`
+ * directamente), así que funciona igual con el proveedor local que con
+ * Supabase (`DATA_PROVIDER=supabase`). Se cachea en memoria por proceso: en
+ * el proveedor local es gratis; en Supabase evita reconsultar en cada tecla.
+ *
  * Cada entrada tiene dos zonas de texto:
  *  - `strong`: marca, modelo, código, slug, motores, carrocería. Un acierto
  *     aquí pesa mucho.
  *  - `weak`: años y frase de resumen. Un acierto aquí solo desempata.
  */
-import { brands } from "@/data/brands";
-import { models } from "@/data/models";
-import { generations } from "@/data/generations";
-import { engines } from "@/data/engines";
-import { generationEngines } from "@/data/generation-engines";
+import { getAllGenerationEngineLinks, getAllModels, getAllPublishedGenerations, getBrands, getEngines } from "@/lib/db";
 import type { SearchResult } from "@/lib/types";
 
 export function normalize(input: string): string {
@@ -36,7 +37,7 @@ interface IndexEntry {
   weight: number;
 }
 
-let cachedIndex: IndexEntry[] | null = null;
+let cachedIndex: Promise<IndexEntry[]> | null = null;
 
 function rangeYears(start: number, end: number): string {
   const out: string[] = [];
@@ -44,8 +45,15 @@ function rangeYears(start: number, end: number): string {
   return out.join(" ");
 }
 
-function buildIndex(): IndexEntry[] {
-  if (cachedIndex) return cachedIndex;
+async function buildIndex(): Promise<IndexEntry[]> {
+  const [brands, models, publishedGenerations, engines, generationEngines] = await Promise.all([
+    getBrands(),
+    getAllModels(),
+    getAllPublishedGenerations(),
+    getEngines(),
+    getAllGenerationEngineLinks(),
+  ]);
+
   const entries: IndexEntry[] = [];
 
   for (const brand of brands) {
@@ -74,13 +82,7 @@ function buildIndex(): IndexEntry[] {
     });
   }
 
-  for (const generation of generations) {
-    if (generation.status !== "published") continue;
-    const model = models.find((m) => m.id === generation.modelId);
-    if (!model) continue;
-    const brand = brands.find((b) => b.id === model.brandId);
-    if (!brand) continue;
-
+  for (const { generation, model, brand } of publishedGenerations) {
     // Generaciones aún a la venta: expandir años hasta el actual.
     const lastYear = generation.endYear ?? new Date().getFullYear();
 
@@ -119,8 +121,12 @@ function buildIndex(): IndexEntry[] {
     });
   }
 
-  cachedIndex = entries;
   return entries;
+}
+
+function getIndex(): Promise<IndexEntry[]> {
+  if (!cachedIndex) cachedIndex = buildIndex();
+  return cachedIndex;
 }
 
 /**
@@ -146,7 +152,7 @@ function wordMatch(hay: string, token: string): boolean {
   );
 }
 
-export function search(query: string, limit = 20): SearchResult[] {
+export async function search(query: string, limit = 20): Promise<SearchResult[]> {
   const q = normalize(query);
   if (q.length < 2) return [];
   const allTokens = q.split(" ").filter(Boolean);
@@ -154,8 +160,9 @@ export function search(query: string, limit = 20): SearchResult[] {
   const required = contentTokens.length > 0 ? contentTokens : allTokens;
 
   const scored: SearchResult[] = [];
+  const index = await getIndex();
 
-  for (const entry of buildIndex()) {
+  for (const entry of index) {
     let score = 0;
     let ok = true;
 

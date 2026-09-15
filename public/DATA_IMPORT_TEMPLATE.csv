@@ -1,0 +1,11 @@
+entity,slug,brand_slug,model_slug,generation_code,engine_code,field,value,source_url,source_title,source_publisher,source_date,reviewed_at,data_status,status,notes
+generation,g20,bmw,serie-3,G20,,start_year,2019,https://www.example-fabricante.com/serie-3,Ficha técnica oficial,BMW,2026-01-15,2026-09-01,verified,draft,
+generation,g20,bmw,serie-3,G20,,end_year,2024,https://www.example-fabricante.com/serie-3,Ficha técnica oficial,BMW,2026-01-15,2026-09-01,verified,draft,
+generation,g20,bmw,serie-3,G20,,body_type,Berlina 4 puertas,,,,,2026-09-01,verified,draft,
+generation,g20,bmw,serie-3,G20,,boot_litres,480,https://www.example-homologacion.eu/g20,Homologación WLTP,Organismo,2026-01-10,2026-09-01,verified,draft,
+engine,b47d20,,,,B47D20,power_hp,190,https://www.example-fabricante.com/b47,Documentación de motor,BMW,2026-01-15,2026-09-01,verified,draft,
+engine,b47d20,,,,B47D20,torque_nm,400,https://www.example-fabricante.com/b47,Documentación de motor,BMW,2026-01-15,2026-09-01,verified,draft,
+generation_engine,,bmw,serie-3,G20,B47D20,trim_label,320d,,,,,2026-09-01,verified,draft,transmission=automatico;drivetrain=trasera
+generation_engine,,bmw,serie-3,G20,B47D20,consumption,4.4,https://www.example-homologacion.eu/g20,Homologación WLTP,Organismo,2026-01-10,2026-09-01,verified,draft,
+known_issue,issue-b47-cadena,,,,B47D20,title,Desgaste de la cadena de distribución,https://www.example-tsb.com/b47,Boletín técnico,Red oficial,2025-11-02,2026-09-01,verified,draft,severity=alta;confidence=moderada;mileage_min=120000;mileage_max=220000;cost_min=900;cost_max=2200
+maintenance_item,m-b47-aceite,,,,B47D20,item,Cambio de aceite y filtro,https://www.example-fabricante.com/b47-mant,Plan de mantenimiento,BMW,2026-01-15,2026-09-01,verified,draft,interval_km=20000;interval_months=24

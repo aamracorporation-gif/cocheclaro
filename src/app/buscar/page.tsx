@@ -27,7 +27,7 @@ export default async function SearchPage({
 }) {
   const { q = "" } = await searchParams;
   const query = q.trim();
-  const results = query.length >= 2 ? search(query, 40) : [];
+  const results = query.length >= 2 ? await search(query, 40) : [];
 
   return (
     <Container>
