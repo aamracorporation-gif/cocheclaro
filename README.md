@@ -184,10 +184,13 @@ Ver [`.env.example`](.env.example). Las claves:
       RLS (`supabase/migrations/0001_init.sql`) + generador de seed
       (`npm run db:seed:generate`). El buscador (`src/lib/search.ts`) también
       funciona sobre Supabase, no solo en local.
+- [x] **Conectado a un proyecto Supabase real en producción** (2026-09-16):
+      esquema migrado, dataset cargado vía `scripts/seed-supabase.ts`,
+      `DATA_PROVIDER=supabase` activo en Vercel. cocheclaro.vercel.app ya lee
+      de Postgres, no del código.
 - [x] CRUD real en `/admin` con `DATA_PROVIDER=supabase`: generaciones y
       comparativas (publicar/despublicar), averías y fuentes (crear/editar),
-      con Server Actions + Zod. Sin probar contra un proyecto Supabase real
-      (no disponible en este entorno): revisa el primer uso con cuidado.
+      con Server Actions + Zod.
 - [x] Importación CSV (`/admin/importar`) para averías y mantenimiento, con
       preview, avisos/errores por fila y validación Zod — probada con
       `DATA_IMPORT_TEMPLATE.csv` real. Otros tipos de entidad quedan para los
